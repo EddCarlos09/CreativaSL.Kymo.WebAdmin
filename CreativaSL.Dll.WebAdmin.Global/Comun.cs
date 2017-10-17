@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CreativaSL.Dll.WebAdmin.Global
 {
+    /// <summary>
+    /// Son los datos qeu se guardan al inicio de seccion
+    /// </summary>
     public static class Comun
     {
         private static string _Conexion;
