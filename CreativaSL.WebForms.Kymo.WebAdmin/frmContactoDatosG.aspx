@@ -80,6 +80,32 @@
                         </div>
                     </div>
                     <div class="row">
+                         <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label" for="cph_MasterBody_txtTituloDatos">
+                                    T&iacute;tulo Datos Contacto<span class="symbol required"></span>
+                                </label>
+                                <span class="input-icon">
+                                    <input type="text" class="form-control tooltips" runat="server" id="txtTituloDatos" name="txtTituloDatos" maxlength="500" data-original-title="Ingrese el t&iacute;tulo datos contacto" data-rel="tooltip" title="" data-placement="top" />
+                                    <i class="fa fa-circle"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                         <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label" for="cph_MasterBody_txtTextoExtra">
+                                    Texto Extra<span class="symbol required"></span>
+                                </label>
+                                <span class="input-icon">
+                                    <input type="text" class="form-control tooltips" runat="server" id="txtTextoExtra" name="txtTextoExtra" maxlength="500" data-original-title="Ingrese el texto extra de contacto" data-rel="tooltip" title="" data-placement="top" />
+                                    <i class="fa fa-circle"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-12">
                             <div>
                                 <span class="symbol required"></span>Campos Obligatorios
@@ -111,7 +137,7 @@
 		<script src="assets/js/main.js"></script>
 		<script>
 		    jQuery(document).ready(function () {
-		        FormValidator.init(1);
+		        FormValidator.init(2);
 		    });
 		</script>
 </asp:Content>

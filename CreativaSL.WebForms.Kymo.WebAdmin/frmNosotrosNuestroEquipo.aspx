@@ -115,13 +115,13 @@
         </div>
     </div>
         <script src="assets/plugins/jQuery/jquery-2.1.1.min.js"></script>
-		<script src="assets/js/form-validation2.js"></script>
+		<script src="assets/js/form-validation.js"></script>
         <script src="assets/js/ui-notifications.js"></script>
         <script src="assets/plugins/sweetalert/lib/sweet-alert.min.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script>
 		    jQuery(document).ready(function () {
-		        FormValidator.init(3);
+		        FormValidator.init(1);
 		    });
 		</script>
     </asp:Content>
