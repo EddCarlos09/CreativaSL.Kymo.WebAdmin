@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_MasterBody" runat="server">
      <div class="row">
         <div class="col-md-12">
-        </div>
+        </div> 
         <div class="col-sd-12">
             <div class="panel panel-white">
                 <div class="panel-heading">
