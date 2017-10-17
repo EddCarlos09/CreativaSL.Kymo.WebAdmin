@@ -173,7 +173,7 @@ var FormValidator = function () {
         $.validator.addMethod("phoneNumbers", function () {
             var dataTxt = document.getElementById("cph_MasterBody_txtTelefonos").value;
             if (dataTxt === '') {
-                return true;
+                return false;
             }
             else {
                 var tagslist = dataTxt.split(",");
