@@ -119,13 +119,21 @@ var FormValidator = function () {
                 ctl00$cph_MasterBody$txtTituloImagen: {
                     required: true
                 },
-                ctl00$cph_MasterBody$imgImagen: "validarImagen"
+                ctl00$cph_MasterBody$imgImagen: "validarImagen",
+                ctl00$cph_MasterBody$txtTituloDatos: {
+                    required: true
+                },
+                ctl00$cph_MasterBody$txtTextoExtra: {
+                    required: true
+                }
 
             },
             messages: {
                 ctl00$cph_MasterBody$txtTitle: "Por favor, ingrese el t&iacute;tulo.",
                 ctl00$cph_MasterBody$txtTituloImagen: "Por favor, ingrese el t&iacute;tulo de la imagen",
-                ctl00$cph_MasterBody$txtTextoAlternativo: "Por favor, ingrese la un texto alternativo."
+                ctl00$cph_MasterBody$txtTextoAlternativo: "Por favor, ingrese la un texto alternativo.",
+                ctl00$cph_MasterBody$txtTituloDatos: "Por favor, ingrese el t&iacute;tulo de contacto",
+                ctl00$cph_MasterBody$txtTextoExtra: "Por favor, ingrese el texto extra de contacto"
             },
             invalidHandler: function (event, validator) { //display error alert on form submit
                 successHandler2.hide();
@@ -173,7 +181,7 @@ var FormValidator = function () {
         $.validator.addMethod("phoneNumbers", function () {
             var dataTxt = document.getElementById("cph_MasterBody_txtTelefonos").value;
             if (dataTxt === '') {
-                return true;
+                return false;
             }
             else {
                 var tagslist = dataTxt.split(",");

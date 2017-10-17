@@ -135,7 +135,7 @@
         <script src="assets/js/mapsContacto.js"></script>
         <script>
 			jQuery(document).ready(function() {
-			    FormValidator.init(2);
+			    FormValidator.init(3);
 			    if ((document.getElementById("cph_MasterBody_hfLongitud").value === ''))
 			        Maps.init(true, 0, 0);
 			});

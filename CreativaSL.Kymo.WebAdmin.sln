@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreativaSL.WebForms.Kymo.WebAdmin", "CreativaSL.WebForms.Kymo.WebAdmin\CreativaSL.WebForms.Kymo.WebAdmin.csproj", "{1620EB35-891A-4CC2-ABCA-D53D46377BE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreativaSL.Dll.WebAdmin.Global", "CreativaSL.Dll.WebAdmin.Global\CreativaSL.Dll.WebAdmin.Global.csproj", "{2316FC49-E7C0-46C8-954C-451D440CDC92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreativaSL.Dll.WebAdmin.Datos", "CreativaSL.Dll.WebAdmin.Datos\CreativaSL.Dll.WebAdmin.Datos.csproj", "{7A20B7C8-C64A-4416-9A58-7D4EED34215E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreativaSL.Dll.WebAdmin.Negocio", "CreativaSL.Dll.WebAdmin.Negocio\CreativaSL.Dll.WebAdmin.Negocio.csproj", "{C971C46D-6965-475F-880E-4A219BA70AB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{1620EB35-891A-4CC2-ABCA-D53D46377BE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1620EB35-891A-4CC2-ABCA-D53D46377BE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1620EB35-891A-4CC2-ABCA-D53D46377BE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2316FC49-E7C0-46C8-954C-451D440CDC92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2316FC49-E7C0-46C8-954C-451D440CDC92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2316FC49-E7C0-46C8-954C-451D440CDC92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2316FC49-E7C0-46C8-954C-451D440CDC92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A20B7C8-C64A-4416-9A58-7D4EED34215E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A20B7C8-C64A-4416-9A58-7D4EED34215E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A20B7C8-C64A-4416-9A58-7D4EED34215E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A20B7C8-C64A-4416-9A58-7D4EED34215E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C971C46D-6965-475F-880E-4A219BA70AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C971C46D-6965-475F-880E-4A219BA70AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C971C46D-6965-475F-880E-4A219BA70AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C971C46D-6965-475F-880E-4A219BA70AB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

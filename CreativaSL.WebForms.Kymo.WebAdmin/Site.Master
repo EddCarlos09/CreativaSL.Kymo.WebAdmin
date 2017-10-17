@@ -153,12 +153,12 @@
                                 <span class="title">CONTACTO</span><i class="icon-arrow"></i> </a>
 								<ul class="sub-menu">
                                     <li>
-										<a href="#">
+										<a href="frmContactoDatosG.aspx">
 											<span class="title">DATOS GENERALES</span>
 										</a>
 									</li>
 									 <li>
-										<a href="#">
+										<a href="frmDatosContactos.aspx">
 											<span class="title">DATOS DE CONTACTO</span>
                                         </a>
  									</li>

@@ -280,6 +280,7 @@
     <Content Include="assets\plugins\blockUI\jquery.blockUI.js" />
     <Content Include="assets\plugins\bootbox\.gitignore" />
     <Content Include="assets\plugins\bootbox\bootbox.js" />
+    <Content Include="assets\plugins\bootbox\bootbox.min.js" />
     <Content Include="assets\plugins\bootbox\Gruntfile.js" />
     <Content Include="assets\plugins\bootbox\header.txt" />
     <Content Include="assets\plugins\bootbox\karma-base.conf.js" />
@@ -4038,6 +4039,7 @@
     <Content Include="assets\sass\vendor\_summernote.scss" />
     <Content Include="assets\sass\vendor\_tags-input.scss" />
     <Content Include="assets\sass\vendor\_time-picker.scss" />
+    <Content Include="assets\plugins\bootbox\build\calculate-size" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4159,6 +4161,16 @@
     <Folder Include="bin\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CreativaSL.Dll.WebAdmin.Global\CreativaSL.Dll.WebAdmin.Global.csproj">
+      <Project>{2316fc49-e7c0-46c8-954c-451d440cdc92}</Project>
+      <Name>CreativaSL.Dll.WebAdmin.Global</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CreativaSL.Dll.WebAdmin.Negocio\CreativaSL.Dll.WebAdmin.Negocio.csproj">
+      <Project>{c971c46d-6965-475f-880e-4a219ba70ab0}</Project>
+      <Name>CreativaSL.Dll.WebAdmin.Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
