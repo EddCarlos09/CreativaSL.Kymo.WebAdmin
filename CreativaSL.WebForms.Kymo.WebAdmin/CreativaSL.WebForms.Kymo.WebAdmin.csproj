@@ -3161,6 +3161,8 @@
     <Content Include="assets\plugins\x-editable\img\loading.gif" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.js" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.min.js" />
+    <Content Include="frmContactoDatosG.aspx" />
+    <Content Include="frmDatosContactos.aspx" />
     <Content Include="frmNosotrosNuestroEquipo.aspx" />
     <Content Include="frmNosotrosNuestroEquipoGrid.aspx" />
     <Content Include="frmRedesSociales.aspx" />
@@ -4043,6 +4045,18 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmContactoDatosG.aspx.cs">
+      <DependentUpon>frmContactoDatosG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmContactoDatosG.aspx.designer.cs">
+      <DependentUpon>frmContactoDatosG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatosContactos.aspx.cs">
+      <DependentUpon>frmDatosContactos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatosContactos.aspx.designer.cs">
+      <DependentUpon>frmDatosContactos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmEjemplo.aspx.cs">
       <DependentUpon>frmEjemplo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
