@@ -74,7 +74,7 @@ namespace CreativaSL.Dll.WebAdmin.Global
 
         private string _CorreoDestinatario;
         /// <summary>
-        /// 
+        /// EL correo a donde se va enviar el contacto
         /// </summary>
         public string CorreoDestinatario
         {
@@ -84,7 +84,7 @@ namespace CreativaSL.Dll.WebAdmin.Global
 
         private int _Puerto;
         /// <summary>
-        /// Puerto es donde van a salir los correos. Para hotmail el 587 ó si no ver la forma de abrir el puerto.Para gmail el 25
+        /// El número de puerto que usa el servidor de correo entrante. Para hotmail el 587 ó si no ver la forma de abrir el puerto.Para gmail el 25
         /// </summary>
         public int Puerto
         {
@@ -94,12 +94,31 @@ namespace CreativaSL.Dll.WebAdmin.Global
 
         private bool _EnableSSL;
         /// <summary>
-        /// 
+        /// La propiedad EnableSsl especifica si SSL se usa para acceder al servidor de correo SMTP especificado.
         /// </summary>
         public bool EnableSSL
         {
             get { return _EnableSSL; }
             set { _EnableSSL = value; }
+        }
+        private bool _HTMLText;
+        /// <summary>
+        /// Para que interprete el HTML que se va enviar y no lo reciba como cadena.
+        /// </summary>
+        public bool HTMLText
+        {
+            get { return _HTMLText; }
+            set { _HTMLText = value; }
+        }
+
+        private string _HostText;
+        /// <summary>
+        /// Un servidor de correo es un equipo que envía 
+        /// </summary>
+        public string HostText
+        {
+            get { return _HostText; }
+            set { _HostText = value; }
         }
 
     }
