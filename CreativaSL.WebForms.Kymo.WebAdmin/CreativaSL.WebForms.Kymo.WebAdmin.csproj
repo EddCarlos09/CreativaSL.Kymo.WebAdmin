@@ -304,6 +304,7 @@
     <Content Include="assets\plugins\bootstrap-colorpicker\js\commits.js" />
     <Content Include="assets\plugins\bootstrap-datepicker\.gitignore" />
     <Content Include="assets\plugins\bootstrap-datepicker\css\datepicker.css" />
+    <Content Include="assets\plugins\bootstrap-datepicker\docs\conf.py" />
     <Content Include="assets\plugins\bootstrap-datepicker\docs\_static\demo_head.png" />
     <Content Include="assets\plugins\bootstrap-datepicker\js\bootstrap-datepicker.js" />
     <Content Include="assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ar.js" />
@@ -457,6 +458,7 @@
     <Content Include="assets\plugins\bootstrap-datetimepicker\dist\locales\bootstrap-datepicker.vi.min.js" />
     <Content Include="assets\plugins\bootstrap-datetimepicker\dist\locales\bootstrap-datepicker.zh-CN.min.js" />
     <Content Include="assets\plugins\bootstrap-datetimepicker\dist\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="assets\plugins\bootstrap-datetimepicker\docs\conf.py" />
     <Content Include="assets\plugins\bootstrap-datetimepicker\docs\requirements.txt" />
     <Content Include="assets\plugins\bootstrap-datetimepicker\docs\_screenshots\demo_head.html" />
     <Content Include="assets\plugins\bootstrap-datetimepicker\docs\_screenshots\markup_component.html" />
@@ -2271,6 +2273,7 @@
     <Content Include="assets\plugins\jQuery-File-Upload\js\vendor\jquery.ui.widget.js" />
     <Content Include="assets\plugins\jQuery-File-Upload\server\gae-go\static\favicon.ico" />
     <Content Include="assets\plugins\jQuery-File-Upload\server\gae-go\static\robots.txt" />
+    <Content Include="assets\plugins\jQuery-File-Upload\server\gae-python\main.py" />
     <Content Include="assets\plugins\jQuery-File-Upload\server\gae-python\static\favicon.ico" />
     <Content Include="assets\plugins\jQuery-File-Upload\server\gae-python\static\robots.txt" />
     <Content Include="assets\plugins\jQuery-File-Upload\server\node\.gitignore" />
@@ -3158,8 +3161,10 @@
     <Content Include="assets\plugins\x-editable\img\loading.gif" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.js" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.min.js" />
-    <Content Include="frmContactoDatosG.aspx" />
-    <Content Include="frmDatosContactos.aspx" />
+    <Content Include="frmNosotrosNuestroEquipo.aspx" />
+    <Content Include="frmNosotrosNuestroEquipoGrid.aspx" />
+    <Content Include="frmRedesSociales.aspx" />
+    <Content Include="frmRedesSocialesGrid.aspx" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="assets\images\Thumbs.db" />
@@ -3194,7 +3199,6 @@
     <Content Include="assets\plugins\bootstrap-datepicker\CHANGELOG.md" />
     <Content Include="assets\plugins\bootstrap-datepicker\composer.json" />
     <Content Include="assets\plugins\bootstrap-datepicker\CONTRIBUTING.md" />
-    <Content Include="assets\plugins\bootstrap-datepicker\docs\conf.py" />
     <Content Include="assets\plugins\bootstrap-datepicker\docs\events.rst" />
     <Content Include="assets\plugins\bootstrap-datepicker\docs\i18n.rst" />
     <Content Include="assets\plugins\bootstrap-datepicker\docs\index.rst" />
@@ -3216,7 +3220,6 @@
     <Content Include="assets\plugins\bootstrap-datetimepicker\CHANGELOG.md" />
     <Content Include="assets\plugins\bootstrap-datetimepicker\composer.json" />
     <Content Include="assets\plugins\bootstrap-datetimepicker\CONTRIBUTING.md" />
-    <Content Include="assets\plugins\bootstrap-datetimepicker\docs\conf.py" />
     <Content Include="assets\plugins\bootstrap-datetimepicker\docs\events.rst" />
     <Content Include="assets\plugins\bootstrap-datetimepicker\docs\i18n.rst" />
     <Content Include="assets\plugins\bootstrap-datetimepicker\docs\index.rst" />
@@ -3710,7 +3713,6 @@
     <Content Include="assets\plugins\jQuery-File-Upload\server\gae-go\app.yaml" />
     <Content Include="assets\plugins\jQuery-File-Upload\server\gae-go\app\main.go" />
     <Content Include="assets\plugins\jQuery-File-Upload\server\gae-python\app.yaml" />
-    <Content Include="assets\plugins\jQuery-File-Upload\server\gae-python\main.py" />
     <Content Include="assets\plugins\jQuery-File-Upload\server\node\package.json" />
     <Content Include="assets\plugins\jQuery-File-Upload\server\php\files\.htaccess" />
     <Content Include="assets\plugins\jQuery-File-Upload\server\php\index.php" />
@@ -4041,24 +4043,36 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmContactoDatosG.aspx.cs">
-      <DependentUpon>frmContactoDatosG.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmContactoDatosG.aspx.designer.cs">
-      <DependentUpon>frmContactoDatosG.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmDatosContactos.aspx.cs">
-      <DependentUpon>frmDatosContactos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmDatosContactos.aspx.designer.cs">
-      <DependentUpon>frmDatosContactos.aspx</DependentUpon>
-    </Compile>
     <Compile Include="frmEjemplo.aspx.cs">
       <DependentUpon>frmEjemplo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmEjemplo.aspx.designer.cs">
       <DependentUpon>frmEjemplo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmNosotrosNuestroEquipo.aspx.cs">
+      <DependentUpon>frmNosotrosNuestroEquipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmNosotrosNuestroEquipo.aspx.designer.cs">
+      <DependentUpon>frmNosotrosNuestroEquipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmNosotrosNuestroEquipoGrid.aspx.cs">
+      <DependentUpon>frmNosotrosNuestroEquipoGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmNosotrosNuestroEquipoGrid.aspx.designer.cs">
+      <DependentUpon>frmNosotrosNuestroEquipoGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmRedesSociales.aspx.cs">
+      <DependentUpon>frmRedesSociales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmRedesSociales.aspx.designer.cs">
+      <DependentUpon>frmRedesSociales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmRedesSocialesGrid.aspx.cs">
+      <DependentUpon>frmRedesSocialesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmRedesSocialesGrid.aspx.designer.cs">
+      <DependentUpon>frmRedesSocialesGrid.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -4074,7 +4088,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
     <Folder Include="Models\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
