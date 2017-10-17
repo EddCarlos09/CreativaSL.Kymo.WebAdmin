@@ -3163,8 +3163,14 @@
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.min.js" />
     <Content Include="frmContactoDatosG.aspx" />
     <Content Include="frmDatosContactos.aspx" />
+    <Content Include="frmNosotrosDatosGenerales.aspx" />
+    <Content Include="frmNosotrosDatosGeneralesGrid.aspx" />
     <Content Include="frmNosotrosNuestroEquipo.aspx" />
     <Content Include="frmNosotrosNuestroEquipoGrid.aspx" />
+    <Content Include="frmNosotrosPorqueElegirnos.aspx" />
+    <Content Include="frmNosotrosPorqueElegirnosGrid.aspx" />
+    <Content Include="frmNosotrosQuienesSomos.aspx" />
+    <Content Include="frmNosotrosQuienesSomosGrid.aspx" />
     <Content Include="frmRedesSociales.aspx" />
     <Content Include="frmRedesSocialesGrid.aspx" />
     <Content Include="packages.config" />
@@ -4047,12 +4053,14 @@
   <ItemGroup>
     <Compile Include="frmContactoDatosG.aspx.cs">
       <DependentUpon>frmContactoDatosG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmContactoDatosG.aspx.designer.cs">
       <DependentUpon>frmContactoDatosG.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmDatosContactos.aspx.cs">
       <DependentUpon>frmDatosContactos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmDatosContactos.aspx.designer.cs">
       <DependentUpon>frmDatosContactos.aspx</DependentUpon>
@@ -4064,26 +4072,72 @@
     <Compile Include="frmEjemplo.aspx.designer.cs">
       <DependentUpon>frmEjemplo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmNosotrosDatosGenerales.aspx.cs">
+      <DependentUpon>frmNosotrosDatosGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmNosotrosDatosGenerales.aspx.designer.cs">
+      <DependentUpon>frmNosotrosDatosGenerales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmNosotrosDatosGeneralesGrid.aspx.cs">
+      <DependentUpon>frmNosotrosDatosGeneralesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmNosotrosDatosGeneralesGrid.aspx.designer.cs">
+      <DependentUpon>frmNosotrosDatosGeneralesGrid.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmNosotrosNuestroEquipo.aspx.cs">
       <DependentUpon>frmNosotrosNuestroEquipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmNosotrosNuestroEquipo.aspx.designer.cs">
       <DependentUpon>frmNosotrosNuestroEquipo.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmNosotrosNuestroEquipoGrid.aspx.cs">
       <DependentUpon>frmNosotrosNuestroEquipoGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmNosotrosNuestroEquipoGrid.aspx.designer.cs">
       <DependentUpon>frmNosotrosNuestroEquipoGrid.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmNosotrosPorqueElegirnos.aspx.cs">
+      <DependentUpon>frmNosotrosPorqueElegirnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmNosotrosPorqueElegirnos.aspx.designer.cs">
+      <DependentUpon>frmNosotrosPorqueElegirnos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmNosotrosPorqueElegirnosGrid.aspx.cs">
+      <DependentUpon>frmNosotrosPorqueElegirnosGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmNosotrosPorqueElegirnosGrid.aspx.designer.cs">
+      <DependentUpon>frmNosotrosPorqueElegirnosGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmNosotrosQuienesSomos.aspx.cs">
+      <DependentUpon>frmNosotrosQuienesSomos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmNosotrosQuienesSomos.aspx.designer.cs">
+      <DependentUpon>frmNosotrosQuienesSomos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmNosotrosQuienesSomosGrid.aspx.cs">
+      <DependentUpon>frmNosotrosQuienesSomosGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmNosotrosQuienesSomosGrid.aspx.designer.cs">
+      <DependentUpon>frmNosotrosQuienesSomosGrid.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmRedesSociales.aspx.cs">
       <DependentUpon>frmRedesSociales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmRedesSociales.aspx.designer.cs">
       <DependentUpon>frmRedesSociales.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmRedesSocialesGrid.aspx.cs">
       <DependentUpon>frmRedesSocialesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmRedesSocialesGrid.aspx.designer.cs">
       <DependentUpon>frmRedesSocialesGrid.aspx</DependentUpon>

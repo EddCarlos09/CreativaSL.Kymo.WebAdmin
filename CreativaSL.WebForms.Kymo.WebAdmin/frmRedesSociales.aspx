@@ -25,13 +25,15 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="cph_MasterBody_redesSociales">
-                                    Redes Sociales
+                                <label class="control-label" for="cmbRedSocial">
+                                    Seleccione una red social <span class="symbol required"></span>
                                 </label>
-                                <select id="cph_MasterBody_cmbRedes" class="form-control search-select">
-                                    <option value="">&nbsp;</option>
-                                    <option value="fb">Facebook</option>
-                                    <option value="ins">Instagram</option>
+                                <select id="cmbRedSocial" name="cmbRedSocial" class="form-control search-select">
+                                    <option value=""></option>
+                                    <%--<% foreach (var Item in ListaCol)
+                                        {
+                                            Response.Write("<option value='" + Item.IDColaborador + "'> " + Item.Nombre + "</option>");
+                                        }%>--%>
                                 </select>
                             </div>
                         </div>

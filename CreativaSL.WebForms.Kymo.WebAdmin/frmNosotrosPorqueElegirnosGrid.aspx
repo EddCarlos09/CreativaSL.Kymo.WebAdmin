@@ -1,16 +1,16 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frmNosotrosNuestroEquipoGrid.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmNosotrosNuestroEquipoGrid" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frmNosotrosPorqueElegirnosGrid.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmNosotrosPorqueElegirnosGrid" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_MasterBody" runat="server">
 	<div class="row">
 		<div class="col-md-12">
 			<!-- start: DYNAMIC TABLE PANEL -->
 			<div class="panel panel-white">
 				<div class="panel-heading">
-					<h4 class="panel-title">Catálogo <span class="text-bold">Nuestro Equipo</span></h4>
+					<h4 class="panel-title">Catálogo <span class="text-bold">P&aacute;gina Porqu&eacute; Elegirnos</span></h4>
 				</div>
 				<div class="panel-body">
 					<div class="row">
 						<div class="col-md-12 space20">
-							<a href="frmNosotrosNuestroEquipo.aspx" class="btn btn-green">
+							<a href="frmNosotrosPorqueElegirnos.aspx" class="btn btn-green">
 								Nuevo
 								<i class="fa fa-plus"></i>
 							</a>
@@ -20,8 +20,7 @@
 						<table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
 							<thead>
 								<tr>
-									<th>Colaborador</th>
-                                    <th>Redes Sociales</th>									
+									<th>Raz&oacute;n</th>									
 									<th>Acciones</th>
 								</tr>
 							</thead>
@@ -33,9 +32,8 @@
 									<td><%=Item.Titulo %></td>--%>
 									<td>
 										<div class="visible-md visible-lg hidden-sm hidden-xs">
-											<%--<%Response.Write("<a href='frmNosotrosNuestroEquipo.aspx?op=2&id=" + Item.IDPublicacion.ToString() + "' class='btn btn-xs btn-blue tooltips' data-placement='top' data-original-title='Editar'> <i class='fa fa-edit'> </i> </a>"); %>
+											<%--<%Response.Write("<a href='frmNosotrosPorqueElegirnos.aspx?op=2&id=" + Item.IDPublicacion.ToString() + "' class='btn btn-xs btn-blue tooltips' data-placement='top' data-original-title='Editar'> <i class='fa fa-edit'> </i> </a>"); %>
 											<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IDPublicacion.ToString() + "' data-toggle='modal'  class='btn btn-xs btn-red tooltips' data-placement='top' data-original-title='Eliminar'> <i class='fa fa-times fa fa-white'> </i> </a>");%>--%>
-                                            <%--<%Response.Write("<a href='frmNosotrosNuestroEquipo.aspx?op=4&id=" + Item.IDPublicacion.ToString() + "' class='btn btn-xs btn-blue tooltips' data-placement='top' data-original-title='Redes Sociales'> <i class='fa fa-facebook-square'> </i></a>"); %>--%>
 										</div>
 
 										<div class="visible-xs visible-sm hidden-md hidden-lg">
@@ -45,14 +43,11 @@
 												</a>
 												<ul role="menu" class="dropdown-menu pull-right dropdown-dark">
 													<li>
-														<%--<%Response.Write("<a href='frmNosotrosNuestroEquipo.aspx?op=2&id=" + Item.IDPublicacion.ToString() + "' role='menuitem' tabindex='-1' class='tooltips' data-placement='top' data-original-title='Editar'><i class='fa fa-edit'></i>Editar</a>"); %>--%>
+														<%--<%Response.Write("<a href='frmNosotrosPorqueElegirnos.aspx?op=2&id=" + Item.IDPublicacion.ToString() + "' role='menuitem' tabindex='-1' class='tooltips' data-placement='top' data-original-title='Editar'><i class='fa fa-edit'></i>Editar</a>"); %>--%>
 													</li>
 													<li>
 														<%--<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IDPublicacion.ToString() + "' role='menuitem' tabindex='-1' data-toggle='modal'  class='tooltips' data-placement='top' data-original-title='Eliminar'><i class='fa fa-times fa fa-white'></i>Eliminar</a>");%>--%>
-													</li>
-                                                    <li>
-														<%--<%Response.Write("<a href='frmRedesSociales.aspx?op=4&id=" + Item.IDPublicacion.ToString() + "' role='menuitem' tabindex='-1' class='tooltips' data-placement='top' data-original-title='Editar'><i class='fa fa-facebook-square'></i>Redes Sociales</a>"); %>--%>
-													</li>
+													</li>													
 												</ul>
 											</div>
 										</div>
@@ -72,7 +67,7 @@
 												</div>
 												<div class="modal-footer">                     
 													<button data-dismiss="modal" class="btn btn-red" type="button">No</button>
-													<%--<% Response.Write("<a  href='frmNosotrosNuestroEquipo.aspx?op=3&id=" + Item.IDPublicacion.ToString() + "' class='btn btn-green add-row' runat='server'>Si</a>");%>--%>
+													<%--<% Response.Write("<a  href='frmNosotrosPorqueElegirnos.aspx?op=3&id=" + Item.IDPublicacion.ToString() + "' class='btn btn-green add-row' runat='server'>Si</a>");%>--%>
 												</div>
 											</div>
 										</div>
