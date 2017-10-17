@@ -18,7 +18,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                 //CN.ObtenerDatosContacto(DatosAux);
                 //if (DatosAux.Completado)
                 //{
-                //    CargarDatos(DatosAux);
+                //    CargarDatos(DatosAux); 
                 //}
                 //else
                 //{

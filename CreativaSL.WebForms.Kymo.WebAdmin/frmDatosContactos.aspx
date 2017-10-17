@@ -10,7 +10,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <asp:HiddenField ID="hf" runat="server" />
-                    </div>
+                    </div> 
 
                     <div class="row">
                         <div class="col-md-12">
