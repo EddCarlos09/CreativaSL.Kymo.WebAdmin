@@ -142,10 +142,20 @@ var FormElements = function() {"use strict";
 		});
 	};
 	//function to initiate jquery.tagsinput
-	var runTagsInput = function() {
-		$('#tags_1').tagsInput({
-			width: 'auto'
-		});
+	var runTagsInput = function () {
+	    $('#tags_1').tagsInput({
+	        width: 'auto'
+	    });
+	    $('#cph_MasterBody_txtTelefonos').tagsInput({
+	        width: 'auto',
+	        height: 'auto',
+	        defaultText: ''
+	    });
+	    $('#cph_MasterBody_txtCorreo').tagsInput({
+	        width: 'auto',
+	        height: 'auto',
+	        defaultText: ''
+	    });
 	};
 	//function to initiate summernote
 	var runSummerNote = function() {
