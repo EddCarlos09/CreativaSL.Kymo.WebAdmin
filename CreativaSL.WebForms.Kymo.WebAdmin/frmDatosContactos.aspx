@@ -67,14 +67,14 @@
                                     Correo <span class="symbol required"></span>
 						        </label>
 						        <span class="input-icon">
-                                    <input type="text" class="form-control tooltips" runat="server" id="txtCorreo" name="txtCorreo" placeholder="" maxlength="300" data-original-title="Ingrese el correo de contacto" data-rel="tooltip"  title="" data-placement="top" />
+                                    <input type="text" class="form-control tooltips" runat="server" id="txtCorreo" name="txtCorreo" placeholder="" maxlength="600" data-original-title="Ingrese el correo de contacto" data-rel="tooltip"  title="" data-placement="top" />
 							        <i class="fa fa-envelope"></i>
                                 </span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row">            
+                    <%--<div class="row">            
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="control-label" for="cph_MasterBody_txtTitulo">
@@ -100,7 +100,7 @@
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
                     <div class="row">
 					    <div class="col-md-12">
 						    <div>

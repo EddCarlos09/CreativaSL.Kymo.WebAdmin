@@ -202,6 +202,30 @@ var FormValidator = function () {
             }
         }, 'Verifique que cada n&uacute;mero telef&oacute;nico cuente con el formato a 10 d&iacute;gitos. Solo se pueden agregar 3 n&uacute;meros telef&oacute;nicos.');
 
+        $.validator.addMethod("Correos", function () {
+            var CorreoTxt = document.getElementById("cph_MasterBody_txtCorreo").value;
+            if (CorreoTxt === '') {
+                return false;
+            }
+            else {
+                var tagslist = CorreoTxt.split(",");
+                if (tagslist.length < 3) {
+                    var band = true;
+                    for (var i = 0; i < tagslist.length; i++) {
+                        console.log(tagslist[i])
+                        if (!tagslist[i].match(/^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{3,63}$/i)) {
+                            band = false;
+                            break;
+                        }
+                    }
+                    return band;
+                }
+                else {
+                    return false;
+                }
+            }
+        }, 'Verifique que cada direcci&oacute;n de correo electr&oacute;nico contenga el formato de nombre@dominio.com');
+
         $('#frmMaster').validate({
             errorElement: "span", // contain the error msg in a small tag
             errorClass: 'help-block',
@@ -222,7 +246,7 @@ var FormValidator = function () {
                 ctl00$cph_MasterBody$address: { required: true },
                 ctl00$cph_MasterBody$txtTitulo: { required: true },
                 ctl00$cph_MasterBody$txtTexto: { required: true },
-                ctl00$cph_MasterBody$txtCorreo: { required: true, email: true },
+                ctl00$cph_MasterBody$txtCorreo: "Correos",
                 ctl00$cph_MasterBody$txtTelefonos: "phoneNumbers"
 
             },
@@ -230,11 +254,11 @@ var FormValidator = function () {
                 //ctl00$cph_MasterBody$txtTelefonos: { required: "Debe ingresar al menos un n&uacute;mero de tel&eacute;fono." },
                 ctl00$cph_MasterBody$address: { required: "Debe ingresar la direcci&oacute;n de contacto." },
                 ctl00$cph_MasterBody$txtTitulo: { required: "Debe ingresar el t&iacute;tulo a mostrar en la p&aacute;gina de contacto." },
-                ctl00$cph_MasterBody$txtTexto: { required: "Debe ingresar el texto a mostrar en la p&aacute;gina de contacto." },
-                ctl00$cph_MasterBody$txtCorreo: {
-                    required: "Debe ingresar una direcci&oacute;n de correo electr&oacute;nico de contacto.",
-                    email: "Su direcci&oacute;n de correo electr&oacute;nico debe tener el formato de nombre@dominio.com"
-                }
+                ctl00$cph_MasterBody$txtTexto: { required: "Debe ingresar el texto a mostrar en la p&aacute;gina de contacto." }//,
+                //ctl00$cph_MasterBody$txtCorreo: {
+                //    required: "Debe ingresar una direcci&oacute;n de correo electr&oacute;nico de contacto.",
+                //    email: "Su direcci&oacute;n de correo electr&oacute;nico debe tener el formato de nombre@dominio.com"
+                //}
             },
             invalidHandler: function (event, validator) { //display error alert on form submit
                 successHandler2.hide();
