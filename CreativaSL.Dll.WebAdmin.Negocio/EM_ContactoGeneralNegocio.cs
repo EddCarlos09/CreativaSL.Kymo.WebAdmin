@@ -10,6 +10,10 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
 {
     public class EM_ContactoGeneralNegocio
     {
+        /// <summary>
+        /// El el metodo es para dar de alta y modificacion de los Datos de Contacto
+        /// </summary>
+        /// <param name="Datos">Es la coleccion de datos que puede recibir de Tipo EM_CantactoGeneral</param>
         public void AC_DatosDeContacto(EM_ContactoGeneral Datos)
         {
             try
@@ -23,7 +27,10 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
             }
         }
 
-
+        /// <summary>
+        /// El metedo es para obtener y pintar los datos de contactos
+        /// </summary>
+        /// <param name="Datos"></param>
         public void ObtenerDatosContacto(EM_ContactoGeneral Datos)
         {
             try

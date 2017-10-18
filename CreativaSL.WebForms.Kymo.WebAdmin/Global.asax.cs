@@ -15,6 +15,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
         {
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings["strConnection"];
             Comun.Conexion = settings.ConnectionString;
+            Comun.IDUsuario = "Sistema Administrador Kymo";
         }
     }
 }

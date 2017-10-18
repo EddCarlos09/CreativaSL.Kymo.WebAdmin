@@ -40,14 +40,16 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                     double.TryParse(Request.Form["ctl00$cph_MasterBody$hfLongitud"].ToString().Replace(",", "."), NumberStyles.Currency, esMX, out Longitud);
                     string Direccion = Request.Form["ctl00$cph_MasterBody$address"].ToString();
                     string Correo = Request.Form["ctl00$cph_MasterBody$txtCorreo"].ToString();
-                    //string Texto = Request.Form["ctl00$cph_MasterBody$txtTexto"].ToString();
-                    //string Titulo = Request.Form["ctl00$cph_MasterBody$txtTitulo"].ToString();
                     this.GuardarDatos(Telefonos, Direccion, Correo, Latitud, Longitud);
                 }
             }
         }
 
         #region Metodos Genrales
+        /// <summary>
+        /// El metodo es el encargado de asignar los valor para dibujar en el HTML
+        /// </summary>
+        /// <param name="DatosAux">Son los datos que Obtuvieron de la base de datos</param>
         private void CargarDatos(EM_ContactoGeneral DatosAux)
         {
             try
@@ -65,8 +67,6 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                 txtCorreo.Value = DatosAux.Correo;
                 txtTelefonos.Value = DatosAux.Telefonos;
                 address.Value = DatosAux.Direccion;
-                //txtTitulo.Value = DatosAux.TituloContacto;
-                //txtTexto.Value = DatosAux.TextoContacto;
                 hfLatitud.Value = DatosAux.Latitud.ToString();
                 hfLongitud.Value = DatosAux.Longitud.ToString();
             }
@@ -76,7 +76,9 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
             }
         }
 
-
+        /// <summary>
+        /// Es el encargo de incializar todo las varibles del html vacio
+        /// </summary>
         private void IniciarDatos()
         {
             try
@@ -84,8 +86,6 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                 hf.Value = string.Empty;
                 txtCorreo.Value = string.Empty;
                 txtTelefonos.Value = string.Empty;
-                //txtTitulo.Value = string.Empty;
-                //txtTexto.Value = string.Empty;
                 address.Value = string.Empty;
                 hfLatitud.Value = string.Empty;
                 hfLongitud.Value = string.Empty;
@@ -95,9 +95,15 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                 throw ex;
             }
         }
-
-
-
+        
+        /// <summary>
+        /// El metodo es el encargado de recibir y enviar los datos a guardar o modificar
+        /// </summary>
+        /// <param name="_Telefonos">El número de teléfono el de la empresa</param>
+        /// <param name="_Direccion">La direccióin es donde se encuentra ubicada la empresa</param>
+        /// <param name="_Correo">El correo es de la empresa</param>
+        /// <param name="_Latitud">La latitud lo de mapa </param>
+        /// <param name="_Longitud">la Longitud es del mapa</param>
         private void GuardarDatos(string _Telefonos, string _Direccion, string _Correo, double _Latitud, double _Longitud)
         {
             try

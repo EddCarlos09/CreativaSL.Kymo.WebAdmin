@@ -45,7 +45,7 @@
 							</div>
 						</div>
 					</div>
-
+                    <br />
                     <div class="row">            
                         <div class="col-md-12">
                             <div class="form-group">
@@ -58,8 +58,6 @@
                             </div>
                         </div>
                     </div>
-
-                    
                     <div class="row">            
                         <div class="col-md-12">
                             <div class="form-group">
@@ -68,39 +66,10 @@
 						        </label>
 						        <span class="input-icon">
                                     <input type="text" class="form-control tooltips" runat="server" id="txtCorreo" name="txtCorreo" placeholder="" maxlength="600" data-original-title="Ingrese el correo de contacto" data-rel="tooltip"  title="" data-placement="top" />
-							        <i class="fa fa-envelope"></i>
                                 </span>
                             </div>
                         </div>
                     </div>
-
-                    <%--<div class="row">            
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label class="control-label" for="cph_MasterBody_txtTitulo">
-                                    T&iacute;tulo Contacto <span class="symbol required"></span>
-						        </label>
-						        <span class="input-icon">
-                                    <input type="text" class="form-control tooltips" runat="server" id="txtTitulo" name="txtTitulo" placeholder="" maxlength="300" data-original-title="Ingrese el t&iacute;tulo a mostrar en contacto" data-rel="tooltip"  title="" data-placement="top" />
-							        <i class="fa fa-envelope"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">            
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label class="control-label" for="cph_MasterBody_txtTexto">
-                                    Texto Contacto <span class="symbol required"></span>
-						        </label>
-						        <span class="input-icon">
-                                    <input type="text" class="form-control tooltips" runat="server" id="txtTexto" name="txtTexto" placeholder="" maxlength="1000" data-original-title="Ingrese el texto a mostrar en contacto" data-rel="tooltip"  title="" data-placement="top" />
-							        <i class="fa fa-envelope"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>--%>
                     <div class="row">
 					    <div class="col-md-12">
 						    <div>
