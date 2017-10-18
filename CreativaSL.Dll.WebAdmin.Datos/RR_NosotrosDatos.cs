@@ -1,6 +1,8 @@
 ﻿using CreativaSL.Dll.WebAdmin.Global;
+using Microsoft.ApplicationBlocks.Data;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +11,8 @@ namespace CreativaSL.Dll.WebAdmin.Datos
 {
     public class RR_NosotrosDatos
     {
+        #region Nosotros Quienes Somos
+
         /// <summary>
         /// Altas y cambios en la tabla "Nosotros Quienes Somos"
         /// </summary>
@@ -69,7 +73,7 @@ namespace CreativaSL.Dll.WebAdmin.Datos
             {
                 List<RR_NosotrosQuienesSomos> Lista = new List<RR_NosotrosQuienesSomos>();
                 RR_NosotrosQuienesSomos Item;
-                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_InfoCandidatos");
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_NosotrosQuienesSomos");
                 while (Dr.Read())
                 {
                     Item = new RR_NosotrosQuienesSomos();
@@ -85,5 +89,33 @@ namespace CreativaSL.Dll.WebAdmin.Datos
             }
         }
 
+        /// <summary>
+        /// Obtiene el detalle de el registro solicitado por el ID de la tabla "Nosotros Quienes Somos"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ObtenerNosotrosQuienesSomosXID(RR_NosotrosQuienesSomos Datos)
+        {
+            try
+            {
+                object[] Parametros = { Datos.IdSeccion };
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_NosotrosQuienesSomosDetalle", Parametros);
+                while (Dr.Read())
+                {
+                    Datos.IdSeccion = Dr.GetString(Dr.GetOrdinal("id_seccion"));
+                    Datos.Titulo = Dr.GetString(Dr.GetOrdinal("titulo"));
+                    Datos.TextoHtml = Dr.GetString(Dr.GetOrdinal("textoHTML"));
+                    Datos.IdImagen = Dr.GetString(Dr.GetOrdinal("id_imagen"));
+                    Datos.TextoAlternativo = Dr.GetString(Dr.GetOrdinal("textoAlternativo"));
+                    Datos.TituloImagen = Dr.GetString(Dr.GetOrdinal("tituloImagen"));
+                    Datos.Completado = true;
+                    break;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
     }
 }
