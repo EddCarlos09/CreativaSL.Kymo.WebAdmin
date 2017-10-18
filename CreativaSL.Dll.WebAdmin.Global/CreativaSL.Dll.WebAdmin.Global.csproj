@@ -47,6 +47,10 @@
     <Compile Include="EM_ContactoGeneral.cs" />
     <Compile Include="EM_ContactoRedesSociales.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RR_NosotrosEquipoTrabajo.cs" />
+    <Compile Include="RR_NosotrosPorqueElegirnos.cs" />
+    <Compile Include="RR_NosotrosQuienesSomos.cs" />
+    <Compile Include="RR_NosotrosRedesSocialesMiembros.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
