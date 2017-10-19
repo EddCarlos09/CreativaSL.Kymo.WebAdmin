@@ -129,7 +129,7 @@ var FormValidator = function () {
 
             },
             messages: {
-                ctl00$cph_MasterBody$txtTitle: "Por favor, ingrese el t&iacute;tulo.",
+                ctl00$cph_MasterBody$txtTitulo: "Por favor, ingrese el t&iacute;tulo de la p&aacute;gina.",
                 ctl00$cph_MasterBody$txtTituloImagen: "Por favor, ingrese el t&iacute;tulo de la imagen",
                 ctl00$cph_MasterBody$txtTextoAlternativo: "Por favor, ingrese la un texto alternativo.",
                 ctl00$cph_MasterBody$txtTituloDatos: "Por favor, ingrese el t&iacute;tulo de contacto",

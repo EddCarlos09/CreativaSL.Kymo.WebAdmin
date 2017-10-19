@@ -25,14 +25,42 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label" for="cph_MasterBody_txtTitulo">
-                                    T&iacute;tulo<span class="symbol required"></span>
+                                    T&iacute;tulo P&aacute;gina<span class="symbol required"></span>
                                 </label>
                                 <span class="input-icon">
-                                    <input type="text" class="form-control tooltips" runat="server" id="txtTitulo" name="txtTitulo" maxlength="200" data-original-title="Ingrese el t&iacute;tulo" data-rel="tooltip" title="" data-placement="top" />
+                                    <input type="text" class="form-control tooltips" runat="server" id="txtTitulo" name="txtTitulo" maxlength="200" data-original-title="Ingrese el t&iacute;tulo de P&aacute;gina" data-rel="tooltip" title="" data-placement="top" />
                                     <i class="fa fa-circle"></i>
                                 </span>
                             </div>
-                        </div> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label" for="cph_MasterBody_txtTituloDatos">
+                                    T&iacute;tulo Datos Contacto<span class="symbol required"></span>
+                                </label>
+                                <span class="input-icon">
+                                    <input type="text" class="form-control tooltips" runat="server" id="txtTituloDatos" name="txtTituloDatos" maxlength="500" data-original-title="Ingrese el t&iacute;tulo datos contacto" data-rel="tooltip" title="" data-placement="top" />
+                                    <i class="fa fa-circle"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label" for="cph_MasterBody_txtTextoExtra">
+                                    Texto Extra<span class="symbol required"></span>
+                                </label>
+                                <span class="input-icon">
+                                    <input type="text" class="form-control tooltips" runat="server" id="txtTextoExtra" name="txtTextoExtra" maxlength="500" data-original-title="Ingrese el texto extra de contacto" data-rel="tooltip" title="" data-placement="top" />
+                                    <i class="fa fa-circle"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">
@@ -74,32 +102,6 @@
                                 </label>
                                 <span class="input-icon">
                                     <input type="text" class="form-control tooltips" runat="server" id="txtTituloImagen" name="txtTituloImagen" maxlength="200" data-original-title="Ingrese el t&iacute;tulo de la imagen" data-rel="tooltip" title="" data-placement="top" />
-                                    <i class="fa fa-circle"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                         <div class="col-md-12">
-                            <div class="form-group">
-                                <label class="control-label" for="cph_MasterBody_txtTituloDatos">
-                                    T&iacute;tulo Datos Contacto<span class="symbol required"></span>
-                                </label>
-                                <span class="input-icon">
-                                    <input type="text" class="form-control tooltips" runat="server" id="txtTituloDatos" name="txtTituloDatos" maxlength="500" data-original-title="Ingrese el t&iacute;tulo datos contacto" data-rel="tooltip" title="" data-placement="top" />
-                                    <i class="fa fa-circle"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                         <div class="col-md-12">
-                            <div class="form-group">
-                                <label class="control-label" for="cph_MasterBody_txtTextoExtra">
-                                    Texto Extra<span class="symbol required"></span>
-                                </label>
-                                <span class="input-icon">
-                                    <input type="text" class="form-control tooltips" runat="server" id="txtTextoExtra" name="txtTextoExtra" maxlength="500" data-original-title="Ingrese el texto extra de contacto" data-rel="tooltip" title="" data-placement="top" />
                                     <i class="fa fa-circle"></i>
                                 </span>
                             </div>

@@ -121,27 +121,7 @@ namespace CreativaSL.Dll.WebAdmin.Global
             get { return _HostText; }
             set { _HostText = value; }
         }
-
-        private string _TituloContacto;
-        /// <summary>
-        /// Es el encambezado de nuestra pagina
-        /// </summary>
-        public string TituloContacto
-        {
-            get { return _TituloContacto; }
-            set { _TituloContacto = value; }
-        }
-        private string _TextoContacto;
-        /// <summary>
-        /// Es referecia a los texto que se muestra en nuestra pagina
-        /// </summary>
-        public string TextoContacto
-        {
-            get { return _TextoContacto; }
-            set { _TextoContacto = value; }
-        }
-
-
+        
         #region DatosDeControl
         private string _Conexion;
         /// <summary>

@@ -45,6 +45,7 @@
     <Compile Include="Comun.cs" />
     <Compile Include="EM_ContactoCorreo.cs" />
     <Compile Include="EM_ContactoGeneral.cs" />
+    <Compile Include="EM_ContactoImagen.cs" />
     <Compile Include="EM_ContactoRedesSociales.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RR_NosotrosEquipoTrabajo.cs" />
