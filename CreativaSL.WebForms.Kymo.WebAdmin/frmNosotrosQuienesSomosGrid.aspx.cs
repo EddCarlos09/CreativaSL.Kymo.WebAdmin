@@ -26,7 +26,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                         NN.EliminarNosotrosQuienesSomos(Datos);
                         if (Datos.Completado)
                         {
-                            //Mostrar mensaje Success
+                            Response.Redirect("frmNosotrosQuienesSomosGrid.aspx");
                         }
                         else
                         {

@@ -72,6 +72,8 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                     string textoHtml           = HttpUtility.HtmlDecode(txtDescripcion.InnerHtml);
                     string textoAlternativo    = Request.Form["ctl00$cph_MasterBody$txtTextoAlternativo"].ToString();
                     string tituloImagen        = Request.Form["ctl00$cph_MasterBody$txtTituloImagen"].ToString();
+                    string NombreRemoverAcentos = Remover.RemoverAcentos(textoAlternativo);
+                    string NombreGuardarImagen = Remover.RemoverSignosAcentos(NombreRemoverAcentos);
                     string txtUrlImg           = Band ? imgImagen.PostedFile.FileName : string.Empty;
                     HttpPostedFile bannerImage = imgImagen.PostedFile as HttpPostedFile;
 
@@ -80,7 +82,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                         string AuxID = Request.Form["ctl00$cph_MasterBody$hf"].ToString();  
                         string AuxIDImg = Request.Form["ctl00$cph_MasterBody$hfImg"].ToString();
                         bool NuevoRegistro = string.IsNullOrEmpty(AuxID);
-                        Guardar(NuevoRegistro, AuxID, AuxIDImg, titulo, textoHtml, textoAlternativo, tituloImagen, txtUrlImg, bannerImage, Band);
+                        Guardar(NuevoRegistro, AuxID, AuxIDImg, titulo, textoHtml, NombreGuardarImagen, tituloImagen, txtUrlImg, bannerImage, Band);
                     }
                     catch (Exception ex)
                     {
@@ -114,8 +116,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
             try
             {                
                 string BaseDir = Server.MapPath("");
-                string FileExtension = BandCambioImagen ? Path.GetExtension(_urlImagen) : string.Empty;
-                string nombreImagen =  Remover.RemoverSignosAcentos(_urlImagen);
+                string FileExtension = BandCambioImagen ? Path.GetExtension(_urlImagen) : string.Empty;                
                 RR_NosotrosQuienesSomos Datos = new RR_NosotrosQuienesSomos
                 {
                     NuevoRegistro    = _nuevoRegistro,
@@ -124,7 +125,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                     TituloImagen     = _tituloImagen,
                     NumPosition      = 1,// A QUE SE REFIERE CON NUM POSITION EN LA BD!!!!!
                     UrlImagen        = BaseDir,
-                    NombreImagen     = nombreImagen,
+                    NombreImagen     = _textoAlternativo,
                     Extencion        = FileExtension,                    
                     CambioImagen     = BandCambioImagen,
                     IdPagina         = 2,//COMO SE QUE TIPO DE PAGINA ASIGNARLE ? SE LE ASIGNA EL NUM DE PAG POR DEFAULT??
@@ -138,7 +139,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                 CN.ACNosotrosQuienesSomos(Datos);                
                 if (Datos.Completado)
                 {                    
-                    Response.Redirect("frmMiembrosEquipoTrabajo.aspx", false);
+                    Response.Redirect("frmNosotrosQuienesSomosGrid.aspx", false);
                 }
                 else
                 {

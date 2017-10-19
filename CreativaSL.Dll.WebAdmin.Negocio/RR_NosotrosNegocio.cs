@@ -83,7 +83,6 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
         }
         #endregion
 
-
         #region Nosotros Nuestro Equipo de Trabajo
 
         /// <summary>
@@ -150,6 +149,7 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
             try
             {
                 RR_NosotrosDatos ND = new RR_NosotrosDatos();
+                ND.ObtenerNosotrosQuienesSomosXID(Datos);
                 
             }
             catch (Exception ex)
@@ -158,6 +158,73 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
             }
         }
 
+        #endregion
+
+        #region Iconos
+
+        public List<RR_Iconos> ObtenerIconos(RR_Iconos Datos)
+        {
+            RR_NosotrosDatos ND = new RR_NosotrosDatos();
+            return ND.ObtenerIconos(Datos);
+        }
+
+        #endregion
+
+        #region Nosotros Elegirnos
+        /// <summary>
+        ///  Realiza la peticion para hacer altas o cambios en la tabla "nosotros elegirnos" 
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ACNosotrosPorqueElegirnos (RR_NosotrosPorqueElegirnos Datos)
+        {
+            RR_NosotrosDatos ND = new RR_NosotrosDatos();
+            ND.ACNosotrosPorqueElegirnos(Datos);
+        }
+
+        /// <summary>
+        /// Realiza la peticion para hacer bajas en la tabla "nosotros elegirnos"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void BNosotrosPorqueElegirnos(RR_NosotrosPorqueElegirnos Datos)
+        {
+            RR_NosotrosDatos ND = new RR_NosotrosDatos();
+            ND.BNosotrosPorqueElegirnos(Datos);
+        }
+
+        /// <summary>
+        /// Realiza la peticion para obtener la lista de los registros en la tabla "nosotros elegirnos"
+        /// </summary>
+        /// <param name="Datos"></param>
+        /// <returns></returns>
+        public List<RR_NosotrosPorqueElegirnos> ObtenerCatalogoNosotrosElegirnos(RR_NosotrosPorqueElegirnos Datos)
+        {
+            RR_NosotrosDatos ND = new RR_NosotrosDatos();
+            return ND.ObtenerCatalogoNosotrosElegirnos(Datos);
+        }
+
+        /// <summary>
+        /// Realiza la peticion para obtener el registro por ID de la tabla "nosotros elegirnos"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ObtenerNosotrosElegirnosXID(RR_NosotrosPorqueElegirnos Datos)
+        {
+            RR_NosotrosDatos ND = new RR_NosotrosDatos();
+            ND.ObtenerNosotrosElegirnosXID(Datos);
+        }
+
+        #endregion
+
+        #region Redes Sociales
+        /// <summary>
+        /// realiza la peticion para obtener las redes sociales
+        /// </summary>
+        /// <param name="Datos"></param>
+        /// <returns></returns>
+        public List<RR_RedesSociales> ObtenerRedesSoc(RR_RedesSociales Datos)
+        {
+            RR_NosotrosDatos ND = new RR_NosotrosDatos();
+            return ND.ObtenerRedesSoc(Datos);
+        }
         #endregion
     }
 }

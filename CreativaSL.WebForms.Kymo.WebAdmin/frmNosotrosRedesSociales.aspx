@@ -30,10 +30,10 @@
                                 </label>
                                 <select id="cmbRedSocial" name="cmbRedSocial" class="form-control search-select">
                                     <option value=""></option>
-                                    <%--<% foreach (var Item in ListaCol)
+                                    <% foreach (var Item in Lista)
                                         {
-                                            Response.Write("<option value='" + Item.IDColaborador + "'> " + Item.Nombre + "</option>");
-                                        }%>--%>
+                                            Response.Write("<option value='" + Item.IdTipoRedSocial + "'> " + Item.Descripcion.ToString() + "</option>");
+                                        }%>
                                 </select>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
 		</div>
 	</div>
 		<script src="assets/plugins/jQuery/jquery-2.1.1.min.js"></script>
-		<script src="assets/js/form-validation2.js"></script>
+		<script src="assets/js/form-validation.js"></script>
 		<script src="assets/js/ui-notifications.js"></script>
 		<script src="assets/plugins/sweetalert/lib/sweet-alert.min.js"></script>
 		<script src="assets/js/main.js"></script>

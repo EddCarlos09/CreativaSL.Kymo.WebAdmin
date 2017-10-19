@@ -118,7 +118,6 @@ namespace CreativaSL.Dll.WebAdmin.Datos
         }
         #endregion
 
-
         #region Nosotros Equipo de Trabajo
         /// <summary>
         /// Altas y cambios en la tabla "Nosotros Cat Equipo Trabajo"
@@ -128,15 +127,21 @@ namespace CreativaSL.Dll.WebAdmin.Datos
         {
             try
             {
-                object[] Parametros = {Datos.NuevoRegistro, Datos.IdImagen, Datos.IDUsuario};
-                Object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "", Parametros);
-                int Resultado = 0;
-                int.TryParse(Result.ToString(), out Resultado);
-                if (Resultado == 1)
+                object[] Parametros = {Datos.NuevoRegistro, Datos.IdImagen, Datos.TextoAlternativo, Datos.TituloImagen, Datos.NumPosition, Datos.UrlImagen,
+                    Datos.NombreImagen, Datos.Extencion, Datos.CambioImagen, Datos.IdPagina, Datos.IdMiembroEquipo, Datos.NombreMostrar,
+                    Datos.Puesto, Datos.PaginaWeb, Datos.IDUsuario};
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_AC_NosotrosNuestroEquipo", Parametros);
+                while (Dr.Read())
                 {
-                    Datos.Completado = true;
+                    int Resultado = Dr.GetInt32(Dr.GetOrdinal("Resultado"));
+                    if (Resultado == 1)
+                    {
+                        Datos.Completado = true;
+                        Datos.UrlImagen = Dr.GetString(Dr.GetOrdinal("ImagenGuardada"));
+                    }
+                    Datos.Resultado = Resultado;
+                    break;
                 }
-                Datos.Resultado = Resultado;
             }
             catch (Exception ex)
             {
@@ -184,7 +189,7 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 {
                     Item = new RR_NosotrosEquipoTrabajo();
                     Item.IdMiembroEquipo = Dr.GetString(Dr.GetOrdinal(("id_miembroEquipo")));
-                    Item.NombreMostrar = Dr.GetString(Dr.GetOrdinal("nombreMostar"));
+                    Item.NombreMostrar = Dr.GetString(Dr.GetOrdinal("nombreMostrar"));
                     Lista.Add(Item);
                 }
                 return Lista;
@@ -204,12 +209,13 @@ namespace CreativaSL.Dll.WebAdmin.Datos
             try
             {
                 object[] Parametros = { Datos.IdMiembroEquipo };
-                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "", Parametros);
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_NosotrosEquipoTrabajoDetalle", Parametros);
                 while (Dr.Read())
                 {
                     Datos.IdMiembroEquipo = Dr.GetString(Dr.GetOrdinal("id_miembroEquipo"));
                     Datos.NombreMostrar = Dr.GetString(Dr.GetOrdinal("nombreMostrar"));
                     Datos.Puesto = Dr.GetString(Dr.GetOrdinal("puesto"));
+                    Datos.IdImagen = Dr.GetString(Dr.GetOrdinal("id_imagen"));
                     Datos.UrlImagen = Dr.GetString(Dr.GetOrdinal("urlImagen"));
                     Datos.TextoAlternativo = Dr.GetString(Dr.GetOrdinal("textoAlternativo"));
                     Datos.TituloImagen = Dr.GetString(Dr.GetOrdinal("tituloImagen"));
@@ -222,6 +228,182 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 throw ex;
             }
         }
+        #endregion
+
+        #region Iconos Css
+        /// <summary>
+        /// Obtiene la lista de los iconos 
+        /// </summary>
+        /// <param name="Datos"></param>
+        /// <returns></returns>
+        public List<RR_Iconos> ObtenerIconos(RR_Iconos Datos)
+        {
+            try
+            {
+                List<RR_Iconos> Lista = new List<RR_Iconos>();
+                RR_Iconos Item;
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_CatIconCSS");
+                while (Dr.Read())
+                {
+                    Item = new RR_Iconos();
+                    Item.IdClassIcono = Dr.GetString(Dr.GetOrdinal(("id_classIcono")));
+                    Item.CssClass = Dr.GetString(Dr.GetOrdinal("cssClass"));
+                    Lista.Add(Item);
+                }
+                return Lista;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region Nosotros Porque elegirnos
+
+        /// <summary>
+        /// Altas y cambios en la tabla  "notros elegirnos"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ACNosotrosPorqueElegirnos(RR_NosotrosPorqueElegirnos Datos)
+        {
+            try
+            {
+                object[] Parametros = { Datos.NuevoRegistro, Datos.IdSeccion, Datos.Titulo, Datos.Texto, Datos.IdClaseIcono, Datos.IDUsuario };
+                object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "RR_spCSLDB_AC_NosotrosElegirnos", Parametros);
+                int Resultado = 0;
+                int.TryParse(Result.ToString(), out Resultado);
+                if(Resultado == 1)
+                {
+                    Datos.Completado = true;
+                }
+                Datos.Resultado = Resultado;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// bajas en la tabla "nosotros elegirnos"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void BNosotrosPorqueElegirnos(RR_NosotrosPorqueElegirnos Datos)
+        {
+            try
+            {
+                object[] Parametros = { Datos.IdSeccion, Datos.IDUsuario };
+                object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "RR_spCSLDB_B_NosotrosElegirnos", Parametros);
+                int Resultado = 0;
+                int.TryParse(Result.ToString(), out Resultado);
+                if (Resultado == 1)
+                {
+                    Datos.Completado = true;
+                }
+                Datos.Resultado = Resultado;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// obtiene la lista de los registros en la tabla "nosotros elegirnos"
+        /// </summary>
+        /// <param name="Datos"></param>
+        /// <returns></returns>
+        public List<RR_NosotrosPorqueElegirnos> ObtenerCatalogoNosotrosElegirnos(RR_NosotrosPorqueElegirnos Datos)
+        {
+            try
+            {
+                List<RR_NosotrosPorqueElegirnos> Lista = new List<RR_NosotrosPorqueElegirnos>();
+                RR_NosotrosPorqueElegirnos Item;
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_NosotrosElegirnos");
+                while (Dr.Read())
+                {
+                    Item = new RR_NosotrosPorqueElegirnos();
+                    Item.IdSeccion = Dr.GetString(Dr.GetOrdinal("id_seccion"));
+                    Item.Titulo = Dr.GetString(Dr.GetOrdinal("titulo"));
+                    Lista.Add(Item);
+                }
+                return Lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// obtiene el registro especifico por id de la tabla "nosotros elegirnos"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ObtenerNosotrosElegirnosXID(RR_NosotrosPorqueElegirnos Datos)
+        {
+            try
+            {
+                object[] Parametros = { Datos.IdSeccion };
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_NosotrosElegirnosDetalle", Parametros);
+                while (Dr.Read())
+                {
+                    Datos.IdSeccion = Dr.GetString(Dr.GetOrdinal("id_seccion"));
+                    Datos.Titulo = Dr.GetString(Dr.GetOrdinal("titulo"));
+                    Datos.Texto = Dr.GetString(Dr.GetOrdinal("texto"));
+                    Datos.IdClaseIcono = Dr.GetString(Dr.GetOrdinal("id_claseIcono"));
+                    Datos.Completado = true;
+                    break;
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
+
+        #region Redes sociales
+        /// <summary>
+        /// Obtiene las redes sociales disponibles para agregar
+        /// </summary>
+        /// <param name="Datos"></param>
+        /// <returns></returns>
+        public List<RR_RedesSociales> ObtenerRedesSoc(RR_RedesSociales Datos)
+        {
+            try
+            {
+                List<RR_RedesSociales> Lista = new List<RR_RedesSociales>();
+                RR_RedesSociales Item;
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_CatRedesSociales");
+                while (Dr.Read())
+                {
+                    Item = new RR_RedesSociales();
+                    Item.IdTipoRedSocial = Dr.GetInt32(Dr.GetOrdinal(("id_tipoRedSocial")));
+                    Item.Descripcion = Dr.GetString(Dr.GetOrdinal("descripcion"));
+                    Lista.Add(Item);
+                }
+                return Lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
+
+        #region Nuestro Equipo Trabajo Redes Sociales
+
+        //RR_spCSLDB_AC_NosotrosRedesSociales
+
+        //RR_spCSLDB_B_NosotrosRedesSociales
+
+        //RR_spCSLDB_get_NosostrosRedesSocialesDetalle
+
+        //RR_spCSLDB_get_NosostrosRedesSociales
+
 
         #endregion
     }
