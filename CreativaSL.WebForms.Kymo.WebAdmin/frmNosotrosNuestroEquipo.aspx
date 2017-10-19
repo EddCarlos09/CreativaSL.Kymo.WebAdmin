@@ -11,6 +11,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <asp:HiddenField ID="hf" runat="server" />
+                        <asp:HiddenField ID="hfImg" runat="server" />
                     </div>
                     <div class="row">
                         <div class="col-md-12">

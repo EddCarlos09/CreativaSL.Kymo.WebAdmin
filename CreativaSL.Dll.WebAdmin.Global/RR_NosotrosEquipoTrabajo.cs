@@ -49,6 +49,16 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _PaginaWeb = value; }
         }
 
+        /// <summary>
+        /// identificador del tipo de pagina que es
+        /// </summary>
+        private int _IdPagina;
+        public int IdPagina
+        {
+            get { return _IdPagina; }
+            set { _IdPagina = value; }
+        }
+
         #region Datos para las imagenes
         private string _IdImagen;
         /// <summary>
@@ -110,7 +120,6 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _CambioImagen = value; }
         }
 
-
         private string _UrlImagen;
         /// <summary>
         /// Url de la imagen subida
@@ -120,6 +129,17 @@ namespace CreativaSL.Dll.WebAdmin.Global
             get { return _UrlImagen; }
             set { _UrlImagen = value; }
         }
+
+        /// <summary>
+        /// Numero de posicion de la imagen en la pagina
+        /// </summary>
+        private int _NumPosition;
+        public int NumPosition
+        {
+            get { return _NumPosition; }
+            set { _NumPosition = value; }
+        }
+        
         #endregion
         #region DatosDeControl
         private string _Conexion;

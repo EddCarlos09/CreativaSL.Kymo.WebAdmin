@@ -10,6 +10,6 @@
 namespace CreativaSL.WebForms.Kymo.WebAdmin {
     
     
-    public partial class frmNosotrosRedesSocialesGrid {
+    public partial class frmRedesSocialesGrid {
     }
 }

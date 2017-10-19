@@ -66,6 +66,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\material-design-iconic-font.min.css" />
     <Content Include="assets\css\plugins.css" />
     <Content Include="assets\css\print.css" />
     <Content Include="assets\css\styles-responsive.css" />
@@ -80,6 +81,7 @@
     <Content Include="assets\css\themes\theme-style7.css" />
     <Content Include="assets\css\themes\theme-style8.css" />
     <Content Include="assets\css\themes\theme-style9.css" />
+    <Content Include="assets\fonts\Material-Design-Iconic-Font.svg" />
     <Content Include="assets\images\anonymous.jpg" />
     <Content Include="assets\images\avatar-1-big.jpg" />
     <Content Include="assets\images\avatar-1-small.jpg" />
@@ -4043,6 +4045,10 @@
     <Content Include="assets\sass\vendor\_tags-input.scss" />
     <Content Include="assets\sass\vendor\_time-picker.scss" />
     <Content Include="assets\plugins\bootbox\build\calculate-size" />
+    <Content Include="assets\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="assets\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="assets\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="assets\fonts\Material-Design-Iconic-Font.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4186,6 +4192,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="bin\" />
     <Folder Include="Imagenes\Contacto\" />
+    <Folder Include="Imagenes\NosotrosEquipoTrabajo\" />
+    <Folder Include="Imagenes\NosotrosQuienesSomos\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>

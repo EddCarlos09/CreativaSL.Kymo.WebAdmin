@@ -66,7 +66,7 @@
 												</div>
 												<div class="modal-footer">                     
 													<button data-dismiss="modal" class="btn btn-red" type="button">No</button>
-													<% Response.Write("<a  href='frmNosotrosQuienesSomos.aspx?op=3&id=" + Item.IdSeccion.ToString() + "' class='btn btn-green add-row' runat='server'>Si</a>");%>
+													<% Response.Write("<a  href='frmNosotrosQuienesSomosGrid.aspx?op=3&id=" + Item.IdSeccion.ToString() + "' class='btn btn-green add-row' runat='server'>Si</a>");%>
 												</div>
 											</div>
 										</div>
