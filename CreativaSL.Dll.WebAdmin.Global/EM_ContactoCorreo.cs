@@ -85,7 +85,13 @@ namespace CreativaSL.Dll.WebAdmin.Global
             get { return _Leido; }
             set { _Leido = value; }
         }
+        private string _CorroDestino;
 
+        public string CorreoDestino
+        {
+            get { return _CorroDestino; }
+            set { _CorroDestino = value; }
+        }
 
         #region DatosDeControl
         private string _Conexion;

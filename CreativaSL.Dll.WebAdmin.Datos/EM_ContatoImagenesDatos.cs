@@ -12,6 +12,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
 {
     public class EM_ContatoImagenesDatos
     {
+        /// <summary>
+        /// Metodo que se encarga de dar de alta y modificacion de imagene
+        /// </summary>
+        /// <param name="Datos">Se envia la cadena de conexion y los parametro que recibe</param>
         public void AC_ImagenContacto(EM_ContactoImagen Datos)
         {
             try
@@ -36,7 +40,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// Es el metodo que se encarga de obtener los datos del registro
+        /// </summary>
+        /// <param name="Datos">Se envia la cadena de conexion y los parametro que recibe</param>
         public void ObtenerImagenContacto(EM_ContactoImagen Datos)
         {
             try

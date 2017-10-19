@@ -163,12 +163,12 @@
                                         </a>
  									</li>
                                      <li>
-										<a href="#">
+										<a href="frmContactoRedesSocialesGrid.aspx">
 											<span class="title">REDES SOCIALES</span>
                                         </a>
  									</li>
                                     <li>
-										<a href="#">
+										<a href="frmContactoSendMail.aspx">
 											<span class="title">CORREO CONTACTO</span>
                                         </a>
  									</li>

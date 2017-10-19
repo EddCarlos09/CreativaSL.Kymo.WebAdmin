@@ -10,6 +10,10 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
 {
     public class EM_ContactoImagenesNegocio
     {
+        /// <summary>
+        /// Es el metodo conector a la capa de datos EM_ContatoImagenesDatos
+        /// </summary>
+        /// <param name="Datos">Se envia la cadena de conexion y los parametro que recibe</param>
         public void AC_ContactoImagenes(EM_ContactoImagen Datos)
         {
             try
@@ -22,6 +26,10 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
                 throw ex;
             }
         }
+        /// <summary>
+        /// Es el metodo conector a la capa de datos EM_ContatoImagenesDatos
+        /// </summary>
+        /// <param name="Datos">Se envia la cadena de conexion y los parametro que recibe</param>
         public void ObtenerContactoImagenes(EM_ContactoImagen Datos)
         {
             try

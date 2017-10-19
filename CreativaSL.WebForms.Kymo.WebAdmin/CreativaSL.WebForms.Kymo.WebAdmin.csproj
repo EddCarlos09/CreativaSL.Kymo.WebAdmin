@@ -3163,6 +3163,9 @@
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.js" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.min.js" />
     <Content Include="frmContactoDatosG.aspx" />
+    <Content Include="frmContactoRedesSociales.aspx" />
+    <Content Include="frmContactoRedesSocialesGrid.aspx" />
+    <Content Include="frmContactoSendMail.aspx" />
     <Content Include="frmDatosContactos.aspx" />
     <Content Include="frmNosotrosDatosGenerales.aspx" />
     <Content Include="frmNosotrosDatosGeneralesGrid.aspx" />
@@ -4061,6 +4064,27 @@
     </Compile>
     <Compile Include="frmContactoDatosG.aspx.designer.cs">
       <DependentUpon>frmContactoDatosG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmContactoRedesSociales.aspx.cs">
+      <DependentUpon>frmContactoRedesSociales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmContactoRedesSociales.aspx.designer.cs">
+      <DependentUpon>frmContactoRedesSociales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmContactoRedesSocialesGrid.aspx.cs">
+      <DependentUpon>frmContactoRedesSocialesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmContactoRedesSocialesGrid.aspx.designer.cs">
+      <DependentUpon>frmContactoRedesSocialesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmContactoSendMail.aspx.cs">
+      <DependentUpon>frmContactoSendMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmContactoSendMail.aspx.designer.cs">
+      <DependentUpon>frmContactoSendMail.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmDatosContactos.aspx.cs">
       <DependentUpon>frmDatosContactos.aspx</DependentUpon>

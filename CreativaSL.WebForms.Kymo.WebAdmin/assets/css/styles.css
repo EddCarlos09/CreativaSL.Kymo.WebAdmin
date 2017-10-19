@@ -51,6 +51,10 @@
 /*  Basic Elements & Classes
 /* ---------------------------------------------------------------------- */
 /* line 4, ../sass/partials/_base.scss */
+.Multiselector {
+  overflow-y: scroll;
+}
+
 html, body {
   width: 100%;
   overflow-x: hidden;
@@ -2553,7 +2557,6 @@ select.form-control option {
   padding: 0 !important;
   box-shadow: none;
   border: none;
-  overflow-y: scroll;
 }
 
 /* line 137, ../sass/partials/_form-elements.scss */
