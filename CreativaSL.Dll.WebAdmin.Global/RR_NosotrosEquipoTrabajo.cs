@@ -49,15 +49,78 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _PaginaWeb = value; }
         }
 
+        #region Datos para las imagenes
         private string _IdImagen;
         /// <summary>
-        /// Identificador para la ima
+        /// identificador de la imagen agregada
         /// </summary>
         public string IdImagen
         {
             get { return _IdImagen; }
             set { _IdImagen = value; }
-        }        
+        }
+
+        private string _TextoAlternativo;
+        /// <summary>
+        /// texto alternativo de la imagen
+        /// </summary>
+        public string TextoAlternativo
+        {
+            get { return _TextoAlternativo; }
+            set { _TextoAlternativo = value; }
+        }
+
+        private string _TituloImagen;
+        /// <summary>
+        /// Titulo de la imagen
+        /// </summary>
+        public string TituloImagen
+        {
+            get { return _TituloImagen; }
+            set { _TituloImagen = value; }
+        }
+
+        private string _NombreImagen;
+        /// <summary>
+        /// Nombre de la imagen
+        /// </summary>
+        public string NombreImagen
+        {
+            get { return _NombreImagen; }
+            set { _NombreImagen = value; }
+        }
+
+        private string _Extencion;
+        /// <summary>
+        /// tipo de archivo que es la imagen
+        /// </summary>
+        public string Extencion
+        {
+            get { return _Extencion; }
+            set { _Extencion = value; }
+        }
+
+        private bool _CambioImagen;
+        /// <summary>
+        /// Cambio de imagen
+        /// </summary>
+        public bool CambioImagen
+        {
+            get { return _CambioImagen; }
+            set { _CambioImagen = value; }
+        }
+
+
+        private string _UrlImagen;
+        /// <summary>
+        /// Url de la imagen subida
+        /// </summary>
+        public string UrlImagen
+        {
+            get { return _UrlImagen; }
+            set { _UrlImagen = value; }
+        }
+        #endregion
         #region DatosDeControl
         private string _Conexion;
         /// <summary>

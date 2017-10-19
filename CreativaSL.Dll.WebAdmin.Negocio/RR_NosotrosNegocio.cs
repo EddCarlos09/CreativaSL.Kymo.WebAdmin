@@ -82,5 +82,82 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
             }
         }
         #endregion
+
+
+        #region Nosotros Nuestro Equipo de Trabajo
+
+        /// <summary>
+        /// Realiza la peticion para hacer las altas o cambios en la tabla "Nosotros Cat Equipo Trabajo"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ACNosotrosEquipoTrabajo(RR_NosotrosEquipoTrabajo Datos)
+        {
+            try
+            {
+                RR_NosotrosDatos ND = new RR_NosotrosDatos();
+                ND.ACNosotrosEquipoTrabajo(Datos);
+                                
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+        }
+
+        /// <summary>
+        /// Realiza la peticion para hacer bajas en la tabla "Nosotros Cat Equipo Trabajo"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void EliminarNosotrosEquipoTrabajo(RR_NosotrosEquipoTrabajo Datos)
+        {
+            try
+            {
+                RR_NosotrosDatos ND = new RR_NosotrosDatos();
+                ND.EliminarNosotrosEquipoTrabajo(Datos);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        /// <summary>
+        /// Realiza la peticion para obtener los registros de la tabla "Nosotros Cat Equipo Trabajo"
+        /// </summary>
+        /// <param name="Datos"></param>
+        /// <returns></returns>
+        public List<RR_NosotrosEquipoTrabajo> ObtenerCatalogoNosotrosEquipoTrabajo(RR_NosotrosEquipoTrabajo Datos)
+        {
+            try
+            {
+                RR_NosotrosDatos ND = new RR_NosotrosDatos();
+                return ND.ObtenerCatalogoNosotrosEquipoTrabajo(Datos);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Realiza la peticion para obtener el registro especifico por ID de la tabla "Nosotros Cat Equipo Trabajo"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ObtenerNosotrosQuienesSomosXID(RR_NosotrosEquipoTrabajo Datos)
+        {
+            try
+            {
+                RR_NosotrosDatos ND = new RR_NosotrosDatos();
+                
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
     }
 }

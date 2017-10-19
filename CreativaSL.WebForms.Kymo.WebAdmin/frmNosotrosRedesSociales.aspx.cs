@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace CreativaSL.WebForms.Kymo.WebAdmin
 {
-    public partial class frmRedesSocialesGrid : System.Web.UI.Page
+    public partial class frmNosotrosRedesSociales : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

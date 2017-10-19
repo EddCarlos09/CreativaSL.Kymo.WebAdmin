@@ -10,7 +10,7 @@
 namespace CreativaSL.WebForms.Kymo.WebAdmin {
     
     
-    public partial class frmRedesSociales {
+    public partial class frmNosotrosRedesSociales {
         
         /// <summary>
         /// Control hf.

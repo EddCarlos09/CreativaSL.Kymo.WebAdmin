@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="frmNosotrosQuienesSomos.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmNosotrosQuienesSomos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" ValidateRequest="false" CodeBehind="frmNosotrosQuienesSomos.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmNosotrosQuienesSomos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_MasterBody" runat="server">
 	<div class="row">
 		<div class="col-md-12">
@@ -11,6 +11,7 @@
 				<div class="panel-body">
 					<div class="row">
 						<asp:HiddenField ID="hf" runat="server" />
+                        <asp:HiddenField ID="hfImg" runat="server" />
 					</div>
 					<div class="row">
 						<div class="col-md-12">
@@ -96,10 +97,10 @@
 							<div class="col-md-6">
 								<div class="form-group">
 									<div class="col-md-6">
-										<input type="submit" formaction="frmNosotrosPorqueElegirnos.aspx" class="btn btn-green btn-block" name="btnGuardar" value="Guardar" />
+										<input type="submit" formaction="frmNosotrosQuienesSomos.aspx" class="btn btn-green btn-block" name="btnGuardar" value="Guardar" />
 									</div>
 									<div class="col-md-6">
-										<a href="frmNosotrosPorqueElegirnosGrid.aspx" class="btn btn-red btn-block" name="btnCancelar">Cancelar</a>
+										<a href="frmNosotrosQuienesSomosGrid.aspx" class="btn btn-red btn-block" name="btnCancelar">Cancelar</a>
 									</div>
 								</div>
 							</div>

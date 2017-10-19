@@ -3172,8 +3172,8 @@
     <Content Include="frmNosotrosPorqueElegirnosGrid.aspx" />
     <Content Include="frmNosotrosQuienesSomos.aspx" />
     <Content Include="frmNosotrosQuienesSomosGrid.aspx" />
-    <Content Include="frmRedesSociales.aspx" />
-    <Content Include="frmRedesSocialesGrid.aspx" />
+    <Content Include="frmNosotrosRedesSociales.aspx" />
+    <Content Include="frmNosotrosRedesSocialesGrid.aspx" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="assets\images\Thumbs.db" />
@@ -4132,19 +4132,19 @@
     <Compile Include="frmNosotrosQuienesSomosGrid.aspx.designer.cs">
       <DependentUpon>frmNosotrosQuienesSomosGrid.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmRedesSociales.aspx.cs">
-      <DependentUpon>frmRedesSociales.aspx</DependentUpon>
+    <Compile Include="frmNosotrosRedesSociales.aspx.cs">
+      <DependentUpon>frmNosotrosRedesSociales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmRedesSociales.aspx.designer.cs">
-      <DependentUpon>frmRedesSociales.aspx</DependentUpon>
+    <Compile Include="frmNosotrosRedesSociales.aspx.designer.cs">
+      <DependentUpon>frmNosotrosRedesSociales.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmRedesSocialesGrid.aspx.cs">
-      <DependentUpon>frmRedesSocialesGrid.aspx</DependentUpon>
+    <Compile Include="frmNosotrosRedesSocialesGrid.aspx.cs">
+      <DependentUpon>frmNosotrosRedesSocialesGrid.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmRedesSocialesGrid.aspx.designer.cs">
-      <DependentUpon>frmRedesSocialesGrid.aspx</DependentUpon>
+    <Compile Include="frmNosotrosRedesSocialesGrid.aspx.designer.cs">
+      <DependentUpon>frmNosotrosRedesSocialesGrid.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

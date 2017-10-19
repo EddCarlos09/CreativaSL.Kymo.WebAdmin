@@ -21,8 +21,8 @@ namespace CreativaSL.Dll.WebAdmin.Datos
         {
             try
             {
-                object[] Parametros = {Datos.NuevoRegistro, Datos.IdImagen, Datos.TextoAlternativo, Datos.TituloImagen, Datos.NombreImagen, Datos.UrlImagen,
-                Datos.NumPosition, Datos.IdPagina, Datos.IdSeccion, Datos.Titulo, Datos.TextoHtml, Datos.IDUsuario};
+                object[] Parametros = {Datos.NuevoRegistro, Datos.IdImagen, Datos.TextoAlternativo, Datos.TituloImagen, Datos.NumPosition, Datos.UrlImagen, Datos.NombreImagen,
+                Datos.Extencion, Datos.CambioImagen, Datos.IdPagina, Datos.IdSeccion, Datos.Titulo, Datos.TextoHtml, Datos.IDUsuario};
                 Object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "RR_spCSLDB_AC_NosotrosQuienesSomos", Parametros);
                 int Resultado = 0;
                 int.TryParse(Result.ToString(), out Resultado);
@@ -116,6 +116,113 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 throw ex;
             }
         }
+        #endregion
+
+
+        #region Nosotros Equipo de Trabajo
+        /// <summary>
+        /// Altas y cambios en la tabla "Nosotros Cat Equipo Trabajo"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ACNosotrosEquipoTrabajo(RR_NosotrosEquipoTrabajo Datos)
+        {
+            try
+            {
+                object[] Parametros = {Datos.NuevoRegistro, Datos.IdImagen, Datos.IDUsuario};
+                Object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "", Parametros);
+                int Resultado = 0;
+                int.TryParse(Result.ToString(), out Resultado);
+                if (Resultado == 1)
+                {
+                    Datos.Completado = true;
+                }
+                Datos.Resultado = Resultado;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Bajas en la tabla "Nosotros Cat Equipo Trabajo"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void EliminarNosotrosEquipoTrabajo(RR_NosotrosEquipoTrabajo Datos)
+        {
+            try
+            {
+                object[] Parametros = { Datos.IdMiembroEquipo, Datos.IDUsuario };
+                object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "RR_spCSLDB_B_NosotrosNuestroEquipo", Parametros);
+                int Resultado = 0;
+                int.TryParse(Result.ToString(), out Resultado);
+                if (Resultado == 1)
+                {
+                    Datos.Completado = true;
+                }
+                Datos.Resultado = Resultado;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Obtiene la lista de todos los textos de la tabla "Nosotros Cat Equipo Trabajo"
+        /// </summary>
+        /// <param name="Datos"></param>
+        /// <returns></returns>
+        public List<RR_NosotrosEquipoTrabajo> ObtenerCatalogoNosotrosEquipoTrabajo(RR_NosotrosEquipoTrabajo Datos)
+        {
+            try
+            {
+                List<RR_NosotrosEquipoTrabajo> Lista = new List<RR_NosotrosEquipoTrabajo>();
+                RR_NosotrosEquipoTrabajo Item;
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_NosotrosEquipoTrabajo");
+                while (Dr.Read())
+                {
+                    Item = new RR_NosotrosEquipoTrabajo();
+                    Item.IdMiembroEquipo = Dr.GetString(Dr.GetOrdinal(("id_miembroEquipo")));
+                    Item.NombreMostrar = Dr.GetString(Dr.GetOrdinal("nombreMostar"));
+                    Lista.Add(Item);
+                }
+                return Lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Obtiene el detalle de el registro solicitado por el ID de la tabla "Nosotros Cat Equipo Trabajo"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ObtenerNosotrosQuienesSomosXID(RR_NosotrosEquipoTrabajo Datos)
+        {
+            try
+            {
+                object[] Parametros = { Datos.IdMiembroEquipo };
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "", Parametros);
+                while (Dr.Read())
+                {
+                    Datos.IdMiembroEquipo = Dr.GetString(Dr.GetOrdinal("id_miembroEquipo"));
+                    Datos.NombreMostrar = Dr.GetString(Dr.GetOrdinal("nombreMostrar"));
+                    Datos.Puesto = Dr.GetString(Dr.GetOrdinal("puesto"));
+                    Datos.UrlImagen = Dr.GetString(Dr.GetOrdinal("urlImagen"));
+                    Datos.TextoAlternativo = Dr.GetString(Dr.GetOrdinal("textoAlternativo"));
+                    Datos.TituloImagen = Dr.GetString(Dr.GetOrdinal("tituloImagen"));
+                    Datos.Completado = true;
+                    break;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         #endregion
     }
 }

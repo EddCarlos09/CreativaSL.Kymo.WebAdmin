@@ -37,8 +37,30 @@ namespace CreativaSL.Dll.WebAdmin.Global
         {
             get { return _TextoHtml; }
             set { _TextoHtml = value; }
+        }      
+
+        private int _NumPosition;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int NumPosition
+        {
+            get { return _NumPosition; }
+            set { _NumPosition = value; }
         }
 
+        private int _IdPagina;
+        /// <summary>
+        /// Identificador de la pagina en la que se subió la imagen
+        /// </summary>
+        public int IdPagina
+        {
+            get { return _IdPagina; }
+            set { _IdPagina = value; }
+        }
+
+
+        #region Datos para las imagenes
         private string _IdImagen;
         /// <summary>
         /// identificador de la imagen agregada
@@ -79,6 +101,27 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _NombreImagen = value; }
         }
 
+        private string _Extencion;
+        /// <summary>
+        /// tipo de archivo que es la imagen
+        /// </summary>
+        public string Extencion
+        {
+            get { return _Extencion; }
+            set { _Extencion = value; }
+        }
+
+        private bool _CambioImagen;
+        /// <summary>
+        /// Cambio de imagen
+        /// </summary>
+        public bool CambioImagen
+        {
+            get { return _CambioImagen; }
+            set { _CambioImagen = value; }
+        }
+
+
         private string _UrlImagen;
         /// <summary>
         /// Url de la imagen subida
@@ -88,26 +131,7 @@ namespace CreativaSL.Dll.WebAdmin.Global
             get { return _UrlImagen; }
             set { _UrlImagen = value; }
         }
-
-        private int _NumPosition;
-        /// <summary>
-        /// 
-        /// </summary>
-        public int NumPosition
-        {
-            get { return _NumPosition; }
-            set { _NumPosition = value; }
-        }
-
-        private int _IdPagina;
-        /// <summary>
-        /// Identificador de la pagina en la que se subió la imagen
-        /// </summary>
-        public int IdPagina
-        {
-            get { return _IdPagina; }
-            set { _IdPagina = value; }
-        }
+        #endregion
 
         #region DatosDeControl
         private string _Conexion;

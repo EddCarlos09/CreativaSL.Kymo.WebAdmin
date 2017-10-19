@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frmRedesSociales.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmRedesSociales" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frmNosotrosRedesSociales.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmNosotrosRedesSociales" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_MasterBody" runat="server">
 	 <div class="row">
 		<div class="col-md-12">
