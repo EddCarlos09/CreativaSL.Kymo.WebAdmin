@@ -62,11 +62,12 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                 txtCorreoDestino.Value = DatosAux.CorreoDestinatario;
                 txtHost.Value = DatosAux.HostText;
                 txtPuerto.Value = DatosAux.Puerto.ToString();
-                string ScriptError = @"
+                string ScriptError =@"
                     $(document).ready(
-                        function() {                        
-                        document.getElementById('ckfb').value  =" + DatosAux.EnableSSL + @";
-                    });";
+                        function() {
+                        $('#ckEnableSsl').prop('checked', " + DatosAux.EnableSSL.ToString().ToLower() + @");
+                }); ";
+                    
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "popup", ScriptError, true);
                 Response.Cookies.Clear();
             }

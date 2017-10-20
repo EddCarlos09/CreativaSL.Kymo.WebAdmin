@@ -177,6 +177,22 @@
 								</ul>
 							</li>
                             <li>
+								<a href="javascript:void(0)"><i class="fa fa-thumbs-up"></i> 
+                                <span class="title">HOME</span><i class="icon-arrow"></i> </a>
+								<ul class="sub-menu">
+                                    <li>
+										<a href="frmHomeBannerGrid.aspx">
+											<span class="title">DATOS GENERALES</span>
+										</a>
+									</li>
+									 <li>
+										<a href="#">
+											<span class="title">TEXTO PAGINA</span>
+                                        </a>
+ 									</li>
+								</ul>
+							</li>
+                            <li>
 								<a href="#"><i class="fa fa-users"></i> 
                                 <span class="title"> Afiliados </span> </a>
 							

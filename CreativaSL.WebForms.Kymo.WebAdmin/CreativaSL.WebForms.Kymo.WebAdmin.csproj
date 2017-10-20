@@ -3169,6 +3169,8 @@
     <Content Include="frmContactoRedesSocialesGrid.aspx" />
     <Content Include="frmContactoSendMail.aspx" />
     <Content Include="frmDatosContactos.aspx" />
+    <Content Include="frmHomeBanner.aspx" />
+    <Content Include="frmHomeBannerGrid.aspx" />
     <Content Include="frmNosotrosDatosGenerales.aspx" />
     <Content Include="frmNosotrosDatosGeneralesGrid.aspx" />
     <Content Include="frmNosotrosNuestroEquipo.aspx" />
@@ -4106,6 +4108,20 @@
     <Compile Include="frmEjemplo.aspx.designer.cs">
       <DependentUpon>frmEjemplo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmHomeBanner.aspx.cs">
+      <DependentUpon>frmHomeBanner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmHomeBanner.aspx.designer.cs">
+      <DependentUpon>frmHomeBanner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeBannerGrid.aspx.cs">
+      <DependentUpon>frmHomeBannerGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmHomeBannerGrid.aspx.designer.cs">
+      <DependentUpon>frmHomeBannerGrid.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmNosotrosDatosGenerales.aspx.cs">
       <DependentUpon>frmNosotrosDatosGenerales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4192,6 +4208,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="bin\" />
     <Folder Include="Imagenes\Contacto\" />
+    <Folder Include="Imagenes\HomeBanner\" />
     <Folder Include="Imagenes\NosotrosEquipoTrabajo\" />
     <Folder Include="Imagenes\NosotrosQuienesSomos\" />
     <Folder Include="Models\" />

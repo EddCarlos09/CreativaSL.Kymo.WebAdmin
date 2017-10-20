@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Comun.cs" />
+    <Compile Include="EM_HomeBanner.cs" />
     <Compile Include="EM_ContactoCorreo.cs" />
     <Compile Include="EM_ContactoGeneral.cs" />
     <Compile Include="EM_ContactoImagen.cs" />
