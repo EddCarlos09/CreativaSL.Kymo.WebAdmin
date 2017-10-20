@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="frmRedesSocialesGrid.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmRedesSocialesGrid" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="frmNosotrosRedesSocialesGrid.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmNosotrosRedesSocialesGrid" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_MasterBody" runat="server">
     <div class="row">
         <div class="col-md-12">
@@ -10,9 +10,8 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12 space20">
-                            <a href="frmRedesSociales.aspx" class="btn btn-green">Nuevo
-								<i class="fa fa-plus"></i>
-                            </a>
+                            <%Response.Write("<a href='frmNosotrosRedesSociales.aspx?op=1&id=" + ID.ToString() + "' class='btn btn-green'> Nueva Pregunta <i class='fa fa-plus'> </i> </a>"); %>                            
+								<i class="fa fa-plus"></i>                            
                         </div>
                     </div>
                     <div class="table-responsive">
@@ -24,15 +23,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <%--<% foreach (var Item in Lista)
-									{ %>--%>
+                                <% foreach (var Item in Lista)
+									{ %>
                                 <tr>
-                                    <%--<td><%=Item.Fecha %></td>
-									<td><%=Item.Titulo %></td>--%>
+                                    <td><%=Item.NombreMostrar %></td>									
                                     <td>
                                         <div class="visible-md visible-lg hidden-sm hidden-xs">
-                                            <%--<%Response.Write("<a href='frmRedesSociales.aspx?op=2&id=" + Item.IDPublicacion.ToString() + "' class='btn btn-xs btn-blue tooltips' data-placement='top' data-original-title='Editar'> <i class='fa fa-edit'> </i> </a>"); %>
-											<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IDPublicacion.ToString() + "' data-toggle='modal'  class='btn btn-xs btn-red tooltips' data-placement='top' data-original-title='Eliminar'> <i class='fa fa-times fa fa-white'> </i> </a>");%>--%>                                            
+                                            <%Response.Write("<a href='frmNosotrosRedesSociales.aspx?op=2&id=" + Item.IdMiembroxRedSocial.ToString() + "' class='btn btn-xs btn-blue tooltips' data-placement='top' data-original-title='Editar'> <i class='fa fa-edit'> </i> </a>"); %>
+											<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IdMiembroxRedSocial.ToString() + "' data-toggle='modal'  class='btn btn-xs btn-red tooltips' data-placement='top' data-original-title='Eliminar'> <i class='fa fa-times fa fa-white'> </i> </a>");%>                                            
                                         </div>
 
                                         <div class="visible-xs visible-sm hidden-md hidden-lg">
@@ -42,15 +40,15 @@
                                                 </a>
                                                 <ul role="menu" class="dropdown-menu pull-right dropdown-dark">
                                                     <li>
-                                                        <%--<%Response.Write("<a href='frmRedesSociales.aspx?op=2&id=" + Item.IDPublicacion.ToString() + "' role='menuitem' tabindex='-1' class='tooltips' data-placement='top' data-original-title='Editar'><i class='fa fa-edit'></i>Editar</a>"); %>--%>
+                                                        <%Response.Write("<a href='frmNosotrosRedesSocialesGrid.aspx?op=2&id=" + Item.IdMiembroxRedSocial.ToString() + "' role='menuitem' tabindex='-1' class='tooltips' data-placement='top' data-original-title='Editar'><i class='fa fa-edit'></i>Editar</a>"); %>
                                                     </li>
                                                     <li>
-                                                        <%--<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IDPublicacion.ToString() + "' role='menuitem' tabindex='-1' data-toggle='modal'  class='tooltips' data-placement='top' data-original-title='Eliminar'><i class='fa fa-times fa fa-white'></i>Eliminar</a>");%>--%>
+                                                        <%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IdMiembroxRedSocial.ToString() + "' role='menuitem' tabindex='-1' data-toggle='modal'  class='tooltips' data-placement='top' data-original-title='Eliminar'><i class='fa fa-times fa fa-white'></i>Eliminar</a>");%>
                                                     </li>                                                    
                                                 </ul>
                                             </div>
                                         </div>
-                                        <%--<div class="modal fade bs-example-modal-sm<% = Item.IDPublicacion.ToString() %>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">--%>
+                                        <div class="modal fade bs-example-modal-sm<% = Item.IdMiembroxRedSocial.ToString() %>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-sm">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -66,14 +64,14 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button data-dismiss="modal" class="btn btn-red" type="button">No</button>
-                                                    <%--<% Response.Write("<a  href='frmRedesSociales.aspx?op=3&id=" + Item.IDPublicacion.ToString() + "' class='btn btn-green add-row' runat='server'>Si</a>");%>--%>
+                                                    <% Response.Write("<a  href='frmNosotrosRedesSocialesGrid.aspx?op=3&id=" + Item.IdMiembroxRedSocial.ToString() + "' class='btn btn-green add-row' runat='server'>Si</a>");%>                                                    
                                                 </div>
                                             </div>
                                         </div>
                     </div>
                     </td>
 								</tr>
-								<%--<% } %>--%>
+								<% } %>
 							</tbody>
 						</table>
                 </div>

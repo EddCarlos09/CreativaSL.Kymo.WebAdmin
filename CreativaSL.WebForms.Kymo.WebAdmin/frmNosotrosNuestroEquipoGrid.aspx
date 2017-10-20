@@ -33,7 +33,7 @@
 										<div class="visible-md visible-lg hidden-sm hidden-xs">
 											<%Response.Write("<a href='frmNosotrosNuestroEquipo.aspx?op=2&id=" + Item.IdMiembroEquipo.ToString() + "' class='btn btn-xs btn-blue tooltips' data-placement='top' data-original-title='Editar'> <i class='fa fa-edit'> </i> </a>"); %>
 											<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IdMiembroEquipo.ToString() + "' data-toggle='modal'  class='btn btn-xs btn-red tooltips' data-placement='top' data-original-title='Eliminar'> <i class='fa fa-times fa fa-white'> </i> </a>");%>
-                                            <%Response.Write("<a href='frmNosotrosNuestroEquipo.aspx?op=4&id=" + Item.IdMiembroEquipo.ToString() + "' class='btn btn-xs btn-blue tooltips' data-placement='top' data-original-title='Redes Sociales'> <i class='fa fa-facebook-square'> </i></a>"); %>
+                                            <%Response.Write("<a href='frmNosotrosRedesSocialesGrid.aspx?op=5&id=" + Item.IdMiembroEquipo.ToString() + "' class='btn btn-xs btn-blue tooltips' data-placement='top' data-original-title='Redes Sociales'> <i class='fa fa-facebook-square'> </i></a>"); %>
 										</div>
 
 										<div class="visible-xs visible-sm hidden-md hidden-lg">
@@ -49,7 +49,7 @@
 														<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IdMiembroEquipo.ToString() + "' role='menuitem' tabindex='-1' data-toggle='modal'  class='tooltips' data-placement='top' data-original-title='Eliminar'><i class='fa fa-times fa fa-white'></i>Eliminar</a>");%>
 													</li>
                                                     <li>
-														<%Response.Write("<a href='frmRedesSociales.aspx?op=4&id=" + Item.IdMiembroEquipo.ToString() + "' role='menuitem' tabindex='-1' class='tooltips' data-placement='top' data-original-title='Editar'><i class='fa fa-facebook-square'></i>Redes Sociales</a>"); %>
+														<%Response.Write("<a href='frmNosotrosRedesSocialesGrid.aspx?op=5&id=" + Item.IdMiembroEquipo.ToString() + "' role='menuitem' tabindex='-1' class='tooltips' data-placement='top' data-original-title='Editar'><i class='fa fa-facebook-square'></i>Redes Sociales</a>"); %>
 													</li>
 												</ul>
 											</div>

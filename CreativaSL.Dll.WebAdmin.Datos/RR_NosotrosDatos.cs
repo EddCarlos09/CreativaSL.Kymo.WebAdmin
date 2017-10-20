@@ -2,6 +2,7 @@
 using Microsoft.ApplicationBlocks.Data;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -395,16 +396,179 @@ namespace CreativaSL.Dll.WebAdmin.Datos
         #endregion
 
         #region Nuestro Equipo Trabajo Redes Sociales
+        /// <summary>
+        /// Realiza altas y cambios de la tabla "Nosotros redes sociales miembros"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ACNosotrosRedesSociales(RR_RedesSociales Datos)
+        {
+            try
+            {
+                object[] Parametros = { Datos.NuevoRegistro, Datos.IdMiembroxRedSocial, Datos.IdMiembroEquipo, Datos.IdTipoRedSocial, Datos.CuentaRedSocial, Datos.IDUsuario };
+                Object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "RR_spCSLDB_AC_NosotrosRedesSociales", Parametros);
+                int Resultado = 0;
+                int.TryParse(Result.ToString(), out Resultado);
+                if(Resultado == 1)
+                {
+                    Datos.Completado = true;
+                }
+                Datos.Resultado = Resultado;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            
+        }
 
-        //RR_spCSLDB_AC_NosotrosRedesSociales
+        /// <summary>
+        /// Borra la red social del miembro en la tabla "Nosotros redes sociales miembros"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void BNosotrosRedesSociales(RR_RedesSociales Datos)
+        {
+            try
+            {
+                object[] Parametros = { Datos.IdMiembroxRedSocial, Datos.IDUsuario };
+                Object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "RR_spCSLDB_B_NosotrosRedesSociales", Parametros);
+                int Resultado = 0;
+                int.TryParse(Result.ToString(), out Resultado);
+                if (Resultado == 1)
+                {
+                    Datos.Completado = true;
+                }
+                Datos.Resultado = Resultado;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
 
-        //RR_spCSLDB_B_NosotrosRedesSociales
+        /// <summary>
+        /// obtiene todas las redes sociales del miembro de equipo de la tabla "Nosotros redes sociales miembros"
+        /// </summary>
+        /// <param name="Datos"></param>
+        /// <returns></returns>
+        public List<RR_RedesSociales> ObtenerNosotrosRedesSociales(RR_RedesSociales Datos)
+        {
+            try
+            {
+                object[] Parametros = {Datos.IdMiembroxRedSocial };
+                List<RR_RedesSociales> Lista = new List<RR_RedesSociales>();
+                RR_RedesSociales Item;
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_NosostrosRedesSociales", Parametros);
+                while (Dr.Read())
+                {
+                    Item = new RR_RedesSociales();
+                    Item.IdMiembroxRedSocial = Dr.GetString(Dr.GetOrdinal("id_miembroXRedSocial"));
+                    Item.NombreMostrar = Dr.GetString(Dr.GetOrdinal("nombreMostrar"));
+                    Lista.Add(Item);                    
+                }
+                return Lista;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
 
-        //RR_spCSLDB_get_NosostrosRedesSocialesDetalle
-
-        //RR_spCSLDB_get_NosostrosRedesSociales
-
+        /// <summary>
+        /// obtiene el detalle de la red social seleccionada por el id de la tabla "Nosotros redes sociales miembros"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ObtenerNosotrosRedesSocialesDetalle(RR_RedesSociales Datos)
+        {
+            try
+            {
+                object[] Parametros = { Datos.IdMiembroxRedSocial };
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_NosostrosRedesSocialesDetalle", Parametros);
+                while (Dr.Read())
+                {
+                    Datos.IdMiembroxRedSocial = Dr.GetString(Dr.GetOrdinal("id_miembroXRedSocial"));
+                    Datos.IdMiembroEquipo = Dr.GetString(Dr.GetOrdinal("id_miembroEquipo"));
+                    Datos.IdTipoRedSocial = Dr.GetInt32(Dr.GetOrdinal("id_tipoRedSocial"));
+                    Datos.CuentaRedSocial = Dr.GetString(Dr.GetOrdinal("cuentaRedSocial"));
+                    Datos.Completado = true;
+                    break;
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         #endregion
+
+        #region Nosotros Datos Generales
+        public void ACNosotrosDatosGenerales(RR_NosotrosDatosGenerales Datos)
+        {
+            try
+            {
+                object[] Parametros = {Datos.NuevoRegistro, Datos.IdImagen, Datos.TextoAlternativo, Datos.TituloImagen, Datos.NumPosition, Datos.UrlImagen,
+                    Datos.NombreImagen, Datos.Extencion, Datos.CambioImagen, Datos.IdPagina, Datos.IdTexto, Datos.Titulo, Datos.Titulo2, Datos.Titulo3, Datos.IDUsuario};
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_AC_NosotrosDatosGenerales", Parametros);
+                while (Dr.Read())
+                {
+                    int Resultado = Dr.GetInt32(Dr.GetOrdinal("Resultado"));
+                    if (Resultado == 1)
+                    {
+                        Datos.Completado = true;
+                        Datos.UrlImagen = Dr.GetString(Dr.GetOrdinal("ImagenGuardada"));
+                    }
+                    Datos.Resultado = Resultado;
+                    break;
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void EliminarNosotrosDatosGenerales(RR_NosotrosDatosGenerales Datos)
+        {
+            try
+            {
+                object[] Parametros = { Datos.IdTexto, Datos.IDUsuario };
+                object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "RR_spCSLDB_B_NosotrosDatosGenerales", Parametros);
+                int Resultado = 0;
+                int.TryParse(Result.ToString(), out Resultado);
+                if (Resultado == 1)
+                {
+                    Datos.Completado = true;
+                }
+                Datos.Resultado = Resultado;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void ObtenerNosotrosDatosGeneralesXID(RR_NosotrosDatosGenerales Datos)
+        {
+            try
+            {
+                DataSet Ds = SqlHelper.ExecuteDataset(Datos.Conexion, "RR_spCSLDB_get_NosotrosDatosGeneralesDetalle");
+                if (Ds != null)
+                {
+                    if (Ds.Tables.Count == 2)
+                    {
+                        Datos.Completado = true;
+                        Datos.TablaDatos = Ds.Tables[0];
+                        Datos.TableTexto = Ds.Tables[1];
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }            
+        }
+        #endregion
+
     }
 }

@@ -38,7 +38,7 @@
 								<label class="control-label">
 									Texto<span class="symbol required"></span>
 								</label>
-								<textarea name="txtDescripcion" id="txtDescripcion" runat="server" class="ckeditor form-control" cols="10" rows="10" maxlength="1056"></textarea>
+								<textarea name="txtDescripcion" id="txtDescripcion" runat="server" class="ckeditor form-control" cols="10" rows="10" ></textarea>
 							</div>
 						</div>
 					</div>
