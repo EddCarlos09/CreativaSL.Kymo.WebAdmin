@@ -56,7 +56,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                 }
                 else
                 {
-                    //IniciarDatos();
+                    IniciarDatos();
                 }                
             }
             else

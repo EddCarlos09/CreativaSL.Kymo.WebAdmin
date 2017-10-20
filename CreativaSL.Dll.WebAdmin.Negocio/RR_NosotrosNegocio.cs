@@ -11,12 +11,12 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
     public class RR_NosotrosNegocio
     {
         #region Nosotros Quienes Somos
-        
+
         /// <summary>
         /// Realiza la peticion para hacer altas o cambios en la tabla "Nosotros Quienes Somos"
         /// </summary>
         /// <param name="Datos"></param>
-        public void ACNosotrosQuienesSomos (RR_NosotrosQuienesSomos Datos)
+        public void ACNosotrosQuienesSomos(RR_NosotrosQuienesSomos Datos)
         {
             try
             {
@@ -34,7 +34,7 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
         /// Realiza la peticion para hacer bajas en la tabla "Nosotros Quienes Somos"
         /// </summary>
         /// <param name="Datos"></param>
-        public void EliminarNosotrosQuienesSomos (RR_NosotrosQuienesSomos Datos)
+        public void EliminarNosotrosQuienesSomos(RR_NosotrosQuienesSomos Datos)
         {
             try
             {
@@ -62,14 +62,14 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
             catch (Exception ex)
             {
                 throw ex;
-            }            
+            }
         }
 
         /// <summary>
         /// Realiza la peticion para obtener el registro especifico por ID de la tabla "Nosotros Quienes Somos"
         /// </summary>
         /// <param name="Datos"></param>
-        public void ObtenerNosotrosQuienesSomosXID (RR_NosotrosQuienesSomos Datos)
+        public void ObtenerNosotrosQuienesSomosXID(RR_NosotrosQuienesSomos Datos)
         {
             try
             {
@@ -95,7 +95,7 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
             {
                 RR_NosotrosDatos ND = new RR_NosotrosDatos();
                 ND.ACNosotrosEquipoTrabajo(Datos);
-                                
+
             }
             catch (Exception ex)
             {
@@ -150,7 +150,7 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
             {
                 RR_NosotrosDatos ND = new RR_NosotrosDatos();
                 ND.ObtenerNosotrosQuienesSomosXID(Datos);
-                
+
             }
             catch (Exception ex)
             {
@@ -175,7 +175,7 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
         ///  Realiza la peticion para hacer altas o cambios en la tabla "nosotros elegirnos" 
         /// </summary>
         /// <param name="Datos"></param>
-        public void ACNosotrosPorqueElegirnos (RR_NosotrosPorqueElegirnos Datos)
+        public void ACNosotrosPorqueElegirnos(RR_NosotrosPorqueElegirnos Datos)
         {
             RR_NosotrosDatos ND = new RR_NosotrosDatos();
             ND.ACNosotrosPorqueElegirnos(Datos);
@@ -225,6 +225,66 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
             RR_NosotrosDatos ND = new RR_NosotrosDatos();
             return ND.ObtenerRedesSoc(Datos);
         }
+
+        /// <summary>
+        /// Realiza la peticion para hacer altas y cambios en la tabla "Nosotros redes sociales miembros"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ACNosotrosRedesSociales(RR_RedesSociales Datos)
+        {
+            RR_NosotrosDatos ND = new RR_NosotrosDatos();
+            ND.ACNosotrosRedesSociales(Datos);
+        }
+        /// <summary>
+        /// realiza la peticion para hacer las bajas de la tabla "Nosotros redes sociales miembros"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void BNosotrosRedesSociales(RR_RedesSociales Datos)
+        {
+            RR_NosotrosDatos ND = new RR_NosotrosDatos();
+            ND.BNosotrosRedesSociales(Datos);
+        }
+        /// <summary>
+        /// realiza las peticiones para obtener la lista de las redes sociales de la tabla "Nosotros redes sociales miembros"
+        /// </summary>
+        /// <param name="Datos"></param>
+        /// <returns></returns>
+        public List<RR_RedesSociales> ObtenerNosotrosRedesSociales(RR_RedesSociales Datos)
+        {
+            RR_NosotrosDatos ND = new RR_NosotrosDatos();
+            return ND.ObtenerNosotrosRedesSociales(Datos);
+        }
+        /// <summary>
+        /// obtiene el deallte de la red social seleccionada de la tabla "Nosotros redes sociales miembros"
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ObtenerNosotrosRedesSocialesDetalle(RR_RedesSociales Datos)
+        {
+            RR_NosotrosDatos ND = new RR_NosotrosDatos();
+            ND.ObtenerNosotrosRedesSocialesDetalle(Datos);
+        }
+        #endregion
+
+        #region Nosotros Datos Generales
+
+        public void ACNosotrosDatosGenerales(RR_NosotrosDatosGenerales Datos)
+        {
+            RR_NosotrosDatos NN = new RR_NosotrosDatos();
+            NN.ACNosotrosDatosGenerales(Datos);
+        }
+
+        public void EliminarNosotrosDatosGenerales(RR_NosotrosDatosGenerales Datos)
+        {
+            RR_NosotrosDatos NN = new RR_NosotrosDatos();
+            NN.EliminarNosotrosDatosGenerales(Datos);
+        }                
+
+        public void ObtenerNosotrosDatosGeneralesXID (RR_NosotrosDatosGenerales Datos)
+        {
+            RR_NosotrosDatos NN = new RR_NosotrosDatos();
+            NN.ObtenerNosotrosDatosGeneralesXID(Datos);
+        }
+
         #endregion
     }
 }

@@ -9,6 +9,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
 {
     public class RR_RedesSociales
     {
+        /// <summary>
+        /// identificador del tipo de  la red social
+        /// </summary>
         private int _IdTipoRedSocial;
         public int IdTipoRedSocial
         {
@@ -16,6 +19,36 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _IdTipoRedSocial = value; }
         }
 
+        /// <summary>
+        /// identificador de la red social
+        /// </summary>
+        private string _IdMiembroxRedSocial;
+        public string IdMiembroxRedSocial
+        {
+            get { return _IdMiembroxRedSocial; }
+            set { _IdMiembroxRedSocial = value; }
+        }
+
+        /// <summary>
+        /// identificador del miembro de equipo
+        /// </summary>
+        private string _IdMiembroEquipo;
+        public string IdMiembroEquipo
+        {
+            get { return _IdMiembroEquipo; }
+            set { _IdMiembroEquipo = value; }
+        }
+
+        /// <summary>
+        /// nombre de la cuenta de la red social
+        /// </summary>
+        private string _CuentaRedSocial;
+        public string CuentaRedSocial
+        {
+            get { return _CuentaRedSocial; }
+            set { _CuentaRedSocial = value; }
+        }
+        
         private string _Descripcion;
         public string Descripcion
         {
@@ -23,6 +56,13 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _Descripcion = value; }
         }
 
+        private string _NombreMostrar;
+        public string NombreMostrar
+        {
+            get { return _NombreMostrar; }
+            set { _NombreMostrar = value; }
+        }
+        
         private string _UrlBase;
         public string UrlBase
         {

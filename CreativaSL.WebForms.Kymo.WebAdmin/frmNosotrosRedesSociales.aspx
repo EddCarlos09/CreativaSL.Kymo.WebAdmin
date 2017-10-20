@@ -11,6 +11,7 @@
 				<div class="panel-body">
 					<div class="row">
 						<asp:HiddenField ID="hf" runat="server" />
+                        <asp:HiddenField ID="hf2" runat="server" />
 					</div>
 					<div class="row">
 						<div class="col-md-12">
@@ -62,10 +63,10 @@
 						<div class="col-md-6">
 							<div class="form-group">
 								<div class="col-md-6">
-									<input type="submit" formaction="frmRedesSociales.aspx" class="btn btn-green btn-block" name="btnGuardar" value="Guardar"/>
+									<input type="submit" formaction="frmNosotrosRedesSociales.aspx" class="btn btn-green btn-block" name="btnGuardar" value="Guardar"/>
 								</div>
 								<div class="col-md-6">
-									<a href="frmRedesSocialesGrid.aspx" class="btn btn-red btn-block" name="btnCancelar">Cancelar</a>
+									<a href="frmNosotrosRedesSocialesGrid.aspx" class="btn btn-red btn-block" name="btnCancelar">Cancelar</a>
 								</div>
 							</div>
 						</div>

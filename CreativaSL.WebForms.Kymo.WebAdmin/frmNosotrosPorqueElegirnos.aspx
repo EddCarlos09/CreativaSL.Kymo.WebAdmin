@@ -27,7 +27,7 @@
                                     T&iacute;tulo<span class="symbol required"></span>
                                 </label>
                                 <span class="input-icon">
-                                    <input type="text" class="form-control tooltips" runat="server" id="txtTitulo" name="txtTitulo" maxlength="200" data-original-title="Ingrese el T&iacute;tulo" data-rel="tooltip" title="" data-placement="top" />
+                                    <input type="text" class="form-control tooltips" runat="server" id="txtTitulo" name="txtTitulo" data-original-title="Ingrese el T&iacute;tulo" data-rel="tooltip" title="" data-placement="top" />
                                     <i class="fa fa-user"></i>
                                 </span>
                             </div>
