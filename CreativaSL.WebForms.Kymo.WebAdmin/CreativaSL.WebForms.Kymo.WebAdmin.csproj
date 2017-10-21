@@ -3164,6 +3164,7 @@
     <Content Include="assets\plugins\x-editable\img\loading.gif" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.js" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.min.js" />
+    <Content Include="frmAvisoPrivacidadDatosGenerales.aspx" />
     <Content Include="frmContactoDatosG.aspx" />
     <Content Include="frmContactoRedesSociales.aspx" />
     <Content Include="frmContactoRedesSocialesGrid.aspx" />
@@ -3183,13 +3184,17 @@
     <Content Include="frmNosotrosRedesSocialesGrid.aspx" />
     <Content Include="frmPatrocinadores.aspx" />
     <Content Include="frmPatrocinadoresGrid.aspx" />
+    <Content Include="Imagenes\AvisoPrivacidad\faro.jpg" />
     <Content Include="Imagenes\Contacto\canon-del-sumidero.jpg" />
+    <Content Include="Imagenes\DatosGenerales\faro.jpg" />
+    <Content Include="Imagenes\DatosGenerales\koala.jpg" />
     <Content Include="Imagenes\DatosGenerales\tulipanes.jpg" />
     <Content Include="Imagenes\HomeBanner\blusas-y-playeras.jpg" />
     <Content Include="Imagenes\HomeBanner\playera-marcar-polo.jpg" />
     <Content Include="Imagenes\HomeBanner\tazas-y-gorras.jpg" />
     <Content Include="Imagenes\NosotrosEquipoTrabajo\desierto.jpg" />
     <Content Include="Imagenes\NosotrosQuienesSomos\faro.jpg" />
+    <Content Include="Imagenes\NosotrosQuienesSomos\koala.jpg" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="assets\images\Thumbs.db" />
@@ -4075,6 +4080,13 @@
   <ItemGroup>
     <Compile Include="ClaseAux\DialogMessage.cs" />
     <Compile Include="ClaseAux\Remover.cs" />
+    <Compile Include="frmAvisoPrivacidadDatosGenerales.aspx.cs">
+      <DependentUpon>frmAvisoPrivacidadDatosGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAvisoPrivacidadDatosGenerales.aspx.designer.cs">
+      <DependentUpon>frmAvisoPrivacidadDatosGenerales.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmContactoDatosG.aspx.cs">
       <DependentUpon>frmContactoDatosG.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4230,9 +4242,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="bin\" />
-    <Folder Include="Imagenes\Contacto\" />
-    <Folder Include="Imagenes\NosotrosEquipoTrabajo\" />
-    <Folder Include="Imagenes\NosotrosQuienesSomos\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>

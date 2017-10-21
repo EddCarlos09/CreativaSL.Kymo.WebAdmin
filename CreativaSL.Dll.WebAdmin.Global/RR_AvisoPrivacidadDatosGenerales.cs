@@ -7,52 +7,56 @@ using System.Threading.Tasks;
 
 namespace CreativaSL.Dll.WebAdmin.Global
 {
-    public class RR_NosotrosEquipoTrabajo
+    public class RR_AvisoPrivacidadDatosGenerales
     {
-        private string _IdMiembroEquipo;
-        /// <summary>
-        /// Identificador para el miembro de equipo de trabajo
-        /// </summary>
-        public string IdMiembroEquipo
+        private string _IdAviso;
+        public string IdAviso
         {
-            get { return _IdMiembroEquipo; }
-            set { _IdMiembroEquipo = value; }
+            get { return _IdAviso; }
+            set { _IdAviso = value; }
         }
 
-        private string _NombreMostrar;
-        /// <summary>
-        /// Nombre del miembro de equipo de trabajo
-        /// </summary>
-        public string NombreMostrar
+        private string _IdTexto;
+        public string IdTexto
         {
-            get { return _NombreMostrar; }
-            set { _NombreMostrar = value; }
+            get { return _IdTexto; }
+            set { _IdTexto = value; }
+        }
+        
+        private string _Texto;
+        public string Texto
+        {
+            get { return _Texto; }
+            set { _Texto = value; }
         }
 
-        private string _Puesto;
-        /// <summary>
-        /// Puesto del miembro de equipo de trabajo
-        /// </summary>
-        public string Puesto
+        private string _Texto2;
+        public string Texto2
         {
-            get { return _Puesto; }
-            set { _Puesto = value; }
+            get { return _Texto2; }
+            set { _Texto2 = value; }
         }
 
-        private bool _PaginaWeb;
-        /// <summary>
-        /// Saber si el miembro de equipo de trabajo tiene página web
-        /// </summary>
-        public bool PaginaWeb
+        private string _TituloAviso;
+
+        public string TituloAviso
         {
-            get { return _PaginaWeb; }
-            set { _PaginaWeb = value; }
+            get { return _TituloAviso; }
+            set { _TituloAviso = value; }
         }
 
-        /// <summary>
-        /// identificador del tipo de pagina que es
-        /// </summary>
+        private string _TextoAviso;
+        public string TextoAviso
+        {
+            get { return _TextoAviso; }
+            set { _TextoAviso = value; }
+        }
+
+
         private int _IdPagina;
+        /// <summary>
+        /// Identificador de la pagina en la que se subió la imagen
+        /// </summary>
         public int IdPagina
         {
             get { return _IdPagina; }
@@ -139,7 +143,7 @@ namespace CreativaSL.Dll.WebAdmin.Global
             get { return _NumPosition; }
             set { _NumPosition = value; }
         }
-        
+
         #endregion
 
         #region DatosDeControl
@@ -185,12 +189,20 @@ namespace CreativaSL.Dll.WebAdmin.Global
 
         private DataTable _TablaDatos;
         /// <summary>
-        /// ???
+        /// 
         /// </summary>
         public DataTable TablaDatos
         {
             get { return _TablaDatos; }
             set { _TablaDatos = value; }
+        }
+
+        private DataTable _TablaTexto;
+
+        public DataTable TableTexto
+        {
+            get { return _TablaTexto; }
+            set { _TablaTexto = value; }
         }
 
         private bool _NuevoRegistro;

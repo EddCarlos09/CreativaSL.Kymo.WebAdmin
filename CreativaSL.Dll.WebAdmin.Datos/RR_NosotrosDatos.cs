@@ -33,6 +33,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                         Datos.Completado = true;
                         Datos.UrlImagen = Dr.GetString(Dr.GetOrdinal("ImagenGuardada"));
                     }
+                    if (Resultado == 2)
+                    {
+                        Datos.Completado = true;                        
+                    }
                     Datos.Resultado = Resultado;
                     break;
                 }
@@ -112,6 +116,7 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                     Datos.IdImagen = Dr.GetString(Dr.GetOrdinal("id_imagen"));
                     Datos.TextoAlternativo = Dr.GetString(Dr.GetOrdinal("textoAlternativo"));
                     Datos.TituloImagen = Dr.GetString(Dr.GetOrdinal("tituloImagen"));
+                    Datos.UrlImagen = Dr.GetString(Dr.GetOrdinal("urlImagen"));
                     Datos.Completado = true;
                     break;
                 }
@@ -466,7 +471,7 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 {
                     Item = new RR_RedesSociales();
                     Item.IdMiembroxRedSocial = Dr.GetString(Dr.GetOrdinal("id_miembroXRedSocial"));
-                    Item.NombreMostrar = Dr.GetString(Dr.GetOrdinal("nombreMostrar"));
+                    Item.NombreMostrar = Dr.GetString(Dr.GetOrdinal("cuentaRedSocial"));
                     Lista.Add(Item);                    
                 }
                 return Lista;
@@ -576,7 +581,7 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 throw ex;
             }            
         }
-        #endregion
+        #endregion        
 
     }
 }
