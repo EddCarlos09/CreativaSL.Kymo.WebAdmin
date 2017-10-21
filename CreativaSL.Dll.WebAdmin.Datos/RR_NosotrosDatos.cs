@@ -521,6 +521,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                         Datos.Completado = true;
                         Datos.UrlImagen = Dr.GetString(Dr.GetOrdinal("ImagenGuardada"));
                     }
+                    else if(Resultado == 2)
+                    {
+                        Datos.Completado = true;
+                    }
                     Datos.Resultado = Resultado;
                     break;
                 }
