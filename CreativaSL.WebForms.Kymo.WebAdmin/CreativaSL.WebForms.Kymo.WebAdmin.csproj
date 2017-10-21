@@ -3181,8 +3181,13 @@
     <Content Include="frmNosotrosQuienesSomosGrid.aspx" />
     <Content Include="frmNosotrosRedesSociales.aspx" />
     <Content Include="frmNosotrosRedesSocialesGrid.aspx" />
+    <Content Include="frmPatrocinadores.aspx" />
+    <Content Include="frmPatrocinadoresGrid.aspx" />
     <Content Include="Imagenes\Contacto\canon-del-sumidero.jpg" />
     <Content Include="Imagenes\DatosGenerales\tulipanes.jpg" />
+    <Content Include="Imagenes\HomeBanner\blusas-y-playeras.jpg" />
+    <Content Include="Imagenes\HomeBanner\playera-marcar-polo.jpg" />
+    <Content Include="Imagenes\HomeBanner\tazas-y-gorras.jpg" />
     <Content Include="Imagenes\NosotrosEquipoTrabajo\desierto.jpg" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
@@ -4195,6 +4200,20 @@
     <Compile Include="frmNosotrosRedesSocialesGrid.aspx.designer.cs">
       <DependentUpon>frmNosotrosRedesSocialesGrid.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmPatrocinadores.aspx.cs">
+      <DependentUpon>frmPatrocinadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPatrocinadores.aspx.designer.cs">
+      <DependentUpon>frmPatrocinadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPatrocinadoresGrid.aspx.cs">
+      <DependentUpon>frmPatrocinadoresGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPatrocinadoresGrid.aspx.designer.cs">
+      <DependentUpon>frmPatrocinadoresGrid.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -4210,8 +4229,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="bin\" />
-    <Folder Include="Imagenes\Contacto\" />
-    <Folder Include="Imagenes\NosotrosEquipoTrabajo\" />
     <Folder Include="Imagenes\NosotrosQuienesSomos\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
