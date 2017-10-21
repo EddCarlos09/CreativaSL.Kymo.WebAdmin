@@ -21,7 +21,7 @@ namespace CreativaSL.Dll.WebAdmin.Datos
             try
             {
                 object[] Parametros = { Datos.NuevoRegistro, Datos.IdImagen, Datos.TituloPagina, Datos.TextoAlternativo, Datos.TituloImagen, Datos.IdPagina,
-                    Datos.TituloContacto, Datos.TextoContacto, Datos.Extencion, Datos.UrlImagen, Datos.IDUsuario };
+                    Datos.TituloContacto, Datos.TextoContacto, Datos.Extencion, Datos.UrlImagen, Datos.CambiarImagen, Datos.IDUsuario };
                 SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "EM_spCSLDB_AC_ContactoImagen", Parametros);
                 while (Dr.Read())
                 {

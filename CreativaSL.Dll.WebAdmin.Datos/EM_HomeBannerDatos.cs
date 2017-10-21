@@ -11,11 +11,15 @@ namespace CreativaSL.Dll.WebAdmin.Datos
 {
     public class EM_HomeBannerDatos
     {
+        /// <summary>
+        /// Rcibe todo los datos para realizar una inserción y modificacion
+        /// </summary>
+        /// <param name="Datos">Objeto de datos Canexion y parametros</param>
         public void AGBanner(EM_HomeBanner Datos)
         {
             try
             {
-                object[] Parametros = { Datos.NuevoRegistro, Datos.IdBanner, Datos.IdTipoBanner, Datos.TextoInicial, Datos.TextoPrincipal, Datos.Comprar, Datos.UrlDestino, Datos.TextoButton, Datos.UrlImagen, Datos.Alt, Datos.Title, Datos.Extencion, Datos.NombreImagen, Datos.IDUsuario };
+                object[] Parametros = { Datos.NuevoRegistro, Datos.IdBanner, Datos.IdTipoBanner, Datos.TextoInicial, Datos.TextoPrincipal, Datos.Comprar, Datos.UrlDestino, Datos.TextoButton, Datos.UrlImagen, Datos.Alt, Datos.Title, Datos.Extencion, Datos.NombreImagen, Datos.CambiarImagen, Datos.IDUsuario };
                 SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "EM_spCSLDB_AC_Home_Banner", Parametros);
                 while (Dr.Read())
                 {
@@ -29,12 +33,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                     break;
                 }
             }
-
             catch (Exception ex)
             {
                 throw ex;
             }
-
         }
 
         public List<EM_HomeBanner> ObtenerListBanner(EM_HomeBanner Datos)
@@ -67,6 +69,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 throw ex;
             }
         }
+        /// <summary>
+        /// Obetenemos el detalle de el registro que se va a modificar
+        /// </summary>
+        /// <param name="Datos">Enviamos y recibimos los parametros</param>
         public void ObtenerDetalleHomeBannerID(EM_HomeBanner Datos)
         {
             try

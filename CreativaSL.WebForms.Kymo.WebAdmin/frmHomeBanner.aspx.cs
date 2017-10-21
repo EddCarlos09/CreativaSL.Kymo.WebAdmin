@@ -8,7 +8,6 @@ using CreativaSL.Dll.WebAdmin.Global;
 using CreativaSL.Dll.WebAdmin.Negocio;
 using CreativaSL.WebForms.Kymo.WebAdmin.ClaseAux;
 using System.IO;
-using CreativaSL.WebForms.Kymo.WebAdmin.ClasesAux;
 
 namespace CreativaSL.WebForms.Kymo.WebAdmin
 {
@@ -59,7 +58,6 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                     {
                         Band = true;
                     }
-
                     string txtNombreInicial = Request.Form["ctl00$cph_MasterBody$txtNombreInicial"].ToString();
                     string txtNombreBanner = Request.Form["ctl00$cph_MasterBody$txtNombreBanner"].ToString();
                     bool verMas = false;
@@ -78,7 +76,6 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                     string IdBanner = "";
                     try
                     {
-
                         string AuxID = Request.Form["ctl00$cph_MasterBody$hf"].ToString();
                         IdBanner = AuxID;
                         bool NuevoRegistro = string.IsNullOrEmpty(IdBanner);
@@ -88,7 +85,6 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                     {
                         Response.Redirect("ErrorPage.aspx?msjError=" + ex.Message);
                     }
-
                 }
             }
         }
@@ -176,7 +172,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                                 System.Drawing.Image Img = new System.Drawing.Bitmap(S);
                                 Img.Save(BaseDir + Datos.UrlImagen);
                             }
-                            catch (Exception ex)
+                            catch (Exception)
                             {
                             }
                         }

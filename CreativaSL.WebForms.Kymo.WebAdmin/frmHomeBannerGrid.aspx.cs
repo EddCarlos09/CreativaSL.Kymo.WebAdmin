@@ -38,6 +38,11 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                 }
             }
             Lista = FN.ObtenerListaBanner(DatosAux);
+            if (Request.QueryString["errorMessage"] != null)
+            {
+                string ScriptError = DialogMessage.Show(TipoMensaje.Error, "Error al cargar los datos. Intenté nuevamente", "Error", ShowMethod.FadeIn, HideMethod.FadeOut, ToastPosition.TopFullWidth, true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "popup", ScriptError, true);
+            }
         }
     }
 }
