@@ -136,9 +136,24 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                     IDUsuario        = User.Identity.Name
                 };
                 RR_NosotrosNegocio CN = new RR_NosotrosNegocio();
-                CN.ACNosotrosQuienesSomos(Datos);                
+                CN.ACNosotrosQuienesSomos(Datos);
                 if (Datos.Completado)
-                {                    
+                {
+                    if (BandCambioImagen)
+                    {
+                        if (PostedImage != null && PostedImage.ContentLength > 0)
+                        {
+                            try
+                            {
+                                Stream S = PostedImage.InputStream;
+                                System.Drawing.Image Img = new System.Drawing.Bitmap(S);
+                                Img.Save(BaseDir + Datos.UrlImagen);
+                            }
+                            catch (Exception)
+                            {
+                            }
+                        }
+                    }
                     Response.Redirect("frmNosotrosQuienesSomosGrid.aspx", false);
                 }
                 else

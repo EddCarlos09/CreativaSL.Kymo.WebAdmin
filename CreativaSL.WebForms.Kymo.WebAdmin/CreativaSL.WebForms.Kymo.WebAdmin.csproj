@@ -3189,6 +3189,7 @@
     <Content Include="Imagenes\HomeBanner\playera-marcar-polo.jpg" />
     <Content Include="Imagenes\HomeBanner\tazas-y-gorras.jpg" />
     <Content Include="Imagenes\NosotrosEquipoTrabajo\desierto.jpg" />
+    <Content Include="Imagenes\NosotrosQuienesSomos\faro.jpg" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="assets\images\Thumbs.db" />
@@ -4229,6 +4230,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="bin\" />
+    <Folder Include="Imagenes\Contacto\" />
+    <Folder Include="Imagenes\NosotrosEquipoTrabajo\" />
     <Folder Include="Imagenes\NosotrosQuienesSomos\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
