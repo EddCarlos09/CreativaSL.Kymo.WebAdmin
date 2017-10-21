@@ -48,6 +48,8 @@
     <Compile Include="Class1.cs" />
     <Compile Include="EM_ContactoGeneralDatos.cs" />
     <Compile Include="EM_ContatoImagenesDatos.cs" />
+    <Compile Include="JL_FAQDatos.cs" />
+    <Compile Include="JL_FaqDatosGeneralesDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RR_NosotrosDatos.cs" />
   </ItemGroup>

@@ -10,33 +10,51 @@
 namespace CreativaSL.WebForms.Kymo.WebAdmin {
     
     
-    public partial class Site {
+    public partial class frmPregunta {
         
         /// <summary>
-        /// skin_color control.
+        /// hf control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlLink skin_color;
+        protected global::System.Web.UI.WebControls.HiddenField hf;
         
         /// <summary>
-        /// frmMaster control.
+        /// hf2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm frmMaster;
+        protected global::System.Web.UI.WebControls.HiddenField hf2;
         
         /// <summary>
-        /// cph_MasterBody control.
+        /// txtPregunta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cph_MasterBody;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPregunta;
+        
+        /// <summary>
+        /// txtRespuesta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtRespuesta;
+        
+        /// <summary>
+        /// txtOrden control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtOrden;
     }
 }

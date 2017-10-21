@@ -163,6 +163,7 @@
     <Content Include="assets\js\form-elements.js" />
     <Content Include="assets\js\form-image-cropping.js" />
     <Content Include="assets\js\form-validation.js" />
+    <Content Include="assets\js\form-validation3.js" />
     <Content Include="assets\js\form-validation2.js" />
     <Content Include="assets\js\form-wizard.js" />
     <Content Include="assets\js\index.js" />
@@ -3162,6 +3163,7 @@
     <Content Include="assets\plugins\x-editable\img\loading.gif" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.js" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.min.js" />
+    <Content Include="frmCapturas.aspx" />
     <Content Include="frmContactoDatosG.aspx" />
     <Content Include="frmDatosContactos.aspx" />
     <Content Include="frmNosotrosDatosGenerales.aspx" />
@@ -3172,6 +3174,8 @@
     <Content Include="frmNosotrosPorqueElegirnosGrid.aspx" />
     <Content Include="frmNosotrosQuienesSomos.aspx" />
     <Content Include="frmNosotrosQuienesSomosGrid.aspx" />
+    <Content Include="frmPregunta.aspx" />
+    <Content Include="frmPreguntasRespuestas.aspx" />
     <Content Include="frmRedesSociales.aspx" />
     <Content Include="frmRedesSocialesGrid.aspx" />
     <Content Include="packages.config" />
@@ -4055,6 +4059,13 @@
   <ItemGroup>
     <Compile Include="ClaseAux\DialogMessage.cs" />
     <Compile Include="ClaseAux\Remover.cs" />
+    <Compile Include="frmCapturas.aspx.cs">
+      <DependentUpon>frmCapturas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCapturas.aspx.designer.cs">
+      <DependentUpon>frmCapturas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmContactoDatosG.aspx.cs">
       <DependentUpon>frmContactoDatosG.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4131,6 +4142,20 @@
     </Compile>
     <Compile Include="frmNosotrosQuienesSomosGrid.aspx.designer.cs">
       <DependentUpon>frmNosotrosQuienesSomosGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregunta.aspx.cs">
+      <DependentUpon>frmPregunta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPregunta.aspx.designer.cs">
+      <DependentUpon>frmPregunta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPreguntasRespuestas.aspx.cs">
+      <DependentUpon>frmPreguntasRespuestas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPreguntasRespuestas.aspx.designer.cs">
+      <DependentUpon>frmPreguntasRespuestas.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmRedesSociales.aspx.cs">
       <DependentUpon>frmRedesSociales.aspx</DependentUpon>
