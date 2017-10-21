@@ -527,6 +527,86 @@ var FormValidator = function () {
         });
     };
 
+    var runValidator6 = function () {
+        var form2 = $('#frmMaster');
+        var errorHandler2 = $('.errorHandler', form2);
+        var successHandler2 = $('.successHandler', form2);
+
+        $.validator.addMethod("validarImagen", function () {
+            if (document.getElementById("cph_MasterBody_hf").value === '') {
+                if ((document.getElementById("cph_MasterBody_imgLogo").value === ''))
+                    return false;
+                else
+                    return true;
+            }
+            else
+                return true;
+        }, 'Debe seleccionar una imagen.');
+        $.validator.addMethod("Url", function () {
+            var urlAux = document.getElementById("cph_MasterBody_txtUrlDestino").value;
+            var expReg = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/gi;
+            if (urlAux.match(expReg))
+                return true;
+            else {
+                return false;
+            }
+        }, 'Debe de escribir una url valida');
+
+        $('#frmMaster').validate({
+            errorElement: "span",
+            errorClass: 'help-block',
+            errorPlacement: function (error, element) {
+                if (element.attr("type") == "radio" || element.attr("type") == "checkbox") {
+                    error.insertAfter($(element).closest('.form-group').children('div').children().last());
+                } else if (element.hasClass("fileupload")) {
+                    error.appendTo($(element).closest('.form-group'));
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+            ignore: "",
+            rules: {
+                ctl00$cph_MasterBody$txtTitle: {
+                    required: true
+                },
+                ctl00$cph_MasterBody$txtAlt: {
+                    required: true
+                },
+                ctl00$cph_MasterBody$txtNombreP: {
+                    required: true
+                },
+                ctl00$cph_MasterBody$txtUrlDestino: "Url",
+                ctl00$cph_MasterBody$imgLogo: "validarImagen",
+                
+            },
+            messages: {
+                ctl00$cph_MasterBody$txtTitle: "Por favor, ingrese el t&iacute;tulo.",
+                ctl00$cph_MasterBody$txtAlt: "Por favor, ingrese el texto alternativo.",
+                ctl00$cph_MasterBody$txtNombreP: "Por favor, el nombre del patrocinador"
+            },
+            invalidHandler: function (event, validator) {
+                successHandler2.hide();
+                errorHandler2.show();
+            },
+            highlight: function (element) {
+                $(element).closest('.help-block').removeClass('valid');
+                $(element).closest('.form-group').removeClass('has-success').addClass('has-error').find('.symbol').removeClass('ok').addClass('required');
+            },
+            unhighlight: function (element) {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            success: function (label, element) {
+                label.addClass('help-block valid');
+                $(element).closest('.form-group').removeClass('has-error').addClass('has-success').find('.symbol').removeClass('required').addClass('ok');
+            },
+            submitHandler: function (form2) {
+                errorHandler2.hide();
+                this.submit();
+            }
+        });
+    };
+
+
     return {
         //main function to initiate template pages
         init: function (aux) {
@@ -543,6 +623,8 @@ var FormValidator = function () {
                 case 5: runValidator4();
                     break;
                 case 6: runValidator5();
+                    break;
+                case 7: runValidator6();
                     break;
             }
         }

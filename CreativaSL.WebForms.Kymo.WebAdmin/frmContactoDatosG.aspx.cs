@@ -8,7 +8,6 @@ using CreativaSL.Dll.WebAdmin.Global;
 using CreativaSL.Dll.WebAdmin.Negocio;
 using System.IO;
 using CreativaSL.WebForms.Kymo.WebAdmin.ClaseAux;
-using CreativaSL.WebForms.Kymo.WebAdmin.ClasesAux;
 
 namespace CreativaSL.WebForms.Kymo.WebAdmin
 {

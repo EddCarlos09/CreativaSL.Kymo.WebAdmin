@@ -4230,9 +4230,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="bin\" />
-    <Folder Include="Imagenes\Contacto\" />
-    <Folder Include="Imagenes\NosotrosEquipoTrabajo\" />
-    <Folder Include="Imagenes\NosotrosQuienesSomos\" />
+    <Folder Include="Imagenes\HomePatrocinador\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>

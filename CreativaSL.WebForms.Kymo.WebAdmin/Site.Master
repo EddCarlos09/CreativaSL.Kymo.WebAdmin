@@ -182,12 +182,17 @@
 								<ul class="sub-menu">
                                     <li>
 										<a href="frmHomeBannerGrid.aspx">
-											<span class="title">DATOS GENERALES</span>
+											<span class="title">BANNER PRINCIPAL</span>
 										</a>
 									</li>
 									 <li>
 										<a href="#">
 											<span class="title">TEXTO PAGINA</span>
+                                        </a>
+ 									</li>
+                                    <li>
+										<a href="frmPatrocinadoresGrid.aspx">
+											<span class="title">PATROCINADORES</span>
                                         </a>
  									</li>
 								</ul>

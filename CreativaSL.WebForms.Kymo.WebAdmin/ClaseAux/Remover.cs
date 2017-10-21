@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace CreativaSL.WebForms.Kymo.WebAdmin.ClasesAux
+namespace CreativaSL.WebForms.Kymo.WebAdmin.ClaseAux
 {
     public class Remover
     {
