@@ -24,14 +24,18 @@ namespace CreativaSL.Dll.WebAdmin.Datos
             {
                 object[] Parametros = {Datos.NuevoRegistro, Datos.IdImagen, Datos.TextoAlternativo, Datos.TituloImagen, Datos.NumPosition, Datos.UrlImagen, Datos.NombreImagen,
                 Datos.Extencion, Datos.CambioImagen, Datos.IdPagina, Datos.IdSeccion, Datos.Titulo, Datos.TextoHtml, Datos.IDUsuario};
-                Object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "RR_spCSLDB_AC_NosotrosQuienesSomos", Parametros);
-                int Resultado = 0;
-                int.TryParse(Result.ToString(), out Resultado);
-                if(Resultado == 1)
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_AC_NosotrosQuienesSomos", Parametros);
+                while (Dr.Read())
                 {
-                    Datos.Completado = true;
+                    int Resultado = Dr.GetInt32(Dr.GetOrdinal("Resultado"));
+                    if (Resultado == 1)
+                    {
+                        Datos.Completado = true;
+                        Datos.UrlImagen = Dr.GetString(Dr.GetOrdinal("ImagenGuardada"));
+                    }
+                    Datos.Resultado = Resultado;
+                    break;
                 }
-                Datos.Resultado = Resultado;
             }
             catch (Exception ex)
             {
