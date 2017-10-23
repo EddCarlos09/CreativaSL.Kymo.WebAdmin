@@ -122,7 +122,7 @@
 		<script src="assets/js/main.js"></script>
 		<script>
 		    jQuery(document).ready(function () {
-		        FormValidator.init();
+		        FormValidator.init(6);
 		    });
 		</script>
 </asp:Content>

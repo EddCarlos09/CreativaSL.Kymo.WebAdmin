@@ -61,6 +61,7 @@
     <Compile Include="RR_NosotrosQuienesSomos.cs" />
     <Compile Include="RR_NosotrosRedesSocialesMiembros.cs" />
     <Compile Include="RR_RedesSociales.cs" />
+    <Compile Include="RR_TerminosCondiciones.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

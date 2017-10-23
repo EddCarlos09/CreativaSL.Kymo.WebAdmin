@@ -9,13 +9,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace CreativaSL.WebForms.Kymo.WebAdmin
-{    
-    public partial class frmNosotrosPorqueElegirnos : System.Web.UI.Page
+{
+    public partial class frmAvisoPrivacidadAvisos : System.Web.UI.Page
     {
-        public List<RR_Iconos> Lista = new List<RR_Iconos>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            CargarComboBox();
             if (!IsPostBack)
             {
                 if (Request.QueryString["op"] != null)
@@ -27,31 +25,31 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                             string ID = Request.QueryString["id"].ToString() != null ? Request.QueryString["id"].ToString() : string.Empty;
                             if (Request.QueryString["id"].ToString() == ID)
                             {
-                                RR_NosotrosPorqueElegirnos Datos = new RR_NosotrosPorqueElegirnos { Conexion = Comun.Conexion, IdSeccion = ID };
-                                RR_NosotrosNegocio NG = new RR_NosotrosNegocio();
-                                NG.ObtenerNosotrosElegirnosXID(Datos);
-                                if (Datos.Completado)
+                                RR_AvisoPrivacidadDatosGenerales DatosAux = new RR_AvisoPrivacidadDatosGenerales {Conexion = Comun.Conexion, IdAviso = ID, IDUsuario = Comun.IDUsuario};
+                                RR_AvisoPrivacidadNegocio APN = new RR_AvisoPrivacidadNegocio();
+                                APN.ObtenerAvisoPrivacidadXID(DatosAux);
+                                if (DatosAux.Completado)
                                 {
-                                    CargarDatos(Datos);
+                                    CargarDatos(DatosAux);
                                 }
                                 else
                                 {
-                                    Response.Redirect("frmNosotrosPorqueElegirnos.aspx?error=" + "Error al cargar los datos&nError=1");
+                                    Response.Redirect("frmAvisoPrivacidadAvisos.aspx?error=" + "Error al cargar los datos&nError=1");
                                 }
                             }
                             else
                             {
-                                Response.Redirect("frmNosotrosPorqueElegirnos.aspx");
+                                Response.Redirect("frmAvisoPrivacidadAvisos.aspx");
                             }
                         }
                         else
                         {
-                            Response.Redirect("frmNosotrosPorqueElegirnos.aspx");
+                            Response.Redirect("frmAvisoPrivacidadAvisos.aspx");
                         }
                     }
                     else
                     {
-                        Response.Redirect("frmNosotrosPorqueElegirnos.aspx");
+                        Response.Redirect("frmAvisoPrivacidadAvisos.aspx");
                     }
                 }
                 else
@@ -61,16 +59,15 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
             }
             else
             {
-                if (Request.Form.Count == 8)
+                if (Request.Form.Count == 7)
                 {
                     string titulo = Request.Form["ctl00$cph_MasterBody$txtTitulo"].ToString();
-                    string textoHtml = HttpUtility.HtmlDecode(txtDescripcion.InnerHtml);
-                    string icono = Request.Form["cmbIconos"].ToString();
+                    string texto = HttpUtility.HtmlDecode(txtDescripcion.InnerHtml);
                     try
                     {
                         string AuxID = Request.Form["ctl00$cph_MasterBody$hf"].ToString();
                         bool NuevoRegistro = string.IsNullOrEmpty(AuxID);
-                        Guardar(NuevoRegistro, AuxID, titulo, textoHtml, icono);
+                        Guardar(NuevoRegistro, AuxID, titulo, texto);
                     }
                     catch (Exception ex)
                     {
@@ -85,24 +82,23 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
             }
         }
 
-        public void Guardar(bool _nuuevoRegistro, string _idSeccion, string _titulo, string _descripcion, string _icono)
+        public void Guardar(bool _nuuevoRegistro, string _idAviso, string _titulo, string _texto)
         {
-            RR_NosotrosPorqueElegirnos DatosAux = new RR_NosotrosPorqueElegirnos
+            RR_AvisoPrivacidadDatosGenerales DatosAux = new RR_AvisoPrivacidadDatosGenerales
             {
                 NuevoRegistro = _nuuevoRegistro,
-                IdSeccion = _idSeccion,
-                Titulo = _titulo,
-                Texto = _descripcion,
-                IdClaseIcono = _icono,
+                IdAviso = _idAviso,
+                TituloAviso = _titulo,
+                TextoAviso = _texto,                
                 Conexion = Comun.Conexion,
                 IDUsuario = User.Identity.Name
             };
 
-            RR_NosotrosNegocio NG = new RR_NosotrosNegocio();
-            NG.ACNosotrosPorqueElegirnos(DatosAux);
+            RR_AvisoPrivacidadNegocio NG = new RR_AvisoPrivacidadNegocio();
+            NG.ACAvisoPrivacidad(DatosAux);
             if (DatosAux.Completado)
             {
-                Response.Redirect("frmNosotrosPorqueElegirnosGrid.aspx");
+                Response.Redirect("frmAvisoPrivacidadAvisosGrid.aspx");
             }
             else
             {
@@ -111,30 +107,17 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
             }
         }
 
-        public void CargarDatos(RR_NosotrosPorqueElegirnos Datos)
+        public void CargarDatos(RR_AvisoPrivacidadDatosGenerales Datos)
         {
-            hf.Value = Datos.IdSeccion;
-            txtTitulo.Value = Datos.Titulo;
-            txtDescripcion.Value = Datos.Texto;
-            string ScriptError = @"
-                    $(document).ready(
-                        function() {                        
-                        document.getElementById('cmbIconos').value=" + Datos.IdClaseIcono.ToString() + @";
-                    });";
-            ScriptManager.RegisterStartupScript(this, typeof(Page), "popup", ScriptError, true);
-        }
-
-        private void CargarComboBox()
-        {
-            RR_Iconos Iconos = new RR_Iconos { Conexion = Comun.Conexion };
-            RR_NosotrosNegocio NG = new RR_NosotrosNegocio();
-            Lista = NG.ObtenerIconos(Iconos);
-        }
+            hf.Value = Datos.IdAviso;
+            txtTitulo.Value = Datos.TituloAviso;
+            txtDescripcion.Value = Datos.TextoAviso;            
+        }      
 
         private void IniciarDatos()
         {
-            hf.Value             = string.Empty;
-            txtTitulo.Value      = string.Empty;
+            hf.Value = string.Empty;
+            txtTitulo.Value = string.Empty;
             txtDescripcion.Value = string.Empty;
         }
     }

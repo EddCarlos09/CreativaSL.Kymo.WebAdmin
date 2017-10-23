@@ -11,15 +11,15 @@ using System.Web.UI.WebControls;
 
 namespace CreativaSL.WebForms.Kymo.WebAdmin
 {
-    public partial class frmAvisoPrivacidadDatosGenerales : System.Web.UI.Page
+    public partial class frmTerminosCondicionesDatosGenerales : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                RR_AvisoPrivacidadDatosGenerales DatosAux = new RR_AvisoPrivacidadDatosGenerales { Conexion = Comun.Conexion };
-                RR_AvisoPrivacidadNegocio NN = new RR_AvisoPrivacidadNegocio();
-                NN.ObtenerAvisoPrivacidadDatosGeneralesXID(DatosAux);
+                RR_TerminosCondiciones DatosAux = new RR_TerminosCondiciones { Conexion = Comun.Conexion };
+                RR_TerminosCondicionesNegocio NN = new RR_TerminosCondicionesNegocio();
+                NN.ObtenerTerminosCondicionesGeneralesXID(DatosAux);
                 if (DatosAux.Completado)
                 {
                     CargarDatos(DatosAux);
@@ -39,7 +39,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                         Band = true;
                     }
                     string titulo1 = Request.Form["ctl00$cph_MasterBody$txtTitulo1"].ToString();
-                    string titulo2 = Request.Form["ctl00$cph_MasterBody$txtTitulo2"].ToString();                    
+                    string titulo2 = Request.Form["ctl00$cph_MasterBody$txtTitulo2"].ToString();
                     string textoAlternativo = Request.Form["ctl00$cph_MasterBody$txtTextoAlternativo"].ToString();
                     string tituloImagen = Request.Form["ctl00$cph_MasterBody$txtTituloImagen"].ToString();
                     string NombreRemoverAcentos = Remover.RemoverAcentos(textoAlternativo);
@@ -87,7 +87,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
             {
                 string BaseDir = Server.MapPath("");
                 string FileExtension = _bandCambioImagen ? Path.GetExtension(_urlImagen) : string.Empty;
-                RR_AvisoPrivacidadDatosGenerales Datos = new RR_AvisoPrivacidadDatosGenerales
+                RR_TerminosCondiciones Datos = new RR_TerminosCondiciones
                 {
                     NuevoRegistro = _nuevoRegistro,
                     IdImagen = _idImagen,
@@ -98,15 +98,15 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                     NombreImagen = _textoAlternativo,
                     Extencion = FileExtension,
                     CambioImagen = _bandCambioImagen,
-                    IdPagina = 5,//COMO SE QUE TIPO DE PAGINA ASIGNARLE ? SE LE ASIGNA EL NUM DE PAG POR DEFAULT??
+                    IdPagina = 6,//COMO SE QUE TIPO DE PAGINA ASIGNARLE ? SE LE ASIGNA EL NUM DE PAG POR DEFAULT??
                     IdTexto = _idTexto,
                     Texto = _titulo,
                     Texto2 = _titulo2,
                     Conexion = Comun.Conexion,
                     IDUsuario = User.Identity.Name
                 };
-                RR_AvisoPrivacidadNegocio CN = new RR_AvisoPrivacidadNegocio();
-                CN.ACAvisoPrivacidadDatosGenerales(Datos);
+                RR_TerminosCondicionesNegocio CN = new RR_TerminosCondicionesNegocio();
+                CN.ACTerminosCondicionesDatosGenerales(Datos);
                 if (Datos.Completado)
                 {
                     if (_bandCambioImagen)
@@ -142,7 +142,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
         /// Carga los datos que se van a editar
         /// </summary>
         /// <param name="DatosAux"></param>
-        private void CargarDatos(RR_AvisoPrivacidadDatosGenerales DatosAux)
+        private void CargarDatos(RR_TerminosCondiciones DatosAux)
         {
             try
             {
@@ -176,7 +176,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                 hf.Value = "";
                 hfImg.Value = "";
                 txtTitulo1.Value = string.Empty;
-                txtTitulo2.Value = string.Empty;                                
+                txtTitulo2.Value = string.Empty;
                 txtTextoAlternativo.Value = string.Empty;
                 txtTituloImagen.Value = string.Empty;
             }

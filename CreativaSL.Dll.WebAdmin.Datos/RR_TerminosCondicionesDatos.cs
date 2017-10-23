@@ -10,17 +10,17 @@ using System.Threading.Tasks;
 
 namespace CreativaSL.Dll.WebAdmin.Datos
 {
-    public class RR_AvisoPrivacidadDatos
+    public class RR_TerminosCondicionesDatos
     {
-        #region Aviso de Privacidad Datos Generales
+        #region Terminos y Condiciones Datos Generales
 
-        public void ACAvisoPrivacidadDatosGenerales(RR_AvisoPrivacidadDatosGenerales Datos)
+        public void ACTerminosDatosGenerales(RR_TerminosCondiciones Datos)
         {
             try
             {
                 object[] Parametros = {Datos.NuevoRegistro, Datos.IdImagen, Datos.TextoAlternativo, Datos.TituloImagen, Datos.NumPosition, Datos.UrlImagen, Datos.NombreImagen,
                 Datos.Extencion, Datos.CambioImagen, Datos.IdPagina, Datos.IdTexto, Datos.Texto, Datos.Texto2, Datos.IDUsuario};
-                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_AC_AvisoPrivacidadGeneral", Parametros);
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_AC_TerminosGeneral", Parametros);
                 while (Dr.Read())
                 {
                     int Resultado = Dr.GetInt32(Dr.GetOrdinal("Resultado"));
@@ -44,11 +44,11 @@ namespace CreativaSL.Dll.WebAdmin.Datos
 
         }
 
-        public void ObtenerAvisoPrivacidadDatosGeneralesXID(RR_AvisoPrivacidadDatosGenerales Datos)
+        public void ObtenerTerminosCondicionesGeneralesXID(RR_TerminosCondiciones Datos)
         {
             try
             {
-                DataSet Ds = SqlHelper.ExecuteDataset(Datos.Conexion, "RR_spCSLDB_get_AvisoPrivacidadDatosGeneralesDetalle");
+                DataSet Ds = SqlHelper.ExecuteDataset(Datos.Conexion, "RR_spCSLDB_get_TerminosDatosGeneralesDetalle");
                 if (Ds != null)
                 {
                     if (Ds.Tables.Count == 2)
@@ -68,14 +68,14 @@ namespace CreativaSL.Dll.WebAdmin.Datos
 
         #endregion
 
-        #region Aviso de Privacidad Textos
+        #region Terminos y Condiciones Textos
 
-        public void ACAvisoPrivacidad(RR_AvisoPrivacidadDatosGenerales Datos)
+        public void ACTerminosCondiciones(RR_TerminosCondiciones Datos)
         {
             try
             {
-                object[] Parametros = { Datos.NuevoRegistro, Datos.IdAviso, Datos.TituloAviso, Datos.TextoAviso, Datos.IDUsuario };
-                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_AC_AvisoPrivacidad", Parametros);
+                object[] Parametros = { Datos.NuevoRegistro, Datos.IdTermino, Datos.TituloTermino, Datos.TextoTermino, Datos.IDUsuario };
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_AC_Terminos", Parametros);
                 while (Dr.Read())
                 {
                     int Resultado = Dr.GetInt32(Dr.GetOrdinal("Resultado"));
@@ -87,19 +87,19 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                     break;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
 
         }
 
-        public void EliminarAvisoPrivacidad(RR_AvisoPrivacidadDatosGenerales Datos)
+        public void EliminarTerminosCondiciones(RR_TerminosCondiciones Datos)
         {
             try
             {
-                object[] Parametros = { Datos.IdAviso, Datos.IDUsuario };
-                object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "RR_spCSLDB_B_AvisoPrivacidad", Parametros);
+                object[] Parametros = { Datos.IdTermino, Datos.IDUsuario };
+                object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "RR_spCSLDB_B_Terminos", Parametros);
                 int Resultado = 0;
                 int.TryParse(Result.ToString(), out Resultado);
                 if (Resultado == 1)
@@ -114,18 +114,18 @@ namespace CreativaSL.Dll.WebAdmin.Datos
             }
         }
 
-        public List<RR_AvisoPrivacidadDatosGenerales> ObtenerAvisosPrivacidad(RR_AvisoPrivacidadDatosGenerales Datos)
+        public List<RR_TerminosCondiciones> ObtenerTerminosCondiciones(RR_TerminosCondiciones Datos)
         {
             try
             {
-                List<RR_AvisoPrivacidadDatosGenerales> Lista = new List<RR_AvisoPrivacidadDatosGenerales>();
-                RR_AvisoPrivacidadDatosGenerales Item;
-                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_AvisosPrivacidad");
+                List<RR_TerminosCondiciones> Lista = new List<RR_TerminosCondiciones>();
+                RR_TerminosCondiciones Item;
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_Terminos");
                 while (Dr.Read())
                 {
-                    Item = new RR_AvisoPrivacidadDatosGenerales();
-                    Item.IdAviso = Dr.GetString(Dr.GetOrdinal(("id_aviso")));
-                    Item.TituloAviso = Dr.GetString(Dr.GetOrdinal("titulo"));
+                    Item = new RR_TerminosCondiciones();
+                    Item.IdTermino = Dr.GetString(Dr.GetOrdinal(("id_termino")));
+                    Item.TituloTermino = Dr.GetString(Dr.GetOrdinal("titulo"));
                     Lista.Add(Item);
                 }
                 return Lista;
@@ -136,17 +136,17 @@ namespace CreativaSL.Dll.WebAdmin.Datos
             }
         }
 
-        public void ObtenerAvisoPrivacidadXID(RR_AvisoPrivacidadDatosGenerales Datos)
+        public void ObtenerTerminosCondicionesXID(RR_TerminosCondiciones Datos)
         {
             try
             {
-                object[] Parametros = { Datos.IdAviso };
+                object[] Parametros = { Datos.IdTermino };
                 SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_AvisosPrivacidadDetalle", Parametros);
                 while (Dr.Read())
                 {
-                    Datos.IdAviso = Dr.GetString(Dr.GetOrdinal("id_aviso"));
-                    Datos.TituloAviso = Dr.GetString(Dr.GetOrdinal("titulo"));
-                    Datos.TextoAviso = Dr.GetString(Dr.GetOrdinal("texto"));                    
+                    Datos.IdTermino = Dr.GetString(Dr.GetOrdinal("id_termino"));
+                    Datos.TituloTermino = Dr.GetString(Dr.GetOrdinal("titulo"));
+                    Datos.TextoTermino = Dr.GetString(Dr.GetOrdinal("texto"));
                     Datos.Completado = true;
                     break;
                 }

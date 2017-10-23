@@ -50,7 +50,7 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
         public void ObtenerAvisoPrivacidadXID (RR_AvisoPrivacidadDatosGenerales Datos)
         {
             RR_AvisoPrivacidadDatos APD = new RR_AvisoPrivacidadDatos();
-            APD.ObtenerAvisoPrivacidadDatosGeneralesXID(Datos);
+            APD.ObtenerAvisoPrivacidadXID(Datos);
         }
 
 

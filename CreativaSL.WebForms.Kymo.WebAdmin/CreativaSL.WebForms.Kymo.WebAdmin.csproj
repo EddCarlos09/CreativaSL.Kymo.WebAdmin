@@ -3164,7 +3164,9 @@
     <Content Include="assets\plugins\x-editable\img\loading.gif" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.js" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.min.js" />
+    <Content Include="frmAvisoPrivacidadAvisosGrid.aspx" />
     <Content Include="frmAvisoPrivacidadDatosGenerales.aspx" />
+    <Content Include="frmAvisoPrivacidadAvisos.aspx" />
     <Content Include="frmContactoDatosG.aspx" />
     <Content Include="frmContactoRedesSociales.aspx" />
     <Content Include="frmContactoRedesSocialesGrid.aspx" />
@@ -3184,17 +3186,26 @@
     <Content Include="frmNosotrosRedesSocialesGrid.aspx" />
     <Content Include="frmPatrocinadores.aspx" />
     <Content Include="frmPatrocinadoresGrid.aspx" />
+    <Content Include="frmTerminosCondiciones.aspx" />
+    <Content Include="frmTerminosCondicionesDatosGenerales.aspx" />
+    <Content Include="frmTerminosCondicionesGrid.aspx" />
     <Content Include="Imagenes\AvisoPrivacidad\faro.jpg" />
     <Content Include="Imagenes\Contacto\canon-del-sumidero.jpg" />
+    <Content Include="Imagenes\Contacto\isla-cancun.jpg" />
     <Content Include="Imagenes\DatosGenerales\faro.jpg" />
     <Content Include="Imagenes\DatosGenerales\koala.jpg" />
     <Content Include="Imagenes\DatosGenerales\tulipanes.jpg" />
     <Content Include="Imagenes\HomeBanner\blusas-y-playeras.jpg" />
     <Content Include="Imagenes\HomeBanner\playera-marcar-polo.jpg" />
     <Content Include="Imagenes\HomeBanner\tazas-y-gorras.jpg" />
+    <Content Include="Imagenes\HomePatrocinador\marca-polo.png" />
+    <Content Include="Imagenes\HomePatrocinador\nike.png" />
+    <Content Include="Imagenes\HomePatrocinador\oggi-jeans.png" />
     <Content Include="Imagenes\NosotrosEquipoTrabajo\desierto.jpg" />
     <Content Include="Imagenes\NosotrosQuienesSomos\faro.jpg" />
     <Content Include="Imagenes\NosotrosQuienesSomos\koala.jpg" />
+    <Content Include="Imagenes\TerminosCondiciones\desierto.jpg" />
+    <Content Include="Imagenes\TerminosCondiciones\planta.jpg" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="assets\images\Thumbs.db" />
@@ -4080,12 +4091,26 @@
   <ItemGroup>
     <Compile Include="ClaseAux\DialogMessage.cs" />
     <Compile Include="ClaseAux\Remover.cs" />
+    <Compile Include="frmAvisoPrivacidadAvisosGrid.aspx.cs">
+      <DependentUpon>frmAvisoPrivacidadAvisosGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAvisoPrivacidadAvisosGrid.aspx.designer.cs">
+      <DependentUpon>frmAvisoPrivacidadAvisosGrid.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmAvisoPrivacidadDatosGenerales.aspx.cs">
       <DependentUpon>frmAvisoPrivacidadDatosGenerales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmAvisoPrivacidadDatosGenerales.aspx.designer.cs">
       <DependentUpon>frmAvisoPrivacidadDatosGenerales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAvisoPrivacidadAvisos.aspx.cs">
+      <DependentUpon>frmAvisoPrivacidadAvisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAvisoPrivacidadAvisos.aspx.designer.cs">
+      <DependentUpon>frmAvisoPrivacidadAvisos.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmContactoDatosG.aspx.cs">
       <DependentUpon>frmContactoDatosG.aspx</DependentUpon>
@@ -4227,6 +4252,27 @@
     <Compile Include="frmPatrocinadoresGrid.aspx.designer.cs">
       <DependentUpon>frmPatrocinadoresGrid.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmTerminosCondiciones.aspx.cs">
+      <DependentUpon>frmTerminosCondiciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTerminosCondiciones.aspx.designer.cs">
+      <DependentUpon>frmTerminosCondiciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmTerminosCondicionesDatosGenerales.aspx.cs">
+      <DependentUpon>frmTerminosCondicionesDatosGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTerminosCondicionesDatosGenerales.aspx.designer.cs">
+      <DependentUpon>frmTerminosCondicionesDatosGenerales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmTerminosCondicionesGrid.aspx.cs">
+      <DependentUpon>frmTerminosCondicionesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTerminosCondicionesGrid.aspx.designer.cs">
+      <DependentUpon>frmTerminosCondicionesGrid.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -4242,9 +4288,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="bin\" />
-    <Folder Include="Imagenes\Contacto\" />
-    <Folder Include="Imagenes\NosotrosEquipoTrabajo\" />
-    <Folder Include="Imagenes\NosotrosQuienesSomos\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
