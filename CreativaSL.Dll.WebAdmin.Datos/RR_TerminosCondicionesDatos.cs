@@ -13,7 +13,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
     public class RR_TerminosCondicionesDatos
     {
         #region Terminos y Condiciones Datos Generales
-
+        /// <summary>
+        /// modifica los textos generales de la pagina terminos y condiciones 
+        /// </summary>
+        /// <param name="Datos"></param>
         public void ACTerminosDatosGenerales(RR_TerminosCondiciones Datos)
         {
             try
@@ -43,7 +46,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
             }
 
         }
-
+        /// <summary>
+        /// obtiene los textos generales de la pagina terminos y condiciones
+        /// </summary>
+        /// <param name="Datos"></param>
         public void ObtenerTerminosCondicionesGeneralesXID(RR_TerminosCondiciones Datos)
         {
             try
@@ -69,7 +75,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
         #endregion
 
         #region Terminos y Condiciones Textos
-
+        /// <summary>
+        /// altas y cambios en los textos de la pagina terminos y condiciones
+        /// </summary>
+        /// <param name="Datos"></param>
         public void ACTerminosCondiciones(RR_TerminosCondiciones Datos)
         {
             try
@@ -93,7 +102,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
             }
 
         }
-
+        /// <summary>
+        /// baja del texto seleccionado de la pagina nosotros datos generales
+        /// </summary>
+        /// <param name="Datos"></param>
         public void EliminarTerminosCondiciones(RR_TerminosCondiciones Datos)
         {
             try
@@ -113,7 +125,11 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// obtiene la lista de los textos de la pagina terminos y condiciones
+        /// </summary>
+        /// <param name="Datos"></param>
+        /// <returns></returns>
         public List<RR_TerminosCondiciones> ObtenerTerminosCondiciones(RR_TerminosCondiciones Datos)
         {
             try
@@ -135,13 +151,16 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// obtiene el texto seleccionado por id de la pagina terminos y condiciones
+        /// </summary>
+        /// <param name="Datos"></param>
         public void ObtenerTerminosCondicionesXID(RR_TerminosCondiciones Datos)
         {
             try
             {
                 object[] Parametros = { Datos.IdTermino };
-                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_AvisosPrivacidadDetalle", Parametros);
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_TerminosDetalle", Parametros);
                 while (Dr.Read())
                 {
                     Datos.IdTermino = Dr.GetString(Dr.GetOrdinal("id_termino"));

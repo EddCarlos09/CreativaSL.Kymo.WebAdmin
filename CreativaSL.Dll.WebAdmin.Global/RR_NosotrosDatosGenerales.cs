@@ -9,6 +9,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
 {
     public class RR_NosotrosDatosGenerales
     {
+        /// <summary>
+        /// identificador del texto 
+        /// </summary>
         private string _IdTexto;
         public string IdTexto
         {
@@ -16,6 +19,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _IdTexto = value; }
         }
         
+        /// <summary>
+        /// titulo de la pagina
+        /// </summary>
         private string _Titulo;
         public string Titulo
         {
@@ -23,6 +29,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _Titulo = value; }
         }
 
+        /// <summary>
+        /// segundo titulo de la pagina
+        /// </summary>
         private string _Titulo2;
         public string Titulo2
         {
@@ -30,6 +39,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _Titulo2 = value; }
         }
 
+        /// <summary>
+        /// tercer titulo de la pagina
+        /// </summary>
         private string _Titulo3;
         public string Titulo3
         {
@@ -37,6 +49,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _Titulo3 = value; }
         }
 
+        /// <summary>
+        /// posicion de la pagina en la que va el elemento 
+        /// </summary>
         private int _NumPosition;
         public int NumPosition
         {
@@ -44,6 +59,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _NumPosition = value; }
         }
 
+        /// <summary>
+        /// identificador de la pagina
+        /// </summary>
         private int _IdPagina;
         public int IdPagina
         {

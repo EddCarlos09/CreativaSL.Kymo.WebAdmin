@@ -511,6 +511,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
         #endregion
 
         #region Nosotros Datos Generales
+        /// <summary>
+        /// modifica el texto general de la pagina nosotros datos generales
+        /// </summary>
+        /// <param name="Datos"></param>
         public void ACNosotrosDatosGenerales(RR_NosotrosDatosGenerales Datos)
         {
             try
@@ -559,7 +563,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// obtiene los textos de la pagina nosotros datos general
+        /// </summary>
+        /// <param name="Datos"></param>
         public void ObtenerNosotrosDatosGeneralesXID(RR_NosotrosDatosGenerales Datos)
         {
             try

@@ -9,6 +9,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
 {
     public class RR_TerminosCondiciones
     {
+        /// <summary>
+        /// identificador del texto terminos y condiciones
+        /// </summary>
         private string _IdTermino;
         public string IdTermino
         {
@@ -16,6 +19,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _IdTermino = value; }
         }
 
+        /// <summary>
+        /// texto de terminos y condiciones
+        /// </summary>
         private string _TextoTermino;
         public string TextoTermino
         {
@@ -23,7 +29,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _TextoTermino = value; }
         }
 
-
+        /// <summary>
+        /// titulo de terminso y condiciones
+        /// </summary>
         private string _TituloTermino;
         public string TituloTermino
         {
@@ -31,6 +39,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _TituloTermino = value; }
         }        
 
+        /// <summary>
+        /// identificador del texto de terminos y condiciones
+        /// </summary>
         private string _IdTexto;
         public string IdTexto
         {
@@ -38,6 +49,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _IdTexto = value; }
         }
 
+        /// <summary>
+        /// texto en la pagina datos generales
+        /// </summary>
         private string _Texto;
         public string Texto
         {
@@ -45,6 +59,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _Texto = value; }
         }
         
+        /// <summary>
+        /// segundo texto en la pagina datos generales
+        /// </summary>
         private string _Texto2;
         public string Texto2
         {
