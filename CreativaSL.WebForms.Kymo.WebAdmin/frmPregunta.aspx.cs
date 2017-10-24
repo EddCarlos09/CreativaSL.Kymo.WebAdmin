@@ -6,7 +6,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using CreativaSL.Dll.WebAdmin.Global;
 using CreativaSL.Dll.WebAdmin.Negocio;
-using CreativaSL.WebForms.Kymo.WebAdmin.ClasesAux;
 using CreativaSL.WebForms.Kymo.WebAdmin.ClaseAux;
 
 namespace CreativaSL.WebForms.Kymo.WebAdmin
