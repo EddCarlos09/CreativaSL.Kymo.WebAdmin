@@ -57,6 +57,8 @@
 		<link rel="stylesheet" href="assets/css/print.css" type="text/css" media="print"/>
 		<!-- end: CORE CSS -->
 		<link rel="shortcut icon" href="assets/images/favicon.ico" />
+        <!-- Iconos-->
+        <link rel="stylesheet" href="assets/css/material-design-iconic-font.min.css"/>"        
 	</head>
 	<!-- end: HEAD -->
 	<!-- start: BODY -->
@@ -127,22 +129,22 @@
                                 <span class="title">NOSOTROS</span><i class="icon-arrow"></i> </a>
 								<ul class="sub-menu">
                                     <li>
-										<a href="#">
+										<a href="frmNosotrosDatosGenerales.aspx">
 											<span class="title">DATOS GENERALES</span>
 										</a>
 									</li>
 									 <li>
-										<a href="#">
+										<a href="frmNosotrosQuienesSomosGrid.aspx">
 											<span class="title">¿QUIENES SOMOS?</span>
                                         </a>
  									</li>
                                      <li>
-										<a href="#">
+										<a href="frmNosotrosPorqueElegirnosGrid.aspx">
 											<span class="title">¿POR QUE ELEGIRNOS?</span>
                                         </a>
  									</li>
                                     <li>
-										<a href="#">
+										<a href="frmNosotrosNuestroEquipoGrid.aspx">
 											<span class="title">NUESTRO EQUIPO</span>
                                         </a>
  									</li>
@@ -163,13 +165,66 @@
                                         </a>
  									</li>
                                      <li>
-										<a href="#">
+										<a href="frmContactoRedesSocialesGrid.aspx">
 											<span class="title">REDES SOCIALES</span>
                                         </a>
  									</li>
                                     <li>
-										<a href="#">
+										<a href="frmContactoSendMail.aspx">
 											<span class="title">CORREO CONTACTO</span>
+                                        </a>
+ 									</li>
+								</ul>
+							</li>
+                            <li>
+								<a href="javascript:void(0)"><i class="fa fa-thumbs-up"></i> 
+                                <span class="title">HOME</span><i class="icon-arrow"></i> </a>
+								<ul class="sub-menu">
+                                    <li>
+										<a href="frmHomeBannerGrid.aspx">
+											<span class="title">BANNER PRINCIPAL</span>
+										</a>
+									</li>
+									 <li>
+										<a href="#">
+											<span class="title">TEXTO PAGINA</span>
+                                        </a>
+ 									</li>
+                                    <li>
+										<a href="frmPatrocinadoresGrid.aspx">
+											<span class="title">PATROCINADORES</span>
+                                        </a>
+ 									</li>
+								</ul>
+							</li>
+                             <li>
+								<a href="javascript:void(0)"><i class="fa fa-thumbs-up"></i> 
+                                <span class="title">AVISO DE PRIVACIDAD</span><i class="icon-arrow"></i> </a>
+								<ul class="sub-menu">
+                                    <li>
+										<a href="#">
+											<span class="title">DATOS GENERALES</span>
+										</a>
+									</li>
+									 <li>
+										<a href="#">
+											<span class="title">AVISO</span>
+                                        </a>
+ 									</li>
+								</ul>
+							</li>
+                             <li>
+								<a href="javascript:void(0)"><i class="fa fa-thumbs-up"></i> 
+                                <span class="title">TERMINOS Y CONDICIONES</span><i class="icon-arrow"></i> </a>
+								<ul class="sub-menu">
+                                    <li>
+										<a href="#">
+											<span class="title">DATOS GENERALES</span>
+										</a>
+									</li>
+									 <li>
+										<a href="#">
+											<span class="title">TERIMINOS</span>
                                         </a>
  									</li>
 								</ul>

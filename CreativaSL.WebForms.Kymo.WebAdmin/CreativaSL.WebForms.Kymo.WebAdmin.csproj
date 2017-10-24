@@ -4159,14 +4159,12 @@
     </Compile>
     <Compile Include="frmRedesSociales.aspx.cs">
       <DependentUpon>frmRedesSociales.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmRedesSociales.aspx.designer.cs">
       <DependentUpon>frmRedesSociales.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmRedesSocialesGrid.aspx.cs">
       <DependentUpon>frmRedesSocialesGrid.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmRedesSocialesGrid.aspx.designer.cs">
       <DependentUpon>frmRedesSocialesGrid.aspx</DependentUpon>

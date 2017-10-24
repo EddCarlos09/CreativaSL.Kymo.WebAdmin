@@ -73,6 +73,14 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _Direccion = value; }
         }
 
+        private string _Password;
+
+        public string Password
+        {
+            get { return _Password; }
+            set { _Password = value; }
+        }
+
         private string _CorreoDestinatario;
         /// <summary>
         /// EL correo a donde se va enviar el contacto

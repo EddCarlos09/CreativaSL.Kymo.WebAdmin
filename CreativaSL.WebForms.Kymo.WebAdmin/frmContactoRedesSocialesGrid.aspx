@@ -1,16 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="frmRedesSocialesGrid.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmRedesSocialesGrid" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frmContactoRedesSocialesGrid.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmContactoRedesSocialesGrid" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_MasterBody" runat="server">
     <div class="row">
         <div class="col-md-12">
             <!-- start: DYNAMIC TABLE PANEL -->
             <div class="panel panel-white">
                 <div class="panel-heading">
-                    <h4 class="panel-title">Catálogo <span class="text-bold">Redes Sociales</span></h4>
+                    <h4 class="panel-title"><span class="text-bold">Contacto Redes Sociales</span></h4>
                 </div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12 space20">
-                            <a href="frmRedesSociales.aspx" class="btn btn-green">Nuevo
+                            <a href="frmContactoRedesSociales.aspx" class="btn btn-green">Nuevo
 								<i class="fa fa-plus"></i>
                             </a>
                         </div>
@@ -18,21 +18,22 @@
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
                             <thead>
-                                <tr>                                    
+                                <tr>
                                     <th>Red Social</th>
+                                    <th>Cuenta</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <%--<% foreach (var Item in Lista)
-									{ %>--%>
+                                <% foreach (var Item in _ListaRedesSocial)
+									{ %>
                                 <tr>
-                                    <%--<td><%=Item.Fecha %></td>
-									<td><%=Item.Titulo %></td>--%>
+                                    <td><%=Item.NombreRedSocial %></td>
+                                    <td><%=Item.Cuenta %></td>
                                     <td>
                                         <div class="visible-md visible-lg hidden-sm hidden-xs">
-                                            <%--<%Response.Write("<a href='frmRedesSociales.aspx?op=2&id=" + Item.IDPublicacion.ToString() + "' class='btn btn-xs btn-blue tooltips' data-placement='top' data-original-title='Editar'> <i class='fa fa-edit'> </i> </a>"); %>
-											<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IDPublicacion.ToString() + "' data-toggle='modal'  class='btn btn-xs btn-red tooltips' data-placement='top' data-original-title='Eliminar'> <i class='fa fa-times fa fa-white'> </i> </a>");%>--%>                                            
+                                            <%Response.Write("<a href='frmContactoRedesSociales.aspx?op=2&id=" + Item.IdRedSocial.ToString() + "' class='btn btn-xs btn-blue tooltips' data-placement='top' data-original-title='Editar'> <i class='fa fa-edit'> </i> </a>"); %>
+											<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IdRedSocial.ToString() + "' data-toggle='modal'  class='btn btn-xs btn-red tooltips' data-placement='top' data-original-title='Eliminar'> <i class='fa fa-times fa fa-white'> </i> </a>");%>
                                         </div>
 
                                         <div class="visible-xs visible-sm hidden-md hidden-lg">
@@ -42,15 +43,15 @@
                                                 </a>
                                                 <ul role="menu" class="dropdown-menu pull-right dropdown-dark">
                                                     <li>
-                                                        <%--<%Response.Write("<a href='frmRedesSociales.aspx?op=2&id=" + Item.IDPublicacion.ToString() + "' role='menuitem' tabindex='-1' class='tooltips' data-placement='top' data-original-title='Editar'><i class='fa fa-edit'></i>Editar</a>"); %>--%>
+                                                        <%Response.Write("<a href='frmContactoRedesSociales.aspx?op=2&id=" + Item.IdRedSocial.ToString() + "' role='menuitem' tabindex='-1' class='tooltips' data-placement='top' data-original-title='Editar'><i class='fa fa-edit'></i>Editar</a>"); %>
                                                     </li>
                                                     <li>
-                                                        <%--<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IDPublicacion.ToString() + "' role='menuitem' tabindex='-1' data-toggle='modal'  class='tooltips' data-placement='top' data-original-title='Eliminar'><i class='fa fa-times fa fa-white'></i>Eliminar</a>");%>--%>
-                                                    </li>                                                    
+                                                        <%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IdRedSocial.ToString() + "' role='menuitem' tabindex='-1' data-toggle='modal'  class='tooltips' data-placement='top' data-original-title='Eliminar'><i class='fa fa-times fa fa-white'></i>Eliminar</a>");%>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
-                                        <%--<div class="modal fade bs-example-modal-sm<% = Item.IDPublicacion.ToString() %>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">--%>
+                                        <div class="modal fade bs-example-modal-sm<% = Item.IdRedSocial.ToString() %>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-sm">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -66,20 +67,19 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button data-dismiss="modal" class="btn btn-red" type="button">No</button>
-                                                    <%--<% Response.Write("<a  href='frmRedesSociales.aspx?op=3&id=" + Item.IDPublicacion.ToString() + "' class='btn btn-green add-row' runat='server'>Si</a>");%>--%>
+                                                    <% Response.Write("<a  href='frmContactoRedesSocialesGrid.aspx?op=3&id=" + Item.IdRedSocial.ToString() + "' class='btn btn-green add-row' runat='server'>Si</a>");%>
                                                 </div>
                                             </div>
                                         </div>
+                                    </td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
                     </div>
-                    </td>
-								</tr>
-								<%--<% } %>--%>
-							</tbody>
-						</table>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 	
 	<!-- start: MAIN JAVASCRIPTS -->

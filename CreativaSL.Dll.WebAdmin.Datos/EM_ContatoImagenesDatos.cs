@@ -12,12 +12,16 @@ namespace CreativaSL.Dll.WebAdmin.Datos
 {
     public class EM_ContatoImagenesDatos
     {
+        /// <summary>
+        /// Metodo que se encarga de dar de alta y modificacion de imagene
+        /// </summary>
+        /// <param name="Datos">Se envia la cadena de conexion y los parametro que recibe</param>
         public void AC_ImagenContacto(EM_ContactoImagen Datos)
         {
             try
             {
                 object[] Parametros = { Datos.NuevoRegistro, Datos.IdImagen, Datos.TituloPagina, Datos.TextoAlternativo, Datos.TituloImagen, Datos.IdPagina,
-                    Datos.TituloContacto, Datos.TextoContacto, Datos.Extencion, Datos.UrlImagen, Datos.IDUsuario };
+                    Datos.TituloContacto, Datos.TextoContacto, Datos.Extencion, Datos.UrlImagen, Datos.CambiarImagen, Datos.IDUsuario };
                 SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "EM_spCSLDB_AC_ContactoImagen", Parametros);
                 while (Dr.Read())
                 {
@@ -36,7 +40,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// Es el metodo que se encarga de obtener los datos del registro
+        /// </summary>
+        /// <param name="Datos">Se envia la cadena de conexion y los parametro que recibe</param>
         public void ObtenerImagenContacto(EM_ContactoImagen Datos)
         {
             try

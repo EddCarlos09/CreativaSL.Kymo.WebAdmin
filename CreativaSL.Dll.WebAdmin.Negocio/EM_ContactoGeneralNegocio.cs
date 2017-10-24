@@ -44,5 +44,39 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
             }
         }
 
+        /// <summary>
+        /// Es el metodo conector a la capa de datos EM_ContatoImagenesDatos
+        /// </summary>
+        /// <param name="Datos">Se envia la cadena de conexion y los parametro que recibe</param>
+        public void AC_ContactoSendMail(EM_ContactoGeneral Datos)
+        {
+            try
+            {
+                EM_ContactoGeneralDatos CD = new EM_ContactoGeneralDatos();
+                CD.AC_CorreoSendContacto(Datos);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// El metedo es para obtener y pintar los datos de contactos
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ObtenerContactoSendMail(EM_ContactoGeneral Datos)
+        {
+            try
+            {
+                EM_ContactoGeneralDatos CD = new EM_ContactoGeneralDatos();
+                CD.ObtenerDatosContactoSentMail(Datos);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

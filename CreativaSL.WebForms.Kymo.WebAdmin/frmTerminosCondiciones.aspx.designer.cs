@@ -10,7 +10,7 @@
 namespace CreativaSL.WebForms.Kymo.WebAdmin {
     
     
-    public partial class frmRedesSociales {
+    public partial class frmTerminosCondiciones {
         
         /// <summary>
         /// Control hf.
@@ -22,12 +22,21 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin {
         protected global::System.Web.UI.WebControls.HiddenField hf;
         
         /// <summary>
-        /// Control txtNickName.
+        /// Control txtTitulo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtNickName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTitulo;
+        
+        /// <summary>
+        /// Control txtDescripcion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtDescripcion;
     }
 }

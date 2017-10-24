@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frmRedesSociales.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmRedesSociales" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frmNosotrosRedesSociales.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmNosotrosRedesSociales" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_MasterBody" runat="server">
 	 <div class="row">
 		<div class="col-md-12">
@@ -11,6 +11,7 @@
 				<div class="panel-body">
 					<div class="row">
 						<asp:HiddenField ID="hf" runat="server" />
+                        <asp:HiddenField ID="hf2" runat="server" />
 					</div>
 					<div class="row">
 						<div class="col-md-12">
@@ -30,10 +31,10 @@
                                 </label>
                                 <select id="cmbRedSocial" name="cmbRedSocial" class="form-control search-select">
                                     <option value=""></option>
-                                    <%--<% foreach (var Item in ListaCol)
+                                    <% foreach (var Item in Lista)
                                         {
-                                            Response.Write("<option value='" + Item.IDColaborador + "'> " + Item.Nombre + "</option>");
-                                        }%>--%>
+                                            Response.Write("<option value='" + Item.IdTipoRedSocial + "'> " + Item.Descripcion.ToString() + "</option>");
+                                        }%>
                                 </select>
                             </div>
                         </div>
@@ -62,10 +63,10 @@
 						<div class="col-md-6">
 							<div class="form-group">
 								<div class="col-md-6">
-									<input type="submit" formaction="frmRedesSociales.aspx" class="btn btn-green btn-block" name="btnGuardar" value="Guardar"/>
+									<input type="submit" formaction="frmNosotrosRedesSociales.aspx" class="btn btn-green btn-block" name="btnGuardar" value="Guardar"/>
 								</div>
 								<div class="col-md-6">
-									<a href="frmRedesSocialesGrid.aspx" class="btn btn-red btn-block" name="btnCancelar">Cancelar</a>
+									<a href="frmNosotrosRedesSocialesGrid.aspx" class="btn btn-red btn-block" name="btnCancelar">Cancelar</a>
 								</div>
 							</div>
 						</div>
@@ -75,7 +76,7 @@
 		</div>
 	</div>
 		<script src="assets/plugins/jQuery/jquery-2.1.1.min.js"></script>
-		<script src="assets/js/form-validation2.js"></script>
+		<script src="assets/js/form-validation.js"></script>
 		<script src="assets/js/ui-notifications.js"></script>
 		<script src="assets/plugins/sweetalert/lib/sweet-alert.min.js"></script>
 		<script src="assets/js/main.js"></script>

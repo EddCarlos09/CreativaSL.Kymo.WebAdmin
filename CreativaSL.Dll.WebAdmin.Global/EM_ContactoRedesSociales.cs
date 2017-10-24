@@ -39,6 +39,16 @@ namespace CreativaSL.Dll.WebAdmin.Global
             get { return _Cuenta; }
             set { _Cuenta = value; }
         }
+        private string _NombreRedSocial;
+        /// <summary>
+        /// Es el nombre de la red social de la empresa
+        /// </summary>
+        public string NombreRedSocial
+        {
+            get { return _NombreRedSocial; }
+            set { _NombreRedSocial = value; }
+        }
+
 
         #region DatosDeControl
         private string _Conexion;

@@ -25,15 +25,14 @@
 								</tr>
 							</thead>
 							<tbody>                  
-								<%--<% foreach (var Item in Lista)
-									{ %>--%>
-								<tr>
-									<%--<td><%=Item.Fecha %></td>
-									<td><%=Item.Titulo %></td>--%>
+								<% foreach (var Item in Lista)
+									{ %>
+								<tr>									
+									<td><%=Item.Titulo %></td>
 									<td>
 										<div class="visible-md visible-lg hidden-sm hidden-xs">
-											<%--<%Response.Write("<a href='frmNosotrosQuienesSomos.aspx?op=2&id=" + Item.IDPublicacion.ToString() + "' class='btn btn-xs btn-blue tooltips' data-placement='top' data-original-title='Editar'> <i class='fa fa-edit'> </i> </a>"); %>
-											<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IDPublicacion.ToString() + "' data-toggle='modal'  class='btn btn-xs btn-red tooltips' data-placement='top' data-original-title='Eliminar'> <i class='fa fa-times fa fa-white'> </i> </a>");%>--%>                                            
+											<%Response.Write("<a href='frmNosotrosQuienesSomos.aspx?op=2&id=" + Item.IdSeccion.ToString() + "' class='btn btn-xs btn-blue tooltips' data-placement='top' data-original-title='Editar'> <i class='fa fa-edit'> </i> </a>"); %>
+											<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IdSeccion.ToString() + "' data-toggle='modal'  class='btn btn-xs btn-red tooltips' data-placement='top' data-original-title='Eliminar'> <i class='fa fa-times fa fa-white'> </i> </a>");%>
 										</div>
 
 										<div class="visible-xs visible-sm hidden-md hidden-lg">
@@ -43,15 +42,15 @@
 												</a>
 												<ul role="menu" class="dropdown-menu pull-right dropdown-dark">
 													<li>
-														<%--<%Response.Write("<a href='frmNosotrosQuienesSomos.aspx?op=2&id=" + Item.IDPublicacion.ToString() + "' role='menuitem' tabindex='-1' class='tooltips' data-placement='top' data-original-title='Editar'><i class='fa fa-edit'></i>Editar</a>"); %>--%>
+														<%Response.Write("<a href='frmNosotrosQuienesSomos.aspx?op=2&id=" + Item.IdSeccion.ToString() + "' role='menuitem' tabindex='-1' class='tooltips' data-placement='top' data-original-title='Editar'><i class='fa fa-edit'></i>Editar</a>"); %>
 													</li>
 													<li>
-														<%--<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IDPublicacion.ToString() + "' role='menuitem' tabindex='-1' data-toggle='modal'  class='tooltips' data-placement='top' data-original-title='Eliminar'><i class='fa fa-times fa fa-white'></i>Eliminar</a>");%>--%>
+														<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IdSeccion.ToString() + "' role='menuitem' tabindex='-1' data-toggle='modal'  class='tooltips' data-placement='top' data-original-title='Eliminar'><i class='fa fa-times fa fa-white'></i>Eliminar</a>");%>
 													</li>                                                    
 												</ul>
 											</div>
 										</div>
-										<%--<div class="modal fade bs-example-modal-sm<% = Item.IDPublicacion.ToString() %>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">--%>
+										<div class="modal fade bs-example-modal-sm<% = Item.IdSeccion.ToString() %>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 										<div class="modal-dialog modal-sm">
 											<div class="modal-content">
 												<div class="modal-header">
@@ -67,14 +66,14 @@
 												</div>
 												<div class="modal-footer">                     
 													<button data-dismiss="modal" class="btn btn-red" type="button">No</button>
-													<%--<% Response.Write("<a  href='frmNosotrosQuienesSomos.aspx?op=3&id=" + Item.IDPublicacion.ToString() + "' class='btn btn-green add-row' runat='server'>Si</a>");%>--%>
+													<% Response.Write("<a  href='frmNosotrosQuienesSomosGrid.aspx?op=3&id=" + Item.IdSeccion.ToString() + "' class='btn btn-green add-row' runat='server'>Si</a>");%>
 												</div>
 											</div>
 										</div>
 									  </div>
 									</td>
 								</tr>
-								<%--<% } %>--%>
+								<% } %>
 							</tbody>
 						</table>
 					</div>
@@ -98,3 +97,4 @@
 			TableData.init();
 		});
 	</script>
+    </asp:Content>

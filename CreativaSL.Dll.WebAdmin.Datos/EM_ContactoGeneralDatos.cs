@@ -62,5 +62,57 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 throw ex;
             }
         }
+
+
+        /// <summary>
+        /// Metodo que se encarga de dar de alta y modificacion
+        /// </summary>
+        /// <param name="Datos">Se envia la cadena de conexion y los parametro que recibe</param>
+        public void AC_CorreoSendContacto(EM_ContactoGeneral Datos)
+        {
+            try
+            {
+                object[] Parametros = {Datos.Correo, Datos.Password, Datos.CorreoDestinatario, Datos.HostText,
+                    Datos.Puerto, Datos.EnableSSL, Datos.IDUsuario };
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "EM_spCSLDB_AC_ContactoDatosSend", Parametros);
+                while (Dr.Read())
+                {
+                    int Resultado = Dr.GetInt32(Dr.GetOrdinal("Resultado"));
+                    if (Resultado == 1)
+                    {
+                        Datos.Completado = true;
+                    }
+                    Datos.Resultado = Resultado;
+                    break;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void ObtenerDatosContactoSentMail(EM_ContactoGeneral Datos)
+        {
+            try
+            {
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "EM_spCSLDB_get_ContactoDatosSend");
+                while (Dr.Read())
+                {
+                    Datos.Correo = Dr.GetString(Dr.GetOrdinal("Correo"));
+                    Datos.Password = Dr.GetString(Dr.GetOrdinal("Passwords"));
+                    Datos.CorreoDestinatario = Dr.GetString(Dr.GetOrdinal("CorreoDestinatario"));
+                    Datos.HostText = Dr.GetString(Dr.GetOrdinal("HostText"));
+                    Datos.Puerto = Dr.GetInt32(Dr.GetOrdinal("Puerto"));
+                    Datos.EnableSSL = Dr.GetBoolean(Dr.GetOrdinal("EnableSsl"));
+                    Datos.Completado = true;
+                    break;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

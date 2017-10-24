@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frmNosotrosPorqueElegirnos.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmNosotrosPorqueElegirnos" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" ValidateRequest="false" AutoEventWireup="true" CodeBehind="frmNosotrosPorqueElegirnos.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmNosotrosPorqueElegirnos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_MasterBody" runat="server">
     <div class="row">
         <div class="col-md-12">
@@ -6,7 +6,7 @@
         <div class="col-sd-12">
             <div class="panel panel-white">
                 <div class="panel-heading">
-                    <h4 class="panel-title"><span class="text-bold">Datos Nuestro Equipo de Trabajo</span></h4>
+                    <h4 class="panel-title"><span class="text-bold">Datos Porque Elegirnos</span></h4>
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -27,7 +27,7 @@
                                     T&iacute;tulo<span class="symbol required"></span>
                                 </label>
                                 <span class="input-icon">
-                                    <input type="text" class="form-control tooltips" runat="server" id="txtTitulo" name="txtTitulo" maxlength="200" data-original-title="Ingrese el T&iacute;tulo" data-rel="tooltip" title="" data-placement="top" />
+                                    <input type="text" class="form-control tooltips" runat="server" id="txtTitulo" name="txtTitulo" data-original-title="Ingrese el T&iacute;tulo" data-rel="tooltip" title="" data-placement="top" />
                                     <i class="fa fa-user"></i>
                                 </span>
                             </div>
@@ -40,7 +40,11 @@
                                     Icono <span class="symbol required"></span>
                                 </label>
                                 <select id="cmbIconos" name="cmbIconos" class="form-control search-select">
-                                    <option value="">&nbsp;</option>
+                                   <% foreach (var Item in Lista)
+                                           {
+                                            Response.Write("<option value='" + Item.IdClassIcono.ToString() + "'>" + Item.CssClass.ToString() + "</option>");
+                                           }
+                                       %>
                                 </select>
                             </div>
                         </div>
@@ -49,8 +53,8 @@
                                 <label class="control-label" for="cph_MasterBody_txtTituloImagen">
                                     Vista Previa
                                 </label>
-                                <span class="input-icon">
-                                    <i class="fa fa-laptop"></i>
+                                <span class="input-icon">                                    
+                                    <i class="zmdi zmdi-whatsapp"></i>
                                 </span>
                             </div>
                         </div>
@@ -59,7 +63,7 @@
                                 <label class="control-label">
                                     Descripci&oacute;n
                                 </label>
-                                <textarea name="txtDescripcion" id="txtDescripcion" runat="server" class="ckeditor form-control" cols="10" rows="10" maxlength="1056"></textarea>
+                                <textarea name="txtDescripcion" id="txtDescripcion" runat="server" class="ckeditor form-control" maxlength="100000000"></textarea>
                             </div>
                         </div>
                         <div class="row">
@@ -100,4 +104,7 @@
 		        FormValidator.init(3);
 		    });
 		</script>
+        <script>            
+            
+        </script>
 </asp:Content>
