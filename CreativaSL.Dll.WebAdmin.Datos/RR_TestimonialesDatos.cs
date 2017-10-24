@@ -73,5 +73,25 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 throw ex;
             }
         }
+
+        public void EliminarTestimonial(RR_Testimoniales Datos)
+        {
+            try
+            {
+                object[] Parametros = { Datos.IdTestimonial };
+                object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "RR_spCSLDB_B_Testimonial", Parametros);
+                int Resultado = 0;
+                int.TryParse(Result.ToString(), out Resultado);
+                if (Resultado == 1)
+                {
+                    Datos.Completado = true;
+                }
+                Datos.Resultado = Resultado;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

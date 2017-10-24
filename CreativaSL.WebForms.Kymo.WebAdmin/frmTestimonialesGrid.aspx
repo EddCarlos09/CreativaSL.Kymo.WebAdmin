@@ -31,7 +31,7 @@
 									<td><%=Item.NombreCompleto %></td>									
 									<td>
 										<div class="visible-md visible-lg hidden-sm hidden-xs">
-											<%Response.Write("<a href='frmTestimonialesGrid.aspx?op=2&id=" + Item.IdTestimonial.ToString() + "' class='btn btn-xs btn-blue tooltips' data-placement='top' data-original-title='Leer Comentario'> <i class='fa fa-eye'> </i> </a>"); %>
+											<%Response.Write("<a href='frmTestimonioDetalle.aspx?op=2&id=" + Item.IdTestimonial.ToString() + "' class='btn btn-xs btn-blue tooltips' data-placement='top' data-original-title='Leer Comentario'> <i class='fa fa-eye'> </i> </a>"); %>
                                             <%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm1" + Item.IdTestimonial.ToString() + "' data-toggle='modal'  class='btn btn-xs btn-yellow tooltips' data-placement='top' data-original-title='Mostrar en Pagina'> <i class='fa fa-check fa fa-check'> </i> </a>");%>
 											<%Response.Write("<a data-placement='top' data-target='.bs-example-modal-sm" + Item.IdTestimonial.ToString() + "' data-toggle='modal'  class='btn btn-xs btn-red tooltips' data-placement='top' data-original-title='Eliminar'> <i class='fa fa-times fa fa-white'> </i> </a>");%>                                            
 										</div>

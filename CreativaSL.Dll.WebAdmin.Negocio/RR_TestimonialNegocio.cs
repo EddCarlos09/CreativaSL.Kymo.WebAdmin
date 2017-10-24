@@ -28,5 +28,11 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
             TD.ActivarTestimonial(Datos);
         }
 
+        public void EliminarTestimonial(RR_Testimoniales Datos)
+        {
+            RR_TestimonialesDatos TD = new RR_TestimonialesDatos();
+            TD.EliminarTestimonial(Datos);
+        }
+
     }
 }

@@ -23,15 +23,33 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                         string AuxID = Request.QueryString["id"];
                         RR_Testimoniales Datos = new RR_Testimoniales { Conexion = Comun.Conexion, IdTestimonial = AuxID, IDUsuario = Comun.IDUsuario };
                         RR_TestimonialNegocio NN = new RR_TestimonialNegocio();
-                        //NN.EliminarNosotrosEquipoTrabajo(Datos);
-                        //if (Datos.Completado)
-                        //{
-                        //    Response.Redirect("frmNosotrosNuestroEquipoGrid.aspx");
-                        //}
-                        //else
-                        //{
-                        //    //Mostrar Mensaje de error
-                        //}
+                        NN.EliminarTestimonial(Datos);
+                        if (Datos.Completado)
+                        {
+                            Response.Redirect("frmTestimonialesGrid.aspx");
+                        }
+                        else
+                        {
+                            //Mostrar Mensaje de error
+                        }
+                    }                    
+                }
+                else if (Request.QueryString["op"] != null && Request.QueryString["op"] == "4")
+                {
+                    if (Request.QueryString["id"] != null)
+                    {
+                        string AuxID = Request.QueryString["id"];
+                        RR_Testimoniales Datos = new RR_Testimoniales { Conexion = Comun.Conexion, IdTestimonial = AuxID, IDUsuario = Comun.IDUsuario };
+                        RR_TestimonialNegocio NN = new RR_TestimonialNegocio();
+                        NN.ActivarTestimonial(Datos);
+                        if (Datos.Completado)
+                        {
+                            Response.Redirect("frmTestimonialesGrid.aspx");
+                        }
+                        else
+                        {
+                            //Mostrar Mensaje de error
+                        }
                     }
                 }
                 if (!IsPostBack)

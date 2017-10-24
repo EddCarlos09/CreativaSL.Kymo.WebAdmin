@@ -3191,6 +3191,7 @@
     <Content Include="frmTerminosCondicionesDatosGenerales.aspx" />
     <Content Include="frmTerminosCondicionesGrid.aspx" />
     <Content Include="frmTestimonialesGrid.aspx" />
+    <Content Include="frmTestimonioDetalle.aspx" />
     <Content Include="Imagenes\AvisoPrivacidad\faro.jpg" />
     <Content Include="Imagenes\Contacto\canon-del-sumidero.jpg" />
     <Content Include="Imagenes\Contacto\isla-cancun.jpg" />
@@ -4288,6 +4289,13 @@
     </Compile>
     <Compile Include="frmTestimonialesGrid.aspx.designer.cs">
       <DependentUpon>frmTestimonialesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmTestimonioDetalle.aspx.cs">
+      <DependentUpon>frmTestimonioDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTestimonioDetalle.aspx.designer.cs">
+      <DependentUpon>frmTestimonioDetalle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
