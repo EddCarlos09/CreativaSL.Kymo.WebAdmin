@@ -51,7 +51,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RR_AvisoPrivacidadNegocio.cs" />
     <Compile Include="RR_NosotrosNegocio.cs" />
+    <Compile Include="RR_ProductosNegocio.cs" />
     <Compile Include="RR_TerminosCondicionesNegocio.cs" />
+    <Compile Include="RR_TestimonialNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CreativaSL.Dll.WebAdmin.Datos\CreativaSL.Dll.WebAdmin.Datos.csproj">

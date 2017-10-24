@@ -3186,9 +3186,11 @@
     <Content Include="frmNosotrosRedesSocialesGrid.aspx" />
     <Content Include="frmPatrocinadores.aspx" />
     <Content Include="frmPatrocinadoresGrid.aspx" />
+    <Content Include="frmProductos.aspx" />
     <Content Include="frmTerminosCondiciones.aspx" />
     <Content Include="frmTerminosCondicionesDatosGenerales.aspx" />
     <Content Include="frmTerminosCondicionesGrid.aspx" />
+    <Content Include="frmTestimonialesGrid.aspx" />
     <Content Include="Imagenes\AvisoPrivacidad\faro.jpg" />
     <Content Include="Imagenes\Contacto\canon-del-sumidero.jpg" />
     <Content Include="Imagenes\Contacto\isla-cancun.jpg" />
@@ -4252,6 +4254,13 @@
     <Compile Include="frmPatrocinadoresGrid.aspx.designer.cs">
       <DependentUpon>frmPatrocinadoresGrid.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmProductos.aspx.cs">
+      <DependentUpon>frmProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmProductos.aspx.designer.cs">
+      <DependentUpon>frmProductos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmTerminosCondiciones.aspx.cs">
       <DependentUpon>frmTerminosCondiciones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4273,6 +4282,13 @@
     <Compile Include="frmTerminosCondicionesGrid.aspx.designer.cs">
       <DependentUpon>frmTerminosCondicionesGrid.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmTestimonialesGrid.aspx.cs">
+      <DependentUpon>frmTestimonialesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTestimonialesGrid.aspx.designer.cs">
+      <DependentUpon>frmTestimonialesGrid.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -4288,6 +4304,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="bin\" />
+    <Folder Include="Imagenes\Productos\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
