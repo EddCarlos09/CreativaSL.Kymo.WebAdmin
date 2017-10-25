@@ -1419,6 +1419,11 @@ var Main = function() {
             document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
         }
     };
+
+
+
+    
+
     return {
         //main function to initiate template pages
         init: function() {
