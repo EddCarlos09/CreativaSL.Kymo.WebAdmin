@@ -3189,8 +3189,6 @@
     <Content Include="frmPregunta.aspx" />
     <Content Include="frmPreguntasRespuestas.aspx" />
     <Content Include="frmProductos.aspx" />
-    <Content Include="frmRedesSociales.aspx" />
-    <Content Include="frmRedesSocialesGrid.aspx" />
     <Content Include="frmTerminosCondiciones.aspx" />
     <Content Include="frmTerminosCondicionesDatosGenerales.aspx" />
     <Content Include="frmTerminosCondicionesGrid.aspx" />
@@ -4265,18 +4263,6 @@
     </Compile>
     <Compile Include="frmProductos.aspx.designer.cs">
       <DependentUpon>frmProductos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmRedesSociales.aspx.cs">
-      <DependentUpon>frmRedesSociales.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmRedesSociales.aspx.designer.cs">
-      <DependentUpon>frmRedesSociales.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmRedesSocialesGrid.aspx.cs">
-      <DependentUpon>frmRedesSocialesGrid.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmRedesSocialesGrid.aspx.designer.cs">
-      <DependentUpon>frmRedesSocialesGrid.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmTerminosCondiciones.aspx.cs">
       <DependentUpon>frmTerminosCondiciones.aspx</DependentUpon>
