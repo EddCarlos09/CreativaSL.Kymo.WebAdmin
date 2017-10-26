@@ -28,7 +28,7 @@
                                     Nombre<span class="symbol required"></span>
                                 </label>
                                 <span class="input-icon">
-                                    <input type="text" class="form-control tooltips" runat="server" id="txtNombre" name="txtNombre" maxlength="200" data-original-title="Ingrese el nombre" data-rel="tooltip" title="" data-placement="top" />
+                                    <input type="text" class="form-control tooltips" runat="server" id="txtNombre" name="txtNombre"  data-original-title="Ingrese el nombre" data-rel="tooltip" title="" data-placement="top" />
                                     <i class="fa fa-user"></i>
                                 </span>
                             </div>
@@ -39,7 +39,7 @@
                                     Puesto<span class="symbol required"></span>
                                 </label>
                                 <span class="input-icon">
-                                    <input type="text" class="form-control tooltips" runat="server" id="txtPuesto" name="txtPuesto" maxlength="200" data-original-title="Ingrese el puesto" data-rel="tooltip" title="" data-placement="top" />
+                                    <input type="text" class="form-control tooltips" runat="server" id="txtPuesto" name="txtPuesto"  data-original-title="Ingrese el puesto" data-rel="tooltip" title="" data-placement="top" />
                                     <i class="fa fa-circle"></i>
                                 </span>
                             </div>
@@ -73,7 +73,7 @@
                                     Texto Alternativo<span class="symbol required"></span>
                                 </label>
                                 <span class="input-icon">
-                                    <input type="text" class="form-control tooltips" runat="server" id="txtTextoAlternativo" name="txtTextoAlternativo" maxlength="200" data-original-title="Ingrese el texto alternativo" data-rel="tooltip" title="" data-placement="top" />
+                                    <input type="text" class="form-control tooltips" runat="server" id="txtTextoAlternativo" name="txtTextoAlternativo"  data-original-title="Ingrese el texto alternativo" data-rel="tooltip" title="" data-placement="top" />
                                     <i class="fa fa-circle"></i>
                                 </span>
                             </div>
@@ -84,7 +84,7 @@
                                     T&iacute;tulo Imagen<span class="symbol required"></span>
                                 </label>
                                 <span class="input-icon">
-                                    <input type="text" class="form-control tooltips" runat="server" id="txtTituloImagen" name="txtTituloImagen" maxlength="200" data-original-title="Ingrese el t&iacute;tulo de la imagen" data-rel="tooltip" title="" data-placement="top" />
+                                    <input type="text" class="form-control tooltips" runat="server" id="txtTituloImagen" name="txtTituloImagen"  data-original-title="Ingrese el t&iacute;tulo de la imagen" data-rel="tooltip" title="" data-placement="top" />
                                     <i class="fa fa-circle"></i>
                                 </span>
                             </div>

@@ -13,7 +13,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
     public class RR_AvisoPrivacidadDatos
     {
         #region Aviso de Privacidad Datos Generales
-
+        /// <summary>
+        /// crea y modifica los textos y la imagen generla de la pagina aviso de privacidad
+        /// </summary>
+        /// <param name="Datos"></param>
         public void ACAvisoPrivacidadDatosGenerales(RR_AvisoPrivacidadDatosGenerales Datos)
         {
             try
@@ -43,7 +46,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
             }
 
         }
-
+        /// <summary>
+        /// obtiene los textos y la imagen de ka pagina aviso de privacidad
+        /// </summary>
+        /// <param name="Datos"></param>
         public void ObtenerAvisoPrivacidadDatosGeneralesXID(RR_AvisoPrivacidadDatosGenerales Datos)
         {
             try
@@ -69,7 +75,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
         #endregion
 
         #region Aviso de Privacidad Textos
-
+        /// <summary>
+        /// Crea y modifica los textos para la pagina aviso de privacidad
+        /// </summary>
+        /// <param name="Datos"></param>
         public void ACAvisoPrivacidad(RR_AvisoPrivacidadDatosGenerales Datos)
         {
             try
@@ -93,7 +102,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
             }
 
         }
-
+        /// <summary>
+        /// Elimina el texto seleccionado para la pagina aviso de privacidad
+        /// </summary>
+        /// <param name="Datos"></param>
         public void EliminarAvisoPrivacidad(RR_AvisoPrivacidadDatosGenerales Datos)
         {
             try
@@ -113,7 +125,11 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// obtiene la lista de todos los textos de la pagina aviso de privacidad
+        /// </summary>
+        /// <param name="Datos"></param>
+        /// <returns></returns>
         public List<RR_AvisoPrivacidadDatosGenerales> ObtenerAvisosPrivacidad(RR_AvisoPrivacidadDatosGenerales Datos)
         {
             try
@@ -124,7 +140,7 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 while (Dr.Read())
                 {
                     Item = new RR_AvisoPrivacidadDatosGenerales();
-                    Item.IdAviso = Dr.GetString(Dr.GetOrdinal(("id_seccion")));
+                    Item.IdAviso = Dr.GetString(Dr.GetOrdinal(("id_aviso")));
                     Item.TituloAviso = Dr.GetString(Dr.GetOrdinal("titulo"));
                     Lista.Add(Item);
                 }
@@ -135,7 +151,10 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// obtiene el texto especifico por id de la pagina avisos de privacidad
+        /// </summary>
+        /// <param name="Datos"></param>
         public void ObtenerAvisoPrivacidadXID(RR_AvisoPrivacidadDatosGenerales Datos)
         {
             try

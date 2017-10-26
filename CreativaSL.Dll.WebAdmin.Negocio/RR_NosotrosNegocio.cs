@@ -162,6 +162,11 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
 
         #region Iconos
 
+        /// <summary>
+        /// obtiene el id y el nombre de los iconos a utilizar
+        /// </summary>
+        /// <param name="Datos"></param>
+        /// <returns></returns>
         public List<RR_Iconos> ObtenerIconos(RR_Iconos Datos)
         {
             RR_NosotrosDatos ND = new RR_NosotrosDatos();
@@ -267,18 +272,30 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
 
         #region Nosotros Datos Generales
 
+        /// <summary>
+        /// altas y bajas de textos en la pagina nosotros
+        /// </summary>
+        /// <param name="Datos"></param>
         public void ACNosotrosDatosGenerales(RR_NosotrosDatosGenerales Datos)
         {
             RR_NosotrosDatos NN = new RR_NosotrosDatos();
             NN.ACNosotrosDatosGenerales(Datos);
         }
 
+        /// <summary>
+        /// bajas de textos en la pagaina nosotros
+        /// </summary>
+        /// <param name="Datos"></param>
         public void EliminarNosotrosDatosGenerales(RR_NosotrosDatosGenerales Datos)
         {
             RR_NosotrosDatos NN = new RR_NosotrosDatos();
             NN.EliminarNosotrosDatosGenerales(Datos);
         }                
 
+        /// <summary>
+        /// obtiene los textos de la pagina nosotors datos generales
+        /// </summary>
+        /// <param name="Datos"></param>
         public void ObtenerNosotrosDatosGeneralesXID (RR_NosotrosDatosGenerales Datos)
         {
             RR_NosotrosDatos NN = new RR_NosotrosDatos();

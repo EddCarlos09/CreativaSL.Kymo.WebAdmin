@@ -46,14 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="EM_ContactoCorreoDatos.cs" />
     <Compile Include="EM_ContactoGeneralDatos.cs" />
-    <Compile Include="EM_ContactoRedesSocialesDatos.cs" />
     <Compile Include="EM_ContatoImagenesDatos.cs" />
-    <Compile Include="EM_HomeBannerDatos.cs" />
-    <Compile Include="EM_PatrocinadoresDatos.cs" />
+    <Compile Include="JL_FAQDatos.cs" />
+    <Compile Include="JL_FaqDatosGeneralesDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RR_AvisoPrivacidadDatos.cs" />
     <Compile Include="RR_NosotrosDatos.cs" />
   </ItemGroup>
   <ItemGroup>

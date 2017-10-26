@@ -9,6 +9,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
 {
     public class RR_AvisoPrivacidadDatosGenerales
     {
+        /// <summary>
+        /// Identificador del texto aviso
+        /// </summary>
         private string _IdAviso;
         public string IdAviso
         {
@@ -16,6 +19,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _IdAviso = value; }
         }
 
+        /// <summary>
+        /// identificador del texto
+        /// </summary>
         private string _IdTexto;
         public string IdTexto
         {
@@ -23,6 +29,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _IdTexto = value; }
         }
         
+        /// <summary>
+        /// titulo del aviso en datos generales
+        /// </summary>
         private string _Texto;
         public string Texto
         {
@@ -30,6 +39,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _Texto = value; }
         }
 
+        /// <summary>
+        /// segundo del aviso en datos generales
+        /// </summary>
         private string _Texto2;
         public string Texto2
         {
@@ -37,14 +49,19 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _Texto2 = value; }
         }
 
+        /// <summary>
+        /// titulo del aviso de privacidad
+        /// </summary>
         private string _TituloAviso;
-
         public string TituloAviso
         {
             get { return _TituloAviso; }
             set { _TituloAviso = value; }
         }
 
+        /// <summary>
+        /// texto que tendra el aviso de privacidad
+        /// </summary>
         private string _TextoAviso;
         public string TextoAviso
         {

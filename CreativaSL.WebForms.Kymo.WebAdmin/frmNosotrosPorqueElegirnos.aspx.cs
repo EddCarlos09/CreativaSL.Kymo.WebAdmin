@@ -64,7 +64,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                 if (Request.Form.Count == 8)
                 {
                     string titulo = Request.Form["ctl00$cph_MasterBody$txtTitulo"].ToString();
-                    string textoHtml = HttpUtility.HtmlDecode(txtDescripcion.InnerHtml);                    
+                    string textoHtml = HttpUtility.HtmlDecode(txtDescripcion.InnerHtml);
                     string icono = Request.Form["cmbIconos"].ToString();
                     try
                     {
@@ -113,6 +113,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
 
         public void CargarDatos(RR_NosotrosPorqueElegirnos Datos)
         {
+            hf.Value = Datos.IdSeccion;
             txtTitulo.Value = Datos.Titulo;
             txtDescripcion.Value = Datos.Texto;
             string ScriptError = @"

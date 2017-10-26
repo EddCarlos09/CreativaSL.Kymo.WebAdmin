@@ -63,7 +63,7 @@
                                 <label class="control-label">
                                     Descripci&oacute;n
                                 </label>
-                                <textarea name="txtDescripcion" id="txtDescripcion" runat="server" class="ckeditor form-control" cols="10" rows="10" maxlength="1056"></textarea>
+                                <textarea name="txtDescripcion" id="txtDescripcion" runat="server" class="ckeditor form-control" maxlength="100000000"></textarea>
                             </div>
                         </div>
                         <div class="row">

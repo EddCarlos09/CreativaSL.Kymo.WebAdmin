@@ -19,6 +19,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _IdClassIcono = value; }
         }
 
+        /// <summary>
+        /// Identificador de la categoria del icono
+        /// </summary>
         private int _IdCategoria;
         public int IdCategoria
         {

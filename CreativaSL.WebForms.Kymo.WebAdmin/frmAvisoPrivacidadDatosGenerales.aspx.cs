@@ -146,6 +146,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
         {
             try
             {
+                hf.Value = DatosAux.TableTexto.Rows[1]["id_texto"].ToString();
                 hfImg.Value = DatosAux.TablaDatos.Rows[0]["IdImagen"].ToString();
                 txtTitulo1.Value = DatosAux.TableTexto.Rows[0]["texto"].ToString();
                 txtTitulo2.Value = DatosAux.TableTexto.Rows[1]["texto"].ToString();

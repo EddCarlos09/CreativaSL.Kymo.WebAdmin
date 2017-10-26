@@ -66,7 +66,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\css\material-design-iconic-font.min.css" />
     <Content Include="assets\css\plugins.css" />
     <Content Include="assets\css\print.css" />
     <Content Include="assets\css\styles-responsive.css" />
@@ -81,7 +80,6 @@
     <Content Include="assets\css\themes\theme-style7.css" />
     <Content Include="assets\css\themes\theme-style8.css" />
     <Content Include="assets\css\themes\theme-style9.css" />
-    <Content Include="assets\fonts\Material-Design-Iconic-Font.svg" />
     <Content Include="assets\images\anonymous.jpg" />
     <Content Include="assets\images\avatar-1-big.jpg" />
     <Content Include="assets\images\avatar-1-small.jpg" />
@@ -165,6 +163,7 @@
     <Content Include="assets\js\form-elements.js" />
     <Content Include="assets\js\form-image-cropping.js" />
     <Content Include="assets\js\form-validation.js" />
+    <Content Include="assets\js\form-validation3.js" />
     <Content Include="assets\js\form-validation2.js" />
     <Content Include="assets\js\form-wizard.js" />
     <Content Include="assets\js\index.js" />
@@ -3164,14 +3163,9 @@
     <Content Include="assets\plugins\x-editable\img\loading.gif" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.js" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.min.js" />
-    <Content Include="frmAvisoPrivacidadDatosGenerales.aspx" />
+    <Content Include="frmCapturas.aspx" />
     <Content Include="frmContactoDatosG.aspx" />
-    <Content Include="frmContactoRedesSociales.aspx" />
-    <Content Include="frmContactoRedesSocialesGrid.aspx" />
-    <Content Include="frmContactoSendMail.aspx" />
     <Content Include="frmDatosContactos.aspx" />
-    <Content Include="frmHomeBanner.aspx" />
-    <Content Include="frmHomeBannerGrid.aspx" />
     <Content Include="frmNosotrosDatosGenerales.aspx" />
     <Content Include="frmNosotrosDatosGeneralesGrid.aspx" />
     <Content Include="frmNosotrosNuestroEquipo.aspx" />
@@ -3180,21 +3174,10 @@
     <Content Include="frmNosotrosPorqueElegirnosGrid.aspx" />
     <Content Include="frmNosotrosQuienesSomos.aspx" />
     <Content Include="frmNosotrosQuienesSomosGrid.aspx" />
-    <Content Include="frmNosotrosRedesSociales.aspx" />
-    <Content Include="frmNosotrosRedesSocialesGrid.aspx" />
-    <Content Include="frmPatrocinadores.aspx" />
-    <Content Include="frmPatrocinadoresGrid.aspx" />
-    <Content Include="Imagenes\AvisoPrivacidad\faro.jpg" />
-    <Content Include="Imagenes\Contacto\canon-del-sumidero.jpg" />
-    <Content Include="Imagenes\DatosGenerales\faro.jpg" />
-    <Content Include="Imagenes\DatosGenerales\koala.jpg" />
-    <Content Include="Imagenes\DatosGenerales\tulipanes.jpg" />
-    <Content Include="Imagenes\HomeBanner\blusas-y-playeras.jpg" />
-    <Content Include="Imagenes\HomeBanner\playera-marcar-polo.jpg" />
-    <Content Include="Imagenes\HomeBanner\tazas-y-gorras.jpg" />
-    <Content Include="Imagenes\NosotrosEquipoTrabajo\desierto.jpg" />
-    <Content Include="Imagenes\NosotrosQuienesSomos\faro.jpg" />
-    <Content Include="Imagenes\NosotrosQuienesSomos\koala.jpg" />
+    <Content Include="frmPregunta.aspx" />
+    <Content Include="frmPreguntasRespuestas.aspx" />
+    <Content Include="frmRedesSociales.aspx" />
+    <Content Include="frmRedesSocialesGrid.aspx" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="assets\images\Thumbs.db" />
@@ -4061,10 +4044,6 @@
     <Content Include="assets\sass\vendor\_tags-input.scss" />
     <Content Include="assets\sass\vendor\_time-picker.scss" />
     <Content Include="assets\plugins\bootbox\build\calculate-size" />
-    <Content Include="assets\fonts\Material-Design-Iconic-Font.eot" />
-    <Content Include="assets\fonts\Material-Design-Iconic-Font.ttf" />
-    <Content Include="assets\fonts\Material-Design-Iconic-Font.woff" />
-    <Content Include="assets\fonts\Material-Design-Iconic-Font.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4080,12 +4059,12 @@
   <ItemGroup>
     <Compile Include="ClaseAux\DialogMessage.cs" />
     <Compile Include="ClaseAux\Remover.cs" />
-    <Compile Include="frmAvisoPrivacidadDatosGenerales.aspx.cs">
-      <DependentUpon>frmAvisoPrivacidadDatosGenerales.aspx</DependentUpon>
+    <Compile Include="frmCapturas.aspx.cs">
+      <DependentUpon>frmCapturas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmAvisoPrivacidadDatosGenerales.aspx.designer.cs">
-      <DependentUpon>frmAvisoPrivacidadDatosGenerales.aspx</DependentUpon>
+    <Compile Include="frmCapturas.aspx.designer.cs">
+      <DependentUpon>frmCapturas.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmContactoDatosG.aspx.cs">
       <DependentUpon>frmContactoDatosG.aspx</DependentUpon>
@@ -4093,27 +4072,6 @@
     </Compile>
     <Compile Include="frmContactoDatosG.aspx.designer.cs">
       <DependentUpon>frmContactoDatosG.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmContactoRedesSociales.aspx.cs">
-      <DependentUpon>frmContactoRedesSociales.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmContactoRedesSociales.aspx.designer.cs">
-      <DependentUpon>frmContactoRedesSociales.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmContactoRedesSocialesGrid.aspx.cs">
-      <DependentUpon>frmContactoRedesSocialesGrid.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmContactoRedesSocialesGrid.aspx.designer.cs">
-      <DependentUpon>frmContactoRedesSocialesGrid.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmContactoSendMail.aspx.cs">
-      <DependentUpon>frmContactoSendMail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmContactoSendMail.aspx.designer.cs">
-      <DependentUpon>frmContactoSendMail.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmDatosContactos.aspx.cs">
       <DependentUpon>frmDatosContactos.aspx</DependentUpon>
@@ -4128,20 +4086,6 @@
     </Compile>
     <Compile Include="frmEjemplo.aspx.designer.cs">
       <DependentUpon>frmEjemplo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmHomeBanner.aspx.cs">
-      <DependentUpon>frmHomeBanner.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmHomeBanner.aspx.designer.cs">
-      <DependentUpon>frmHomeBanner.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmHomeBannerGrid.aspx.cs">
-      <DependentUpon>frmHomeBannerGrid.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmHomeBannerGrid.aspx.designer.cs">
-      <DependentUpon>frmHomeBannerGrid.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmNosotrosDatosGenerales.aspx.cs">
       <DependentUpon>frmNosotrosDatosGenerales.aspx</DependentUpon>
@@ -4199,33 +4143,31 @@
     <Compile Include="frmNosotrosQuienesSomosGrid.aspx.designer.cs">
       <DependentUpon>frmNosotrosQuienesSomosGrid.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmNosotrosRedesSociales.aspx.cs">
-      <DependentUpon>frmNosotrosRedesSociales.aspx</DependentUpon>
+    <Compile Include="frmPregunta.aspx.cs">
+      <DependentUpon>frmPregunta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmNosotrosRedesSociales.aspx.designer.cs">
-      <DependentUpon>frmNosotrosRedesSociales.aspx</DependentUpon>
+    <Compile Include="frmPregunta.aspx.designer.cs">
+      <DependentUpon>frmPregunta.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmNosotrosRedesSocialesGrid.aspx.cs">
-      <DependentUpon>frmNosotrosRedesSocialesGrid.aspx</DependentUpon>
+    <Compile Include="frmPreguntasRespuestas.aspx.cs">
+      <DependentUpon>frmPreguntasRespuestas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmNosotrosRedesSocialesGrid.aspx.designer.cs">
-      <DependentUpon>frmNosotrosRedesSocialesGrid.aspx</DependentUpon>
+    <Compile Include="frmPreguntasRespuestas.aspx.designer.cs">
+      <DependentUpon>frmPreguntasRespuestas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmPatrocinadores.aspx.cs">
-      <DependentUpon>frmPatrocinadores.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="frmRedesSociales.aspx.cs">
+      <DependentUpon>frmRedesSociales.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmPatrocinadores.aspx.designer.cs">
-      <DependentUpon>frmPatrocinadores.aspx</DependentUpon>
+    <Compile Include="frmRedesSociales.aspx.designer.cs">
+      <DependentUpon>frmRedesSociales.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmPatrocinadoresGrid.aspx.cs">
-      <DependentUpon>frmPatrocinadoresGrid.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="frmRedesSocialesGrid.aspx.cs">
+      <DependentUpon>frmRedesSocialesGrid.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmPatrocinadoresGrid.aspx.designer.cs">
-      <DependentUpon>frmPatrocinadoresGrid.aspx</DependentUpon>
+    <Compile Include="frmRedesSocialesGrid.aspx.designer.cs">
+      <DependentUpon>frmRedesSocialesGrid.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -4243,8 +4185,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="bin\" />
     <Folder Include="Imagenes\Contacto\" />
-    <Folder Include="Imagenes\NosotrosEquipoTrabajo\" />
-    <Folder Include="Imagenes\NosotrosQuienesSomos\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>

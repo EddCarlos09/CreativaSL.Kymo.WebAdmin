@@ -49,6 +49,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _CuentaRedSocial = value; }
         }
         
+        /// <summary>
+        /// descripcion de la red social
+        /// </summary>
         private string _Descripcion;
         public string Descripcion
         {
@@ -56,6 +59,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _Descripcion = value; }
         }
 
+        /// <summary>
+        /// nombre a mostrar en la red social
+        /// </summary>
         private string _NombreMostrar;
         public string NombreMostrar
         {
@@ -63,6 +69,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _NombreMostrar = value; }
         }
         
+        /// <summary>
+        /// url base asginada desde la bd
+        /// </summary>
         private string _UrlBase;
         public string UrlBase
         {
@@ -70,6 +79,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _UrlBase = value; }
         }
 
+        /// <summary>
+        /// tipo de red social
+        /// </summary>
         private string _Class;
         public string Class
         {
@@ -77,6 +89,9 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _Class = value; }
         }
 
+        /// <summary>
+        /// icono de la red social
+        /// </summary>
         private string _FaClass;
         public string FaClass
         {

@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.ApplicationBlocks.Data">
-      <HintPath>..\CreativaSL.WebForms.Kymo.WebAdmin\Bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,21 +43,17 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Comun.cs" />
-    <Compile Include="EM_HomeBanner.cs" />
     <Compile Include="EM_ContactoCorreo.cs" />
     <Compile Include="EM_ContactoGeneral.cs" />
     <Compile Include="EM_ContactoImagen.cs" />
     <Compile Include="EM_ContactoRedesSociales.cs" />
-    <Compile Include="EM_Patrocinadores.cs" />
+    <Compile Include="JL_FaqDatosGenerales.cs" />
+    <Compile Include="JL_Pregunta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RR_AvisoPrivacidadDatosGenerales.cs" />
-    <Compile Include="RR_Iconos.cs" />
-    <Compile Include="RR_NosotrosDatosGenerales.cs" />
     <Compile Include="RR_NosotrosEquipoTrabajo.cs" />
     <Compile Include="RR_NosotrosPorqueElegirnos.cs" />
     <Compile Include="RR_NosotrosQuienesSomos.cs" />
     <Compile Include="RR_NosotrosRedesSocialesMiembros.cs" />
-    <Compile Include="RR_RedesSociales.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
