@@ -10,33 +10,51 @@
 namespace CreativaSL.WebForms.Kymo.WebAdmin {
     
     
-    public partial class Site {
+    public partial class frmHomeImagenesGenerales {
         
         /// <summary>
-        /// Control skin_color.
+        /// Control hf.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlLink skin_color;
+        protected global::System.Web.UI.WebControls.HiddenField hf;
         
         /// <summary>
-        /// Control frmMaster.
+        /// Control Logo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm frmMaster;
+        protected global::System.Web.UI.HtmlControls.HtmlImage Logo;
         
         /// <summary>
-        /// Control cph_MasterBody.
+        /// Control imgImagen.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cph_MasterBody;
+        protected global::System.Web.UI.WebControls.FileUpload imgImagen;
+        
+        /// <summary>
+        /// Control txtTextoAlternativo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTextoAlternativo;
+        
+        /// <summary>
+        /// Control txtTituloImagen.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTituloImagen;
     }
 }

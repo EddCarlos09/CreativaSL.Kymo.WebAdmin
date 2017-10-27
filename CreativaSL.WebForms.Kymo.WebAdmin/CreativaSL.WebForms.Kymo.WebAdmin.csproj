@@ -3174,6 +3174,7 @@
     <Content Include="frmDatosContactos.aspx" />
     <Content Include="frmHomeBanner.aspx" />
     <Content Include="frmHomeBannerGrid.aspx" />
+    <Content Include="frmHomeImagenesGenerales.aspx" />
     <Content Include="frmNosotrosDatosGenerales.aspx" />
     <Content Include="frmNosotrosDatosGeneralesGrid.aspx" />
     <Content Include="frmNosotrosNuestroEquipo.aspx" />
@@ -4159,6 +4160,13 @@
     <Compile Include="frmHomeBannerGrid.aspx.designer.cs">
       <DependentUpon>frmHomeBannerGrid.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmHomeImagenesGenerales.aspx.cs">
+      <DependentUpon>frmHomeImagenesGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmHomeImagenesGenerales.aspx.designer.cs">
+      <DependentUpon>frmHomeImagenesGenerales.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmNosotrosDatosGenerales.aspx.cs">
       <DependentUpon>frmNosotrosDatosGenerales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4315,6 +4323,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="bin\" />
     <Folder Include="Imagenes\Contacto\" />
+    <Folder Include="Imagenes\Home\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
