@@ -47,6 +47,7 @@
     <Compile Include="EM_ContactoImagenesNegocio.cs" />
     <Compile Include="EM_ContactoRedesSocialesNegocio.cs" />
     <Compile Include="EM_HomeBannerNegocio.cs" />
+    <Compile Include="EM_HomeGeneralesNegocio.cs" />
     <Compile Include="EM_PatrocinadoresNegocio.cs" />
     <Compile Include="JL_FaqDatosGeneralesNegocio.cs" />
     <Compile Include="JL_FAQNegocio.cs" />

@@ -51,6 +51,7 @@
     <Compile Include="EM_ContactoRedesSocialesDatos.cs" />
     <Compile Include="EM_ContatoImagenesDatos.cs" />
     <Compile Include="EM_HomeBannerDatos.cs" />
+    <Compile Include="EM_HomeGeneralesDatos.cs" />
     <Compile Include="EM_PatrocinadoresDatos.cs" />
     <Compile Include="JL_FAQDatos.cs" />
     <Compile Include="JL_FaqDatosGeneralesDatos.cs" />

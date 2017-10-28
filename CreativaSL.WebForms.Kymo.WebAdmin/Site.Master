@@ -180,16 +180,16 @@
 								<a href="javascript:void(0)"><i class="fa fa-thumbs-up"></i> 
                                 <span class="title">HOME</span><i class="icon-arrow"></i> </a>
 								<ul class="sub-menu">
+                                     <li>
+										<a href="frmHomeImagenesGenerales.aspx">
+											<span class="title">DATOS GENERALES</span>
+                                        </a>
+ 									</li>
                                     <li>
 										<a href="frmHomeBannerGrid.aspx">
 											<span class="title">BANNER PRINCIPAL</span>
 										</a>
 									</li>
-									 <li>
-										<a href="#">
-											<span class="title">TEXTO PAGINA</span>
-                                        </a>
- 									</li>
                                     <li>
 										<a href="frmPatrocinadoresGrid.aspx">
 											<span class="title">PATROCINADORES</span>
