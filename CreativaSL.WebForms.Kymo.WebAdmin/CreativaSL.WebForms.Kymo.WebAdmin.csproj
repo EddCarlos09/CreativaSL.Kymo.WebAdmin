@@ -3163,9 +3163,17 @@
     <Content Include="assets\plugins\x-editable\img\loading.gif" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.js" />
     <Content Include="assets\plugins\x-editable\js\bootstrap-editable.min.js" />
+    <Content Include="frmAvisoPrivacidadAvisos.aspx" />
+    <Content Include="frmAvisoPrivacidadAvisosGrid.aspx" />
+    <Content Include="frmAvisoPrivacidadDatosGenerales.aspx" />
     <Content Include="frmCapturas.aspx" />
     <Content Include="frmContactoDatosG.aspx" />
+    <Content Include="frmContactoRedesSociales.aspx" />
+    <Content Include="frmContactoRedesSocialesGrid.aspx" />
+    <Content Include="frmContactoSendMail.aspx" />
     <Content Include="frmDatosContactos.aspx" />
+    <Content Include="frmHomeBanner.aspx" />
+    <Content Include="frmHomeBannerGrid.aspx" />
     <Content Include="frmNosotrosDatosGenerales.aspx" />
     <Content Include="frmNosotrosDatosGeneralesGrid.aspx" />
     <Content Include="frmNosotrosNuestroEquipo.aspx" />
@@ -3174,10 +3182,19 @@
     <Content Include="frmNosotrosPorqueElegirnosGrid.aspx" />
     <Content Include="frmNosotrosQuienesSomos.aspx" />
     <Content Include="frmNosotrosQuienesSomosGrid.aspx" />
+    <Content Include="frmNosotrosRedesSociales.aspx" />
+    <Content Include="frmNosotrosRedesSocialesGrid.aspx" />
+    <Content Include="frmPatrocinadores.aspx" />
+    <Content Include="frmPatrocinadoresGrid.aspx" />
     <Content Include="frmPregunta.aspx" />
     <Content Include="frmPreguntasRespuestas.aspx" />
-    <Content Include="frmRedesSociales.aspx" />
-    <Content Include="frmRedesSocialesGrid.aspx" />
+    <Content Include="frmProducto.aspx" />
+    <Content Include="frmProductos.aspx" />
+    <Content Include="frmTerminosCondiciones.aspx" />
+    <Content Include="frmTerminosCondicionesDatosGenerales.aspx" />
+    <Content Include="frmTerminosCondicionesGrid.aspx" />
+    <Content Include="frmTestimonialesGrid.aspx" />
+    <Content Include="frmTestimonioDetalle.aspx" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="assets\images\Thumbs.db" />
@@ -4059,6 +4076,27 @@
   <ItemGroup>
     <Compile Include="ClaseAux\DialogMessage.cs" />
     <Compile Include="ClaseAux\Remover.cs" />
+    <Compile Include="frmAvisoPrivacidadAvisos.aspx.cs">
+      <DependentUpon>frmAvisoPrivacidadAvisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAvisoPrivacidadAvisos.aspx.designer.cs">
+      <DependentUpon>frmAvisoPrivacidadAvisos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAvisoPrivacidadAvisosGrid.aspx.cs">
+      <DependentUpon>frmAvisoPrivacidadAvisosGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAvisoPrivacidadAvisosGrid.aspx.designer.cs">
+      <DependentUpon>frmAvisoPrivacidadAvisosGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAvisoPrivacidadDatosGenerales.aspx.cs">
+      <DependentUpon>frmAvisoPrivacidadDatosGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAvisoPrivacidadDatosGenerales.aspx.designer.cs">
+      <DependentUpon>frmAvisoPrivacidadDatosGenerales.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmCapturas.aspx.cs">
       <DependentUpon>frmCapturas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4073,6 +4111,27 @@
     <Compile Include="frmContactoDatosG.aspx.designer.cs">
       <DependentUpon>frmContactoDatosG.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmContactoRedesSociales.aspx.cs">
+      <DependentUpon>frmContactoRedesSociales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmContactoRedesSociales.aspx.designer.cs">
+      <DependentUpon>frmContactoRedesSociales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmContactoRedesSocialesGrid.aspx.cs">
+      <DependentUpon>frmContactoRedesSocialesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmContactoRedesSocialesGrid.aspx.designer.cs">
+      <DependentUpon>frmContactoRedesSocialesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmContactoSendMail.aspx.cs">
+      <DependentUpon>frmContactoSendMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmContactoSendMail.aspx.designer.cs">
+      <DependentUpon>frmContactoSendMail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmDatosContactos.aspx.cs">
       <DependentUpon>frmDatosContactos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4086,6 +4145,20 @@
     </Compile>
     <Compile Include="frmEjemplo.aspx.designer.cs">
       <DependentUpon>frmEjemplo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeBanner.aspx.cs">
+      <DependentUpon>frmHomeBanner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmHomeBanner.aspx.designer.cs">
+      <DependentUpon>frmHomeBanner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeBannerGrid.aspx.cs">
+      <DependentUpon>frmHomeBannerGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmHomeBannerGrid.aspx.designer.cs">
+      <DependentUpon>frmHomeBannerGrid.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmNosotrosDatosGenerales.aspx.cs">
       <DependentUpon>frmNosotrosDatosGenerales.aspx</DependentUpon>
@@ -4143,6 +4216,34 @@
     <Compile Include="frmNosotrosQuienesSomosGrid.aspx.designer.cs">
       <DependentUpon>frmNosotrosQuienesSomosGrid.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmNosotrosRedesSociales.aspx.cs">
+      <DependentUpon>frmNosotrosRedesSociales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmNosotrosRedesSociales.aspx.designer.cs">
+      <DependentUpon>frmNosotrosRedesSociales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmNosotrosRedesSocialesGrid.aspx.cs">
+      <DependentUpon>frmNosotrosRedesSocialesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmNosotrosRedesSocialesGrid.aspx.designer.cs">
+      <DependentUpon>frmNosotrosRedesSocialesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPatrocinadores.aspx.cs">
+      <DependentUpon>frmPatrocinadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPatrocinadores.aspx.designer.cs">
+      <DependentUpon>frmPatrocinadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPatrocinadoresGrid.aspx.cs">
+      <DependentUpon>frmPatrocinadoresGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPatrocinadoresGrid.aspx.designer.cs">
+      <DependentUpon>frmPatrocinadoresGrid.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmPregunta.aspx.cs">
       <DependentUpon>frmPregunta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4157,17 +4258,54 @@
     <Compile Include="frmPreguntasRespuestas.aspx.designer.cs">
       <DependentUpon>frmPreguntasRespuestas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmRedesSociales.aspx.cs">
-      <DependentUpon>frmRedesSociales.aspx</DependentUpon>
+    <Compile Include="frmProducto.aspx.cs">
+      <DependentUpon>frmProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmRedesSociales.aspx.designer.cs">
-      <DependentUpon>frmRedesSociales.aspx</DependentUpon>
+    <Compile Include="frmProducto.aspx.designer.cs">
+      <DependentUpon>frmProducto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmRedesSocialesGrid.aspx.cs">
-      <DependentUpon>frmRedesSocialesGrid.aspx</DependentUpon>
+    <Compile Include="frmProductos.aspx.cs">
+      <DependentUpon>frmProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmRedesSocialesGrid.aspx.designer.cs">
-      <DependentUpon>frmRedesSocialesGrid.aspx</DependentUpon>
+    <Compile Include="frmProductos.aspx.designer.cs">
+      <DependentUpon>frmProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmTerminosCondiciones.aspx.cs">
+      <DependentUpon>frmTerminosCondiciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTerminosCondiciones.aspx.designer.cs">
+      <DependentUpon>frmTerminosCondiciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmTerminosCondicionesDatosGenerales.aspx.cs">
+      <DependentUpon>frmTerminosCondicionesDatosGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTerminosCondicionesDatosGenerales.aspx.designer.cs">
+      <DependentUpon>frmTerminosCondicionesDatosGenerales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmTerminosCondicionesGrid.aspx.cs">
+      <DependentUpon>frmTerminosCondicionesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTerminosCondicionesGrid.aspx.designer.cs">
+      <DependentUpon>frmTerminosCondicionesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmTestimonialesGrid.aspx.cs">
+      <DependentUpon>frmTestimonialesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTestimonialesGrid.aspx.designer.cs">
+      <DependentUpon>frmTestimonialesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmTestimonioDetalle.aspx.cs">
+      <DependentUpon>frmTestimonioDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTestimonioDetalle.aspx.designer.cs">
+      <DependentUpon>frmTestimonioDetalle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

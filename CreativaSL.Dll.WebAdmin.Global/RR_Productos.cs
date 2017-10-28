@@ -16,6 +16,13 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _IdTexto = value; }
         }
 
+        private string _IdTexto2;
+        public string IdTexto2
+        {
+            get { return _IdTexto2; }
+            set { _IdTexto2 = value; }
+        }
+
         private string _Texto;
         public string Texto
         {

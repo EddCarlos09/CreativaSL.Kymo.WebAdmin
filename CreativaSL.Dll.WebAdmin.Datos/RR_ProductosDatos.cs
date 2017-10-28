@@ -12,7 +12,7 @@ namespace CreativaSL.Dll.WebAdmin.Datos
 {
     public class RR_ProductosDatos
     {
-        #region Terminos y Condiciones Datos Generales
+        #region productos datos generales
         /// <summary>
         /// modifica los textos generales de la pagina terminos y condiciones 
         /// </summary>
@@ -22,7 +22,7 @@ namespace CreativaSL.Dll.WebAdmin.Datos
             try
             {
                 object[] Parametros = {Datos.NuevoRegistro, Datos.IdImagen, Datos.TextoAlternativo, Datos.TituloImagen, Datos.NumPosition, Datos.UrlImagen, Datos.NombreImagen,
-                Datos.Extencion, Datos.CambioImagen, Datos.IdPagina, Datos.IdTexto, Datos.Texto, Datos.Texto2, Datos.IDUsuario};
+                Datos.Extencion, Datos.CambioImagen, Datos.IdPagina, Datos.IdTexto, Datos.IdTexto2, Datos.Texto, Datos.Texto2, Datos.IDUsuario};
                 SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_AC_ProductosGeneral", Parametros);
                 while (Dr.Read())
                 {
@@ -71,6 +71,69 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 throw ex;
             }
         }
+        #endregion
+
+        #region Producto datos generales
+
+        /// <summary>
+        /// modifica los textos generales de la pagina terminos y condiciones 
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ACProductoDatosGenerales(RR_Productos Datos)
+        {
+            try
+            {
+                object[] Parametros = {Datos.NuevoRegistro, Datos.IdImagen, Datos.TextoAlternativo, Datos.TituloImagen, Datos.NumPosition, Datos.UrlImagen, Datos.NombreImagen,
+                Datos.Extencion, Datos.CambioImagen, Datos.IdPagina, Datos.IdTexto, Datos.IdTexto2, Datos.Texto, Datos.Texto2, Datos.IDUsuario};
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_AC_ProductoGeneral", Parametros);
+                while (Dr.Read())
+                {
+                    int Resultado = Dr.GetInt32(Dr.GetOrdinal("Resultado"));
+                    if (Resultado == 1)
+                    {
+                        Datos.Completado = true;
+                        Datos.UrlImagen = Dr.GetString(Dr.GetOrdinal("ImagenGuardada"));
+                    }
+                    if (Resultado == 2)
+                    {
+                        Datos.Completado = true;
+                    }
+                    Datos.Resultado = Resultado;
+                    break;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        /// <summary>
+        /// obtiene los textos generales de la pagina terminos y condiciones
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ObtenerProductoGeneralesXID(RR_Productos Datos)
+        {
+            try
+            {
+                DataSet Ds = SqlHelper.ExecuteDataset(Datos.Conexion, "RR_spCSLDB_get_ProductoDatosGeneralesDetalle");
+                if (Ds != null)
+                {
+                    if (Ds.Tables.Count == 2)
+                    {
+                        Datos.Completado = true;
+                        Datos.TablaDatos = Ds.Tables[0];
+                        Datos.TableTexto = Ds.Tables[1];
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         #endregion
     }
 }

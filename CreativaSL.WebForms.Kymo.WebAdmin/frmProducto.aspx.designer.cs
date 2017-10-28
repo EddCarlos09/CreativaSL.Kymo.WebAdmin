@@ -10,7 +10,7 @@
 namespace CreativaSL.WebForms.Kymo.WebAdmin {
     
     
-    public partial class frmProductos {
+    public partial class frmProducto {
         
         /// <summary>
         /// Control hftxt1.

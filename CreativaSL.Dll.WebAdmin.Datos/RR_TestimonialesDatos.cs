@@ -58,7 +58,7 @@ namespace CreativaSL.Dll.WebAdmin.Datos
         {
             try
             {
-                object[] Parametros = { Datos.IdTestimonial };
+                object[] Parametros = { Datos.IdTestimonial, Datos.IDUsuario };
                 object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "RR_spCSLDB_ActivarTestimonial", Parametros);
                 int Resultado = 0;
                 int.TryParse(Result.ToString(), out Resultado);
@@ -78,7 +78,7 @@ namespace CreativaSL.Dll.WebAdmin.Datos
         {
             try
             {
-                object[] Parametros = { Datos.IdTestimonial };
+                object[] Parametros = { Datos.IdTestimonial, Datos.IDUsuario };
                 object Result = SqlHelper.ExecuteScalar(Datos.Conexion, "RR_spCSLDB_B_Testimonial", Parametros);
                 int Resultado = 0;
                 int.TryParse(Result.ToString(), out Resultado);

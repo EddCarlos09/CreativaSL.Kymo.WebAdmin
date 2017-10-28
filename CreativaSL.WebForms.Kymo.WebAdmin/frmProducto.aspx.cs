@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace CreativaSL.WebForms.Kymo.WebAdmin
 {
-    public partial class frmProductos : System.Web.UI.Page
+    public partial class frmProducto : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,7 +19,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
             {
                 RR_Productos DatosAux = new RR_Productos { Conexion = Comun.Conexion };
                 RR_ProductosNegocio NN = new RR_ProductosNegocio();
-                NN.ObtenerProductosGeneralesXID(DatosAux);
+                NN.ObtenerProductoGeneralesXID(DatosAux);
                 if (DatosAux.Completado)
                 {
                     CargarDatos(DatosAux);
@@ -67,6 +67,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
             }
         }
 
+
         #region Metodos
 
         /// <summary>
@@ -99,7 +100,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                     NombreImagen = _textoAlternativo,
                     Extencion = FileExtension,
                     CambioImagen = _bandCambioImagen,
-                    IdPagina = 8,//COMO SE QUE TIPO DE PAGINA ASIGNARLE ? SE LE ASIGNA EL NUM DE PAG POR DEFAULT??
+                    IdPagina = 7,//COMO SE QUE TIPO DE PAGINA ASIGNARLE ? SE LE ASIGNA EL NUM DE PAG POR DEFAULT??
                     IdTexto = _idTexto,
                     IdTexto2 = _idTexto2,
                     Texto = _titulo,
@@ -108,7 +109,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                     IDUsuario = User.Identity.Name
                 };
                 RR_ProductosNegocio CN = new RR_ProductosNegocio();
-                CN.ACProductosDatosGenerales(Datos);
+                CN.ACProductoDatosGenerales(Datos);
                 if (Datos.Completado)
                 {
                     if (_bandCambioImagen)
@@ -179,8 +180,8 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
             {
                 hftxt1.Value = "";
                 hftxt2.Value = "";
-                hfImg.Value = "";                
-                txtTitulo.Value = string.Empty;                
+                hfImg.Value = "";
+                txtTitulo.Value = string.Empty;
                 txtTextoAlternativo.Value = string.Empty;
                 txtTituloImagen.Value = string.Empty;
             }
