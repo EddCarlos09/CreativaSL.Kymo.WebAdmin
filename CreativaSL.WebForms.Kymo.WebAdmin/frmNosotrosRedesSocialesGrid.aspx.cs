@@ -35,7 +35,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                         }
                     }
                 }
-                if (Request.QueryString["op"] != null && Request.QueryString["op"] == "5")
+                else if (Request.QueryString["op"] != null && Request.QueryString["op"] == "5")
                 {
                     if (Request.QueryString["id"] != null)
                     {

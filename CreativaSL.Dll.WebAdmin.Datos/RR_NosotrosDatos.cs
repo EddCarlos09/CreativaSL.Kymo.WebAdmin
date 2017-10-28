@@ -466,12 +466,12 @@ namespace CreativaSL.Dll.WebAdmin.Datos
                 object[] Parametros = {Datos.IdMiembroxRedSocial };
                 List<RR_RedesSociales> Lista = new List<RR_RedesSociales>();
                 RR_RedesSociales Item;
-                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_NosostrosRedesSociales", Parametros);
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Datos.Conexion, "RR_spCSLDB_get_NosostrosRedesSociales");
                 while (Dr.Read())
                 {
                     Item = new RR_RedesSociales();
                     Item.IdMiembroxRedSocial = Dr.GetString(Dr.GetOrdinal("id_miembroXRedSocial"));
-                    Item.NombreMostrar = Dr.GetString(Dr.GetOrdinal("cuentaRedSocial"));
+                    Item.NombreMostrar = Dr.GetString(Dr.GetOrdinal("descripcion"));
                     Lista.Add(Item);                    
                 }
                 return Lista;

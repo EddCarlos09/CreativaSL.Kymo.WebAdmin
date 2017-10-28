@@ -11,15 +11,15 @@ using System.Web.UI.WebControls;
 
 namespace CreativaSL.WebForms.Kymo.WebAdmin
 {
-    public partial class frmProducto : System.Web.UI.Page
+    public partial class frmCarritoComprasDatosGenerales : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                RR_Productos DatosAux = new RR_Productos { Conexion = Comun.Conexion };
-                RR_ProductosNegocio NN = new RR_ProductosNegocio();
-                NN.ObtenerProductoGeneralesXID(DatosAux);
+                RR_CarritoComprasDatosGenerales DatosAux = new RR_CarritoComprasDatosGenerales { Conexion = Comun.Conexion };
+                RR_CarritoComprasNegocio CN = new RR_CarritoComprasNegocio();
+                CN.ObtenerTextosCarritoComprasDatosGeneralesXID(DatosAux);
                 if (DatosAux.Completado)
                 {
                     CargarDatos(DatosAux);
@@ -38,7 +38,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                     {
                         Band = true;
                     }
-                    string titulo = Request.Form["ctl00$cph_MasterBody$txtTitulo"].ToString();
+                    string titulo1 = Request.Form["ctl00$cph_MasterBody$txtTitulo1"].ToString();
                     string titulo2 = Request.Form["ctl00$cph_MasterBody$txtTitulo2"].ToString();
                     string textoAlternativo = Request.Form["ctl00$cph_MasterBody$txtTextoAlternativo"].ToString();
                     string tituloImagen = Request.Form["ctl00$cph_MasterBody$txtTituloImagen"].ToString();
@@ -49,11 +49,11 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
 
                     try
                     {
-                        string AuxIDTex1 = Request.Form["ctl00$cph_MasterBody$hftxt1"].ToString();
-                        string AuxIDTex2 = Request.Form["ctl00$cph_MasterBody$hftxt2"].ToString();
+                        string AuxIDtxt1 = Request.Form["ctl00$cph_MasterBody$hftxt1"].ToString();
+                        string AuxIDtxt2 = Request.Form["ctl00$cph_MasterBody$hftxt2"].ToString();
                         string AuxIDImg = Request.Form["ctl00$cph_MasterBody$hfImg"].ToString();
                         bool NuevoRegistro = string.IsNullOrEmpty(AuxIDImg);
-                        Guardar(NuevoRegistro, AuxIDTex1, AuxIDTex2, AuxIDImg, titulo, titulo2, NombreGuardarImagen, tituloImagen, txtUrlImg, bannerImage, Band);
+                        Guardar(NuevoRegistro, AuxIDtxt1, AuxIDImg, AuxIDtxt2, titulo1, titulo2, NombreGuardarImagen, tituloImagen, txtUrlImg, bannerImage, Band);
                     }
                     catch (Exception ex)
                     {
@@ -66,7 +66,6 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                 }
             }
         }
-
 
         #region Metodos
 
@@ -83,13 +82,13 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
         /// <param name="_urlImagen">url de la imagen</param>
         /// <param name="PostedImage"></param>
         /// <param name="BandCambioImagen">Si se cambio la imagen</param>
-        private void Guardar(bool _nuevoRegistro, string _idTexto, string _idTexto2, string _idImagen, string _titulo, string _titulo2, string _textoAlternativo, string _tituloImagen, string _urlImagen, HttpPostedFile _postedImage, bool _bandCambioImagen)
+        private void Guardar(bool _nuevoRegistro, string _idTexto1, string _idTexto2, string _idImagen, string _titulo, string _titulo2, string _textoAlternativo, string _tituloImagen, string _urlImagen, HttpPostedFile _postedImage, bool _bandCambioImagen)
         {
             try
             {
                 string BaseDir = Server.MapPath("");
                 string FileExtension = _bandCambioImagen ? Path.GetExtension(_urlImagen) : string.Empty;
-                RR_Productos Datos = new RR_Productos
+                RR_CarritoComprasDatosGenerales Datos = new RR_CarritoComprasDatosGenerales
                 {
                     NuevoRegistro = _nuevoRegistro,
                     IdImagen = _idImagen,
@@ -100,16 +99,16 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                     NombreImagen = _textoAlternativo,
                     Extencion = FileExtension,
                     CambioImagen = _bandCambioImagen,
-                    IdPagina = 7,//COMO SE QUE TIPO DE PAGINA ASIGNARLE ? SE LE ASIGNA EL NUM DE PAG POR DEFAULT??
-                    IdTexto = _idTexto,
+                    IdPagina = 9,//COMO SE QUE TIPO DE PAGINA ASIGNARLE ? SE LE ASIGNA EL NUM DE PAG POR DEFAULT??
+                    IdTexto = _idTexto1,
                     IdTexto2 = _idTexto2,
-                    Texto = _titulo,
-                    Texto2 = _titulo2,
+                    TituloPagina = _titulo,
+                    TituloPagina2 = _titulo2,
                     Conexion = Comun.Conexion,
                     IDUsuario = User.Identity.Name
                 };
-                RR_ProductosNegocio CN = new RR_ProductosNegocio();
-                CN.ACProductoDatosGenerales(Datos);
+                RR_CarritoComprasNegocio CN = new RR_CarritoComprasNegocio();
+                CN.ACCarritoComprasDatosGeneral(Datos);
                 if (Datos.Completado)
                 {
                     if (_bandCambioImagen)
@@ -127,7 +126,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                             }
                         }
                     }
-                    Response.Redirect("frmProducto.aspx", false);
+                    //Response.Redirect("frmNosotrosDatosGeneralesGrid.aspx", false);
                 }
                 else
                 {
@@ -145,14 +144,14 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
         /// Carga los datos que se van a editar
         /// </summary>
         /// <param name="DatosAux"></param>
-        private void CargarDatos(RR_Productos DatosAux)
+        private void CargarDatos(RR_CarritoComprasDatosGenerales DatosAux)
         {
             try
             {
                 hftxt1.Value = DatosAux.TableTexto.Rows[0]["id_texto"].ToString();
                 hftxt2.Value = DatosAux.TableTexto.Rows[1]["id_texto"].ToString();
                 hfImg.Value = DatosAux.TablaDatos.Rows[0]["IdImagen"].ToString();
-                txtTitulo.Value = DatosAux.TableTexto.Rows[0]["texto"].ToString();
+                txtTitulo1.Value = DatosAux.TableTexto.Rows[0]["texto"].ToString();
                 txtTitulo2.Value = DatosAux.TableTexto.Rows[1]["texto"].ToString();
                 txtTextoAlternativo.Value = DatosAux.TablaDatos.Rows[0]["TextoAlternativo"].ToString();
                 txtTituloImagen.Value = DatosAux.TablaDatos.Rows[0]["TituloImagen"].ToString();
@@ -181,7 +180,8 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                 hftxt1.Value = "";
                 hftxt2.Value = "";
                 hfImg.Value = "";
-                txtTitulo.Value = string.Empty;
+                txtTitulo1.Value = string.Empty;
+                txtTitulo2.Value = string.Empty;
                 txtTextoAlternativo.Value = string.Empty;
                 txtTituloImagen.Value = string.Empty;
             }

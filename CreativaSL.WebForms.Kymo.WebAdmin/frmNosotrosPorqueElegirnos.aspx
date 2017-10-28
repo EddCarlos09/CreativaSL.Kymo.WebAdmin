@@ -39,7 +39,7 @@
                                 <label class="control-label" for="cmbIconos">
                                     Icono <span class="symbol required"></span>
                                 </label>
-                                <select id="cmbIconos" name="cmbIconos" class="form-control search-select">
+                                <select id="cmbIconos" name="cmbIconos" class="form-control search-select" onchange="cambiarContenido()">
                                    <% foreach (var Item in Lista)
                                            {
                                             Response.Write("<option value='" + Item.IdClassIcono.ToString() + "'>" + Item.CssClass.ToString() + "</option>");
@@ -53,8 +53,8 @@
                                 <label class="control-label" for="cph_MasterBody_txtTituloImagen">
                                     Vista Previa
                                 </label>
-                                <span class="input-icon">                                    
-                                    <i class="zmdi zmdi-whatsapp"></i>
+                                <span class="input-icon" >                                    
+                                    <i id="icono" style="font-size:30px"></i>
                                 </span>
                             </div>
                         </div>
@@ -104,7 +104,12 @@
 		        FormValidator.init(3);
 		    });
 		</script>
-        <script>            
-            
+        <script>
+            function cambiarContenido() {
+                var select = $("#cmbIconos option:selected").text();
+                $("#cmbIconos").val(select);
+                document.getElementById("icono").className = select;
+                
+            }
         </script>
 </asp:Content>
