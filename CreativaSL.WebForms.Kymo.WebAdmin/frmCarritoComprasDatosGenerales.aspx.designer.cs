@@ -10,7 +10,7 @@
 namespace CreativaSL.WebForms.Kymo.WebAdmin {
     
     
-    public partial class frmProductos {
+    public partial class frmCarritoComprasDatosGenerales {
         
         /// <summary>
         /// Control hftxt1.
@@ -40,13 +40,13 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin {
         protected global::System.Web.UI.WebControls.HiddenField hfImg;
         
         /// <summary>
-        /// Control txtTitulo.
+        /// Control txtTitulo1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTitulo;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTitulo1;
         
         /// <summary>
         /// Control txtTitulo2.

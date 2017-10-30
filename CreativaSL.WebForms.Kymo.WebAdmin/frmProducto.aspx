@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="frmProductos.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmProductos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="frmProducto.aspx.cs" Inherits="CreativaSL.WebForms.Kymo.WebAdmin.frmProducto" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_MasterBody" runat="server">
 	<div class="row">
 		<div class="col-md-12">
@@ -6,7 +6,7 @@
 		<div class="col-sd-12">
 			<div class="panel panel-white">
 				<div class="panel-heading">
-					<h4 class="panel-title"><span class="text-bold">Productos</span></h4>
+					<h4 class="panel-title"><span class="text-bold">Producto</span></h4>
 				</div>
 				<div class="panel-body">
 					<div class="row">
@@ -37,7 +37,7 @@
                         <div class="col-md-6">
 							<div class="form-group">
 								<label class="control-label" for="cph_MasterBody_txtTitulo">
-									T&iacute;tulo 1<span class="symbol required"></span>
+									T&iacute;tulo 2<span class="symbol required"></span>
 								</label>
 								<span class="input-icon">
 									<input type="text" class="form-control tooltips" runat="server" id="txtTitulo2" name="txtTitulo2" data-original-title="Ingrese el primer T&iacute;tulo" data-rel="tooltip" title="" data-placement="top" />
@@ -101,10 +101,10 @@
 							<div class="col-md-6">
 								<div class="form-group">
 									<div class="col-md-6">
-										<input type="submit" formaction="frmProductos.aspx" class="btn btn-green btn-block" name="btnGuardar" value="Guardar" />
+										<input type="submit" formaction="frmProducto.aspx" class="btn btn-green btn-block" name="btnGuardar" value="Guardar" />
 									</div>
 									<div class="col-md-6">
-										<a href="frmProductos.aspx" class="btn btn-red btn-block" name="btnCancelar">Cancelar</a>
+										<a href="frmProducto.aspx" class="btn btn-red btn-block" name="btnCancelar">Cancelar</a>
 									</div>
 								</div>
 							</div>

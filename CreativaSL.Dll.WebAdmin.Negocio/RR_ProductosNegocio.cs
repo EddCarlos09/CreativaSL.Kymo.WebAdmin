@@ -10,7 +10,7 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
 {
     public class RR_ProductosNegocio
     {
-        #region Datos generales aviso de privacidad
+        #region Datos generales productos
         /// <summary>
         /// modifica los textos generales y la imagen de la pagina terminos y condiciones
         /// </summary>
@@ -29,7 +29,30 @@ namespace CreativaSL.Dll.WebAdmin.Negocio
         {
             RR_ProductosDatos NN = new RR_ProductosDatos();
             NN.ObtenerProductosGeneralesXID(Datos);
-        }      
+        }
+        #endregion
+
+        #region datos generales producto
+
+        /// <summary>
+        /// modifica los textos generales y la imagen de la pagina terminos y condiciones
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ACProductoDatosGenerales(RR_Productos Datos)
+        {
+            RR_ProductosDatos APD = new RR_ProductosDatos();
+            APD.ACProductoDatosGenerales(Datos);
+
+        }
+        /// <summary>
+        /// obtiene los textos generales y la imagen de la pagina terminos y condiciones 
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void ObtenerProductoGeneralesXID(RR_Productos Datos)
+        {
+            RR_ProductosDatos NN = new RR_ProductosDatos();
+            NN.ObtenerProductoGeneralesXID(Datos);
+        }
 
         #endregion
     }

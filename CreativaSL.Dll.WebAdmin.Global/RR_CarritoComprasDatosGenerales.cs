@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CreativaSL.Dll.WebAdmin.Global
 {
-    public class RR_Productos
+    public class RR_CarritoComprasDatosGenerales
     {
         private string _IdTexto;
         public string IdTexto
@@ -16,32 +16,19 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _IdTexto = value; }
         }
 
-        private string _IdTexto2;
-        public string IdTexto2
+        private string _TituloPagina;
+        public string TituloPagina
         {
-            get { return _IdTexto2; }
-            set { _IdTexto2 = value; }
+            get { return _TituloPagina; }
+            set { _TituloPagina = value; }
         }
 
-        private string _Texto;
-        public string Texto
-        {
-            get { return _Texto; }
-            set { _Texto = value; }
-        }
+        private string _TituloPagina2;
 
-        private string _Texto2;
-        public string Texto2
+        public string TituloPagina2
         {
-            get { return _Texto2; }
-            set { _Texto2 = value; }
-        }
-
-        private int _NumPosition;
-        public int NumPosition
-        {
-            get { return _NumPosition; }
-            set { _NumPosition = value; }
+            get { return _TituloPagina2; }
+            set { _TituloPagina2 = value; }
         }
 
         private int _IdPagina;
@@ -49,6 +36,13 @@ namespace CreativaSL.Dll.WebAdmin.Global
         {
             get { return _IdPagina; }
             set { _IdPagina = value; }
+        }
+
+        private string _IdTexto2;
+        public string IdTexto2
+        {
+            get { return _IdTexto2; }
+            set { _IdTexto2 = value; }
         }
 
 
@@ -114,7 +108,6 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _CambioImagen = value; }
         }
 
-
         private string _UrlImagen;
         /// <summary>
         /// Url de la imagen subida
@@ -124,6 +117,17 @@ namespace CreativaSL.Dll.WebAdmin.Global
             get { return _UrlImagen; }
             set { _UrlImagen = value; }
         }
+
+        /// <summary>
+        /// Numero de posicion de la imagen en la pagina
+        /// </summary>
+        private int _NumPosition;
+        public int NumPosition
+        {
+            get { return _NumPosition; }
+            set { _NumPosition = value; }
+        }
+
         #endregion
 
         #region DatosDeControl
@@ -169,7 +173,7 @@ namespace CreativaSL.Dll.WebAdmin.Global
 
         private DataTable _TablaDatos;
         /// <summary>
-        /// ???
+        /// 
         /// </summary>
         public DataTable TablaDatos
         {
@@ -177,15 +181,13 @@ namespace CreativaSL.Dll.WebAdmin.Global
             set { _TablaDatos = value; }
         }
 
-        private DataTable _TableTexto;
+        private DataTable _TablaTexto;
 
         public DataTable TableTexto
         {
-            get { return _TableTexto; }
-            set { _TableTexto = value; }
+            get { return _TablaTexto; }
+            set { _TablaTexto = value; }
         }
-
-
 
         private bool _NuevoRegistro;
         /// <summary>

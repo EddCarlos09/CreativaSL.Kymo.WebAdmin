@@ -38,17 +38,17 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                                 }
                                 else
                                 {
-                                    Response.Redirect("frmNosotrosNuestroEquipo.aspx?error=" + "Error al cargar los datos&nError=1");
+                                    Response.Redirect("frmNosotrosRedesSocialesGrid.aspx?error=" + "Error al cargar los datos&nError=1");
                                 }
                             }
                             else
                             {
-                                Response.Redirect("frmNosotrosNuestroEquipo.aspx");
+                                Response.Redirect("frmNosotrosRedesSocialesGrid.aspx");
                             }
                         }
                         else
                         {
-                            Response.Redirect("frmNosotrosNuestroEquipo.aspx");
+                            Response.Redirect("frmNosotrosRedesSocialesGrid.aspx");
                         }
                     }
                     else if(Request.QueryString["op"] == "1")
@@ -63,7 +63,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                             }
                             else
                             {
-                                Response.Redirect("frmNosotrosRedesSociales.aspx?op=0&id=" + this.ID.ToString(), false);
+                                Response.Redirect("frmNosotrosRedesSocialesGrid.aspx?op=0&id=" + this.ID.ToString(), false);
                             }
                         }
                         else
@@ -89,7 +89,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                     try
                     {
                         string IdMiembroRed = Request.Form["ctl00$cph_MasterBody$hf"].ToString();
-                        string IdMiembro    = Request.Form["ctl00$cph_MasterBody$hf2"].ToString(); ;
+                        string IdMiembro = Request.Form["ctl00$cph_MasterBody$hf2"].ToString();
                         bool NuevoRegistro  = string.IsNullOrEmpty(IdMiembroRed);
                         Guardar(NuevoRegistro, nickName, idredSocial, IdMiembroRed, IdMiembro);
                     }
@@ -121,7 +121,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
             NG.ACNosotrosRedesSociales(DatosAux);
             if (DatosAux.Completado)
             {
-                Response.Redirect("frmNosotrosPorqueElegirnosGrid.aspx");
+                Response.Redirect("frmNosotrosNuestroEquipoGrid.aspx");
             }
             else
             {
@@ -132,6 +132,8 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
 
         public void CargarDatos(RR_RedesSociales Datos)
         {
+            hf.Value = Datos.IdMiembroxRedSocial;
+            hf2.Value = IDMiembroEquipo;
             txtNickName.Value = Datos.CuentaRedSocial;            
             string ScriptError = @"
                     $(document).ready(
