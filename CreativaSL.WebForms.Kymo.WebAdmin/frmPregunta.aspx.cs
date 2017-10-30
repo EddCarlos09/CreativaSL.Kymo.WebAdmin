@@ -119,7 +119,7 @@ namespace CreativaSL.WebForms.Kymo.WebAdmin
                 {
                     this.IDPregunta = Datos.IDPregunta.ToString();
                     hf.Value = Datos.IDPregunta.ToString();
-                    string ScriptError = DialogMessage.Show(TipoMensaje.Error, "Verifique número de orden ya exite para esta encuestas.", "Error", ShowMethod.FadeIn, HideMethod.FadeOut, ToastPosition.TopFullWidth, true);
+                    string ScriptError = DialogMessage.Show(TipoMensaje.Error, "Verifique número de orden ya exite para esta pregunta.", "Error", ShowMethod.FadeIn, HideMethod.FadeOut, ToastPosition.TopFullWidth, true);
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "popup", ScriptError, true);
                 }
             }
